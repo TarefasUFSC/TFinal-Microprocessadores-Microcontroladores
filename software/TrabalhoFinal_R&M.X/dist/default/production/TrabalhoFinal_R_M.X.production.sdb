@@ -78,8 +78,8 @@
 "233
 [u S134 . 1 `S125 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES134  1 e 1 @6 ]
-"340
-[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
 [s S34 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -174,6 +174,8 @@
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1499
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 [s S66 . 1 `uc 1 TMR1IE 1 0 :1:0 
@@ -228,7 +230,7 @@
 "279
 [v _main main `(v  1 e 1 0 ]
 {
-"309
+"313
 } 0
 "219
 [v _verifySensor verifySensor `(v  1 e 1 0 ]

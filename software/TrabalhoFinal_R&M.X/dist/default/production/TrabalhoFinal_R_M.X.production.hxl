@@ -10,7 +10,7 @@
 ### Memory Usage ###
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
-  8h - AAFh		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
+  8h - ABBh		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
  Unused ranges:
   6h - 7h
 
@@ -192,3 +192,5 @@
 00000A80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000A90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000AA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000AB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00000AC0 | --

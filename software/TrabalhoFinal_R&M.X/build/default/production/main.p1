@@ -143,9 +143,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1152
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1152: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
-"340
-[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"278
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "2235
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2235:     struct {
 [s S91 :4 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -171,6 +171,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1375
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1375: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"1437
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1437: extern volatile unsigned char TRISC __attribute__((address(0x087)));
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "1499
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
@@ -1113,8 +1116,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _verifySensor ]
 [f ]
 "221
-[; ;main.c: 221:     PORTD = getADConverterValue();
-[e = _PORTD -> ( _getADConverterValue ..  `uc ]
+[; ;main.c: 221:     PORTC = getADConverterValue();
+[e = _PORTC -> ( _getADConverterValue ..  `uc ]
 "222
 [; ;main.c: 222:     if(getADConverterValue()<umidade_minima){
 [e $ ! < ( _getADConverterValue ..  _umidade_minima 139  ]
@@ -1233,77 +1236,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 283:     TRISB = 0b00011101;
 [e = _TRISB -> -> 29 `i `uc ]
 "284
-[; ;main.c: 284:     TRISD = 0b00000000;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 284:     TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
 "285
-[; ;main.c: 285:     OPTION_REGbits.nRBPU = 0;
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 285:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
 "286
-[; ;main.c: 286:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 286:     TRISD = 0b00000000;
+[e = _TRISD -> -> 0 `i `uc ]
+"287
+[; ;main.c: 287:     OPTION_REGbits.nRBPU = 0;
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
 "288
-[; ;main.c: 288:     setupExternalInterruption();
-[e ( _setupExternalInterruption ..  ]
-"289
-[; ;main.c: 289:     setupWatchdogTimer();
-[e ( _setupWatchdogTimer ..  ]
+[; ;main.c: 288:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "290
-[; ;main.c: 290:     setupTimer();
-[e ( _setupTimer ..  ]
+[; ;main.c: 290:     setupExternalInterruption();
+[e ( _setupExternalInterruption ..  ]
 "291
-[; ;main.c: 291:     setupADC();
-[e ( _setupADC ..  ]
+[; ;main.c: 291:     setupWatchdogTimer();
+[e ( _setupWatchdogTimer ..  ]
 "292
-[; ;main.c: 292:     Lcd_Init();
-[e ( _Lcd_Init ..  ]
+[; ;main.c: 292:     setupTimer();
+[e ( _setupTimer ..  ]
 "293
-[; ;main.c: 293:     int a = 0;
-[v _a `i ~T0 @X0 1 a ]
-[e = _a -> 0 `i ]
+[; ;main.c: 293:     setupADC();
+[e ( _setupADC ..  ]
 "294
-[; ;main.c: 294:     while (1)
-[e :U 145 ]
-"295
-[; ;main.c: 295:     {
-{
-"296
-[; ;main.c: 296:         verifySensor();
-[e ( _verifySensor ..  ]
+[; ;main.c: 294:     Lcd_Init();
+[e ( _Lcd_Init ..  ]
 "297
-[; ;main.c: 297:         verifyMenu();
-[e ( _verifyMenu ..  ]
+[; ;main.c: 297:     while (1)
+[e :U 145 ]
 "298
-[; ;main.c: 298:         Lcd_Clear();
-[e ( _Lcd_Clear ..  ]
+[; ;main.c: 298:     {
+{
 "299
-[; ;main.c: 299:         Lcd_Set_Cursor(1,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"301
-[; ;main.c: 301:         Lcd_Write_String("OLA MUNDO");
-[e ( _Lcd_Write_String (1 :s 1C ]
+[; ;main.c: 299:         verifySensor();
+[e ( _verifySensor ..  ]
+"300
+[; ;main.c: 300:         verifyMenu();
+[e ( _verifyMenu ..  ]
 "302
-[; ;main.c: 302:         _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"304
-[; ;main.c: 304:         Lcd_Set_Cursor(2,1);
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 302:         Lcd_Clear();
+[e ( _Lcd_Clear ..  ]
+"303
+[; ;main.c: 303:         Lcd_Set_Cursor(1,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "305
-[; ;main.c: 305:         Lcd_Write_String("MUNDO DOIDO");
-[e ( _Lcd_Write_String (1 :s 2C ]
+[; ;main.c: 305:         Lcd_Write_String("OLA MUNDO");
+[e ( _Lcd_Write_String (1 :s 1C ]
 "306
-[; ;main.c: 306:         _delay((unsigned long)((2000)*(4000000/4000.0)));
+[; ;main.c: 306:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"308
+[; ;main.c: 308:         Lcd_Set_Cursor(2,1);
+[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
+"309
+[; ;main.c: 309:         Lcd_Write_String("MUNDO DOIDO");
+[e ( _Lcd_Write_String (1 :s 2C ]
+"310
+[; ;main.c: 310:         _delay((unsigned long)((2000)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"307
-[; ;main.c: 307:     }
+"311
+[; ;main.c: 311:     }
 }
 [e :U 144 ]
 [e $U 145  ]
 [e :U 146 ]
-"308
-[; ;main.c: 308:     return;
+"312
+[; ;main.c: 312:     return;
 [e $UE 143  ]
-"309
-[; ;main.c: 309: }
+"313
+[; ;main.c: 313: }
 [e :UE 143 ]
 }
 [a 1C 79 76 65 32 77 85 78 68 79 0 ]

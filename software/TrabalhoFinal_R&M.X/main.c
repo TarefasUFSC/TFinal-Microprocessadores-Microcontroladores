@@ -218,6 +218,7 @@ int getADConverterValue(){
 }
 void verifySensor()
 {
+    PORTC = getADConverterValue();
     if(getADConverterValue()<umidade_minima){
         LED_UMIDADE = 1;
         irrigar();
@@ -280,6 +281,8 @@ void main(void)
     // INICIALIZA��ES
     TRISA = 0b00000001;             //configura as portas usadas
     TRISB = 0b00011101;
+    TRISC = 0;
+    PORTC = 0;
     TRISD = 0b00000000;
     OPTION_REGbits.nRBPU = 0;       //habilita os resistores de pull-up
     PORTB = 0;
@@ -289,11 +292,13 @@ void main(void)
     setupTimer(); 
     setupADC();
     Lcd_Init();
-    int a = 0;
+   
+    
     while (1)
     {
         verifySensor();
         verifyMenu();
+        
         Lcd_Clear();                    //limpa LCD
         Lcd_Set_Cursor(1,1);            //Poe cursor linha 1 coluna 1
     

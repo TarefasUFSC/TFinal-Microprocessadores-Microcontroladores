@@ -2132,7 +2132,7 @@ int getADConverterValue(){
 }
 void verifySensor()
 {
-    PORTD = getADConverterValue();
+    PORTC = getADConverterValue();
     if(getADConverterValue()<umidade_minima){
         PORTBbits.RB7 = 1;
         irrigar();
@@ -2195,6 +2195,8 @@ void main(void)
 
     TRISA = 0b00000001;
     TRISB = 0b00011101;
+    TRISC = 0;
+    PORTC = 0;
     TRISD = 0b00000000;
     OPTION_REGbits.nRBPU = 0;
     PORTB = 0;
@@ -2204,11 +2206,13 @@ void main(void)
     setupTimer();
     setupADC();
     Lcd_Init();
-    int a = 0;
+
+
     while (1)
     {
         verifySensor();
         verifyMenu();
+
         Lcd_Clear();
         Lcd_Set_Cursor(1,1);
 
