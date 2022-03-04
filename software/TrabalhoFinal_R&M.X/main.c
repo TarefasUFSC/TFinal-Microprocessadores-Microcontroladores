@@ -74,7 +74,6 @@ int setup_menu = 0;
 int MLxMS = 25;
 
 
-int ext_int_ativa = 0;
 
 /****************************************************************/
 
@@ -162,6 +161,7 @@ void handleTimerInterruption()
 
 
 void irrigar(){
+    
     irrigacao_ativa = 1;
     timer_counter = 0;
     // ativa o timer 1
@@ -177,9 +177,7 @@ void irrigar(){
 void handleExternalInterruption()
 {
     if(INTF){
-        if(!irrigacao_ativa && ext_int_ativa){
-            
-            
+        if(!irrigacao_ativa){
             irrigar();
         }
         INTCONbits.INTF = 0;
@@ -199,7 +197,7 @@ void setupExternalInterruption()
     OPTION_REGbits.INTEDG   = 0;
 	INTCONbits.GIE          = 1;
 	INTCONbits.INTE         = 1;
-    INTCONbits.INTF = 0;
+    INTCONbits.INTF         = 0;
     return;
 }
 
@@ -290,17 +288,15 @@ void verifyMenu()
     }
     return;
 }
-
 // Retorna o valor em %
 int getADConverterValue(){
     ADCON0bits.GO       = 1;
-    __delay_us(10);
-    float leitura = 100*ADRESH/256;
+    __delay_us(100);
+    int leitura = 100*ADRESH/256;
     return leitura;
 }
 void verifySensor()
 {
-
     if(getADConverterValue()<umidade_minima){
         LED_UMIDADE = 1;
         irrigar();
@@ -375,14 +371,12 @@ void main(void)
     setupADC();
     Lcd_Init();
    
-    __delay_ms(100);
-    ext_int_ativa = 1;
-    
     while (1)
     {
         verifySensor();
         verifyMenu();
         CLRWDT();
+        
     }
     return;
 }

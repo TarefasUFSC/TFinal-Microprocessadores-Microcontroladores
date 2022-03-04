@@ -1988,7 +1988,6 @@ int setup_menu = 0;
 int MLxMS = 25;
 
 
-int ext_int_ativa = 0;
 
 
 
@@ -2076,6 +2075,7 @@ void handleTimerInterruption()
 
 
 void irrigar(){
+
     irrigacao_ativa = 1;
     timer_counter = 0;
 
@@ -2091,9 +2091,7 @@ void irrigar(){
 void handleExternalInterruption()
 {
     if(INTF){
-        if(!irrigacao_ativa && ext_int_ativa){
-
-
+        if(!irrigacao_ativa){
             irrigar();
         }
         INTCONbits.INTF = 0;
@@ -2205,16 +2203,14 @@ void verifyMenu()
     return;
 }
 
-
 int getADConverterValue(){
     ADCON0bits.GO = 1;
-    _delay((unsigned long)((10)*(4000000/4000000.0)));
-    float leitura = 100*ADRESH/256;
+    _delay((unsigned long)((100)*(4000000/4000000.0)));
+    int leitura = 100*ADRESH/256;
     return leitura;
 }
 void verifySensor()
 {
-
     if(getADConverterValue()<umidade_minima){
         PORTBbits.RB7 = 1;
         irrigar();
@@ -2289,14 +2285,12 @@ void main(void)
     setupADC();
     Lcd_Init();
 
-    _delay((unsigned long)((100)*(4000000/4000.0)));
-    ext_int_ativa = 1;
-
     while (1)
     {
         verifySensor();
         verifyMenu();
         __asm("clrwdt");
+
     }
     return;
 }
