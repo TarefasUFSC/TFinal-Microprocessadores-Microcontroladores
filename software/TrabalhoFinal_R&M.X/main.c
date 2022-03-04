@@ -132,11 +132,16 @@ void handleTimerInterruption()
 {
     if(TMR1IF){
         if(irrigacao_ativa){
-            
             timer_counter++;
+            VALVULA = 1;
+            LED_IRRIGACAO = 1;
             if(timer_counter_max <= timer_counter){
                 VALVULA = 0;
                 irrigacao_ativa = 0;
+                LED_IRRIGACAO = 0;
+                
+                // desliga o timer 1
+                T1CONbits.TMR1ON = 0;
             }
         }
         else{
@@ -154,25 +159,24 @@ void handleTimerInterruption()
 void irrigar(){
     irrigacao_ativa = 1;
     timer_counter = 0;
-    VALVULA = 1;
     
     // ativa o timer 1
     T1CONbits.TMR1ON = 1;
     
-    // n�o pode usar o menu enquanto tiver aqui
-    while(irrigacao_ativa);
     
-    // desliga o timer 1
-    T1CONbits.TMR1ON = 0;
+    // n�o pode usar o menu enquanto tiver aqui
+    //while(irrigacao_ativa);
+    
     
 }
 
 void handleExternalInterruption()
 {
     if(INTF){
-        //if(!irrigacao_ativa)
-        //irrigar
-        LED_IRRIGACAO = 1;
+        if(!irrigacao_ativa){
+            irrigar();
+        }
+        INTCONbits.INTF = 0;
     }
     return;
 }
@@ -186,9 +190,9 @@ void __interrupt() interrupcao(void)
 
 void setupExternalInterruption()
 {
-    OPTION_REGbits.INTEDG = 0;
-	INTCONbits.GIE = 1;
-	INTCONbits.INTE = 1;
+    OPTION_REGbits.INTEDG   = 1;
+	INTCONbits.GIE          = 1;
+	INTCONbits.INTE         = 1;
     return;
 }
 
@@ -216,7 +220,11 @@ void verifySensor()
 {
     PORTD = getADConverterValue();
     if(getADConverterValue()<umidade_minima){
+        LED_UMIDADE = 1;
         irrigar();
+    }
+    else{
+        LED_UMIDADE = 0;
     }
     return;
 }
