@@ -21,6 +21,12 @@
 
 #define _XTAL_FREQ 4000000
 
+//configurando o watchdog time
+//#pragma config WDTE = ON //habilita o uso do WDT
+//#pragma config FOSC = HS //define uso do clock externo em 4 ou 20Mhz
+//#pragma config PWRTE = ON //habilita reset ao ligar (pode ser usado no lugar do capacitor)
+//#pragma config BOREN = ON //Habilita o reset por Brown-out (vales na tensï¿½o)
+
 #define SENSOR_UMIDADE      PORTAbits.RA0
 
 #define BTN_IRRIGAR         PORTBbits.RB0
@@ -32,21 +38,28 @@
 #define LED_IRRIGACAO       PORTBbits.RB6
 #define LED_UMIDADE         PORTBbits.RB7
 
-#define EN                  PORTDbits.RD0
-#define RS                  PORTDbits.RD1
-#define RW                  PORTDbits.RD2
-#define D4                  PORTDbits.RD4
-#define D5                  PORTDbits.RD5
-#define D6                  PORTDbits.RD6
-#define D7                  PORTDbits.RD7
+//#define EN                  PORTDbits.RD0
+//#define RS                  PORTDbits.RD1
+//#define RW                  PORTDbits.RD2
+//#define D4                  PORTDbits.RD4
+//#define D5                  PORTDbits.RD5
+//#define D6                  PORTDbits.RD6
+//#define D7                  PORTDbits.RD7
 
+//*** define pinos referentes a interface com LCD
+#define RS RD2
+#define EN RD3
+#define D4 RD4
+#define D5 RD5
+#define D6 RD6
+#define D7 RD7
 
             
 
 // Adiciona a lib do LCD
 #include "lcd.h"
 
-/* ******************* Variáveis Globais ************************/
+/* ******************* Variï¿½veis Globais ************************/
 int timer_counter = 0;
 int timer_counter_max = 10;
 int irrigacao_ativa = 0;
@@ -83,12 +96,12 @@ void setupNewVolumeFlow(int new_ml)
 
 void setupTimer()
 {
-    // Configs de interrupção
+    // Configs de interrupï¿½ï¿½o
     INTCONbits.GIE      = 1;
     INTCONbits.PEIE     = 1;
     PIE1bits.TMR1IE     = 1;
     
-    /* Configuração do Timer1 como temporazidaor*/
+    /* Configuraï¿½ï¿½o do Timer1 como temporazidaor*/
     T1CONbits.TMR1CS    = 0;
     
     // Define o pre-scaler em 1:8
@@ -98,7 +111,7 @@ void setupTimer()
     /* Calculos para o contador
      * clock = 4Mhz -> clock/4 = 1Mhz
      * 1Mhz/8 = 125Khz -> periodo = 0.000008s ou 8ms
-     * Para uma interrupção a cada 500ms são necessárias 62500 ciclos de máquina
+     * Para uma interrupï¿½ï¿½o a cada 500ms sï¿½o necessï¿½rias 62500 ciclos de mï¿½quina
      * 65536 - 62500 = 3036     
      */
     TMR1H               = 0x0B;
@@ -107,7 +120,7 @@ void setupTimer()
     T1CONbits.TMR1ON    = 0;
     
     
-    // inicia o contador com um valor padrão de ML
+    // inicia o contador com um valor padrï¿½o de ML
     setupNewVolumeFlow(200);
     return;
 }
@@ -146,7 +159,7 @@ void irrigar(){
     // ativa o timer 1
     T1CONbits.TMR1ON = 1;
     
-    // não pode usar o menu enquanto tiver aqui
+    // nï¿½o pode usar o menu enquanto tiver aqui
     while(irrigacao_ativa);
     
     // desliga o timer 1
@@ -156,7 +169,11 @@ void irrigar(){
 
 void handleExternalInterruption()
 {
-
+    if(INTF){
+        //if(!irrigacao_ativa)
+        //irrigar
+        LED_IRRIGACAO = 1;
+    }
     return;
 }
 
@@ -169,6 +186,9 @@ void __interrupt() interrupcao(void)
 
 void setupExternalInterruption()
 {
+    OPTION_REGbits.INTEDG = 0;
+	INTCONbits.GIE = 1;
+	INTCONbits.INTE = 1;
     return;
 }
 
@@ -203,6 +223,11 @@ void verifySensor()
 
 void setupWatchdogTimer()
 {
+    //OPTION_REGbits.PSA = 1; //define que o prescaler esta associado ao WTD
+    //OPTION_REGbits.PS0 = 0; // define o prescaler do WTD para 1:64 (1152ms)
+    //OPTION_REGbits.PS1 = 1;
+    //OPTION_REGbits.PS2 = 1;
+    //CLRWDT();
     return;
 }
 
@@ -217,15 +242,15 @@ void setupADC(){
     ADCON1bits.PCFG2    = 1;
     ADCON1bits.PCFG3    = 1;
     
-    // clock de conversão
+    // clock de conversï¿½o
     ADCON1bits.ADCS2    = 1;
     ADCON0bits.ADCS1    = 1;
     ADCON0bits.ADCS0    = 0;
     
-    // Configura a conversão em 8 bits
+    // Configura a conversï¿½o em 8 bits
     ADCON1bits.ADFM     = 0;
     
-    // inicialização do conversor
+    // inicializaï¿½ï¿½o do conversor
     ADRESL              = 0;
     ADRESH              = 0;
     
@@ -245,7 +270,7 @@ void setupADC(){
 
 void main(void)
 {
-    // INICIALIZAÇÕES
+    // INICIALIZAï¿½ï¿½ES
     TRISA = 0b00000001;             //configura as portas usadas
     TRISB = 0b00011101;
     TRISD = 0b00000000;
@@ -262,8 +287,15 @@ void main(void)
     {
         verifySensor();
         verifyMenu();
-        
-       
+        Lcd_Clear();                    //limpa LCD
+        Lcd_Set_Cursor(1,1);            //Poe cursor linha 1 coluna 1
+    
+        Lcd_Write_String("OLA MUNDO");  //escreve string
+        __delay_ms(1000);
+    
+        Lcd_Set_Cursor(2,1);             //linha 2 coluna 1
+        Lcd_Write_String("MUNDO DOIDO"); //escreve string]
+        __delay_ms(2000);
     }
     return;
 }
