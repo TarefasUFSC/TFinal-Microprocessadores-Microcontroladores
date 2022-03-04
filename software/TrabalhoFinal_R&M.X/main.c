@@ -69,6 +69,8 @@ void changeTimerMaxConter(int mili_s){
     
 }
 
+
+// passa o parametro da nova qtd de ml
 void setupNewVolumeFlow(int new_ml)
 {
     // converter ml em ms
@@ -133,16 +135,20 @@ void handleTimerInterruption()
     }
     return;
 }
+
+
 void irrigar(){
     irrigacao_ativa = 1;
     timer_counter = 0;
     VALVULA = 1;
     
+    // ativa o timer 1
     T1CONbits.TMR1ON = 1;
     
     // não pode usar o menu enquanto tiver aqui
     while(irrigacao_ativa);
     
+    // desliga o timer 1
     T1CONbits.TMR1ON = 0;
     
 }
@@ -205,12 +211,7 @@ void main(void)
         verifySensor();
         verifyMenu();
         
-        //teste da irrigação
-        if(BTN_INC == 0&& a == 0){
-            a = 1;
-            irrigar();
-            __delay_ms(5000);
-        }
+       
     }
     return;
 }
