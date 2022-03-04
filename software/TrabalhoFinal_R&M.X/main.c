@@ -64,6 +64,8 @@ int timer_counter = 0;
 int timer_counter_max = 10;
 int irrigacao_ativa = 0;
 int umidade_minima = 10; // em %
+int water_volume = 200;
+int setup_menu = 0;
 
 
 // 5s = 200ml
@@ -121,7 +123,7 @@ void setupTimer()
     
     
     // inicia o contador com um valor padr�o de ML
-    setupNewVolumeFlow(200);
+    setupNewVolumeFlow(water_volume);
     return;
 }
 
@@ -196,14 +198,89 @@ void setupExternalInterruption()
     return;
 }
 
+void writeValor(int valor)
+{
+    char centena = valor/100 + 48;
+    char dezena = (valor%100)/10 + 48;
+    char unidade = valor%10 + 48;
+    Lcd_Set_Cursor(2,1);
+    Lcd_Write_Char(centena);
+    Lcd_Write_Char(dezena);
+    Lcd_Write_Char(unidade);
+    return;
+}
+
 void handleMenu()
 {
+    int volume = water_volume;
+    int umidade = umidade_minima;
+    
+    while(setup_menu == 1){
+        CLRWDT();
+        __delay_ms(100);
+        Lcd_Set_Cursor(1,1);            //Poe cursor linha 1 coluna 1
+        Lcd_Write_String("NEW THRESHOLD:");  //escreve string
+        writeValor(umidade);
+        if(!BTN_ENTER){
+            umidade_minima = umidade;
+            setup_menu = 2;
+            __delay_ms(500);
+        }
+        if(!BTN_INC){
+            umidade++;
+            if(umidade > 999) umidade = 0;
+            writeValor(umidade);
+            __delay_ms(100);
+        }
+        if(!BTN_DEC){
+            umidade--;
+            if(umidade < 0) umidade = 0;
+            writeValor(umidade);
+            __delay_ms(100);
+        }
+    }
+    Lcd_Clear();
+    while(setup_menu == 2){
+        CLRWDT();
+        __delay_ms(100);
+        Lcd_Set_Cursor(1,1);
+        Lcd_Write_String("NEW VOLUME:");
+        writeValor(volume);
+        if(!BTN_ENTER){
+            water_volume = volume;
+            setupNewVolumeFlow(water_volume);
+            setup_menu = 3;
+            __delay_ms(500);
+        }
+        if(!BTN_INC){
+            volume++;
+            if(volume > 999) volume = 0;
+            writeValor(volume);
+            __delay_ms(100);
+        }
+        if(!BTN_DEC){
+            volume--;
+            if(volume < 0) volume = 0;
+            writeValor(volume);
+            __delay_ms(100);
+        }
+    }
+    Lcd_Clear();
+    while(setup_menu == 3){
+        CLRWDT();
+        LED_SETUP = 0;
+        break;
+    }
+    Lcd_Clear();
     return;
 }
 void verifyMenu()
 {
-    if (BTN_ENTER)
+    if (!BTN_ENTER)
     {
+        setup_menu = 1;
+        LED_SETUP = 1;
+        __delay_ms(500);
         handleMenu();
     }
     return;
@@ -231,11 +308,11 @@ void verifySensor()
 
 void setupWatchdogTimer()
 {
-    //OPTION_REGbits.PSA = 1; //define que o prescaler esta associado ao WTD
-    //OPTION_REGbits.PS0 = 0; // define o prescaler do WTD para 1:64 (1152ms)
-    //OPTION_REGbits.PS1 = 1;
-    //OPTION_REGbits.PS2 = 1;
-    //CLRWDT();
+    OPTION_REGbits.PSA = 1; //define que o prescaler esta associado ao WTD
+    OPTION_REGbits.PS0 = 0; // define o prescaler do WTD para 1:64 (1152ms)
+    OPTION_REGbits.PS1 = 1;
+    OPTION_REGbits.PS2 = 1;
+    CLRWDT();
     return;
 }
 
@@ -298,16 +375,7 @@ void main(void)
     {
         verifySensor();
         verifyMenu();
-        
-        Lcd_Clear();                    //limpa LCD
-        Lcd_Set_Cursor(1,1);            //Poe cursor linha 1 coluna 1
-    
-        Lcd_Write_String("OLA MUNDO");  //escreve string
-        __delay_ms(1000);
-    
-        Lcd_Set_Cursor(2,1);             //linha 2 coluna 1
-        Lcd_Write_String("MUNDO DOIDO"); //escreve string]
-        __delay_ms(2000);
+        CLRWDT();
     }
     return;
 }
