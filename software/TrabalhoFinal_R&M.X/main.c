@@ -56,6 +56,7 @@ void setupNewVolumeFlow(int new_ml){
     int new_ms;
     // chama o setup timer com o novo ms
     setupTimer(new_ms);
+    return;
 }
 
 void handleTimerInterruption(){
@@ -70,7 +71,7 @@ void handleExternalInterruption(){
 void __interrupt() interrupcao(void){
     handleTimerInterruption();
     handleExternalInterruption();
-    
+    return;
 }
 
 
@@ -87,6 +88,7 @@ void verifyMenu(){
     if(BTN_ENTER){
         handleMenu();
     }
+    return;
 }
 void verifySensor(){
     return;
