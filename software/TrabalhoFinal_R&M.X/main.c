@@ -32,14 +32,13 @@
 #define LED_IRRIGACAO       PORTBbits.RB6
 #define LED_UMIDADE         PORTBbits.RB7
 
-#define E                   PORTDbits.RD0
+#define EN                  PORTDbits.RD0
 #define RS                  PORTDbits.RD1
 #define RW                  PORTDbits.RD2
 #define D4                  PORTDbits.RD4
 #define D5                  PORTDbits.RD5
 #define D6                  PORTDbits.RD6
 #define D7                  PORTDbits.RD7
-#define EN                  PORTDbits.RD3
 
 
 // Adiciona a lib do LCD
