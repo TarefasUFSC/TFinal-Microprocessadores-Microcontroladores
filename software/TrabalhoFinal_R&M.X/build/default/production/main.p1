@@ -68,9 +68,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2890
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2890: extern volatile __bit TMR1IF __attribute__((address(0x60)));
 [v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
-"340
-[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "222
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 222:     struct {
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -95,6 +92,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PIR1bits `VS20 ~T0 @X0 0 e@12 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
+"1165
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1165:     struct {
+[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :2 `uc 1 ]
+[n S46 . ADON . GO_nDONE CHS ADCS ]
+"1172
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1172:     struct {
+[s S47 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S47 . . GO CHS0 CHS1 CHS2 ADCS0 ADCS1 ]
+"1181
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1181:     struct {
+[s S48 :2 `uc 1 :1 `uc 1 ]
+[n S48 . . nDONE ]
+"1185
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1185:     struct {
+[s S49 :2 `uc 1 :1 `uc 1 ]
+[n S49 . . GO_DONE ]
+"1164
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1164: typedef union {
+[u S45 `S46 1 `S47 1 `S48 1 `S49 1 ]
+[n S45 . . . . . ]
+"1190
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1190: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
+[v _ADCON0bits `VS45 ~T0 @X0 0 e@31 ]
+"1152
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1152: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"340
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 340: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"2235
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2235:     struct {
+[s S91 :4 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S91 . PCFG . ADCS2 ADFM ]
+"2241
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2241:     struct {
+[s S92 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S92 . PCFG0 PCFG1 PCFG2 PCFG3 ]
+"2234
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2234: typedef union {
+[u S90 `S91 1 `S92 1 ]
+[n S90 . . . ]
+"2248
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2248: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09F)));
+[v _ADCON1bits `VS90 ~T0 @X0 0 e@159 ]
+"2222
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2222: extern volatile unsigned char ADRESL __attribute__((address(0x09E)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
 [p mainexit ]
 "1325
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1325: extern volatile unsigned char TRISA __attribute__((address(0x085)));
@@ -697,136 +741,136 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _irrigacao_ativa
 -> 0 `i
 ]
-"58
-[; ;main.c: 58: int MLxMS = 25;
+"53
+[; ;main.c: 53: int umidade_minima = 10;
+[v _umidade_minima `i ~T0 @X0 1 e ]
+[i _umidade_minima
+-> 10 `i
+]
+"59
+[; ;main.c: 59: int MLxMS = 25;
 [v _MLxMS `i ~T0 @X0 1 e ]
 [i _MLxMS
 -> 25 `i
 ]
-"65
-[; ;main.c: 65: void changeTimerMaxConter(int mili_s){
+"66
+[; ;main.c: 66: void changeTimerMaxConter(int mili_s){
 [v _changeTimerMaxConter `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _changeTimerMaxConter ]
 [v _mili_s `i ~T0 @X0 1 r1 ]
 [f ]
-"67
-[; ;main.c: 67:     timer_counter_max = (mili_s/500);
-[e = _timer_counter_max / _mili_s -> 500 `i ]
 "68
-[; ;main.c: 68:     return;
+[; ;main.c: 68:     timer_counter_max = (mili_s/500);
+[e = _timer_counter_max / _mili_s -> 500 `i ]
+"69
+[; ;main.c: 69:     return;
 [e $UE 120  ]
-"70
-[; ;main.c: 70: }
+"71
+[; ;main.c: 71: }
 [e :UE 120 ]
 }
-"72
-[; ;main.c: 72: void setupNewVolumeFlow(int new_ml)
+"75
+[; ;main.c: 75: void setupNewVolumeFlow(int new_ml)
 [v _setupNewVolumeFlow `(v ~T0 @X0 1 ef1`i ]
-"73
-[; ;main.c: 73: {
+"76
+[; ;main.c: 76: {
 {
 [e :U _setupNewVolumeFlow ]
-"72
-[; ;main.c: 72: void setupNewVolumeFlow(int new_ml)
-[v _new_ml `i ~T0 @X0 1 r1 ]
-"73
-[; ;main.c: 73: {
-[f ]
 "75
-[; ;main.c: 75:     int new_ms = new_ml*MLxMS;
+[; ;main.c: 75: void setupNewVolumeFlow(int new_ml)
+[v _new_ml `i ~T0 @X0 1 r1 ]
+"76
+[; ;main.c: 76: {
+[f ]
+"78
+[; ;main.c: 78:     int new_ms = new_ml*MLxMS;
 [v _new_ms `i ~T0 @X0 1 a ]
 [e = _new_ms * _new_ml _MLxMS ]
-"77
-[; ;main.c: 77:     changeTimerMaxConter(new_ms);
+"80
+[; ;main.c: 80:     changeTimerMaxConter(new_ms);
 [e ( _changeTimerMaxConter (1 _new_ms ]
-"78
-[; ;main.c: 78:     return;
+"81
+[; ;main.c: 81:     return;
 [e $UE 121  ]
-"79
-[; ;main.c: 79: }
+"82
+[; ;main.c: 82: }
 [e :UE 121 ]
 }
-"81
-[; ;main.c: 81: void setupTimer()
+"84
+[; ;main.c: 84: void setupTimer()
 [v _setupTimer `(v ~T0 @X0 1 ef ]
-"82
-[; ;main.c: 82: {
+"85
+[; ;main.c: 85: {
 {
 [e :U _setupTimer ]
 [f ]
-"84
-[; ;main.c: 84:     INTCONbits.GIE = 1;
+"87
+[; ;main.c: 87:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"85
-[; ;main.c: 85:     INTCONbits.PEIE = 1;
+"88
+[; ;main.c: 88:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"86
-[; ;main.c: 86:     PIE1bits.TMR1IE = 1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
 "89
-[; ;main.c: 89:     T1CONbits.TMR1CS = 0;
-[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 89:     PIE1bits.TMR1IE = 1;
+[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
 "92
-[; ;main.c: 92:     T1CONbits.T1CKPS0 = 1;
+[; ;main.c: 92:     T1CONbits.TMR1CS = 0;
+[e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
+"95
+[; ;main.c: 95:     T1CONbits.T1CKPS0 = 1;
 [e = . . _T1CONbits 1 3 -> -> 1 `i `uc ]
-"93
-[; ;main.c: 93:     T1CONbits.T1CKPS1 = 1;
+"96
+[; ;main.c: 96:     T1CONbits.T1CKPS1 = 1;
 [e = . . _T1CONbits 1 4 -> -> 1 `i `uc ]
-"101
-[; ;main.c: 101:     TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
-"102
-[; ;main.c: 102:     TMR1L = 0xDC;
-[e = _TMR1L -> -> 220 `i `uc ]
 "104
-[; ;main.c: 104:     T1CONbits.TMR1ON = 0;
+[; ;main.c: 104:     TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
+"105
+[; ;main.c: 105:     TMR1L = 0xDC;
+[e = _TMR1L -> -> 220 `i `uc ]
+"107
+[; ;main.c: 107:     T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"108
-[; ;main.c: 108:     setupNewVolumeFlow(200);
+"111
+[; ;main.c: 111:     setupNewVolumeFlow(200);
 [e ( _setupNewVolumeFlow (1 -> 200 `i ]
-"109
-[; ;main.c: 109:     return;
+"112
+[; ;main.c: 112:     return;
 [e $UE 122  ]
-"110
-[; ;main.c: 110: }
+"113
+[; ;main.c: 113: }
 [e :UE 122 ]
 }
-"115
-[; ;main.c: 115: void handleTimerInterruption()
+"118
+[; ;main.c: 118: void handleTimerInterruption()
 [v _handleTimerInterruption `(v ~T0 @X0 1 ef ]
-"116
-[; ;main.c: 116: {
+"119
+[; ;main.c: 119: {
 {
 [e :U _handleTimerInterruption ]
 [f ]
-"117
-[; ;main.c: 117:     if(TMR1IF){
+"120
+[; ;main.c: 120:     if(TMR1IF){
 [e $ ! _TMR1IF 124  ]
 {
-"118
-[; ;main.c: 118:         if(irrigacao_ativa){
+"121
+[; ;main.c: 121:         if(irrigacao_ativa){
 [e $ ! != _irrigacao_ativa -> 0 `i 125  ]
 {
-"120
-[; ;main.c: 120:             PORTD = timer_counter;
-[e = _PORTD -> _timer_counter `uc ]
-"122
-[; ;main.c: 122:             timer_counter++;
-[e ++ _timer_counter -> 1 `i ]
 "123
-[; ;main.c: 123:             if(timer_counter_max <= timer_counter){
+[; ;main.c: 123:             timer_counter++;
+[e ++ _timer_counter -> 1 `i ]
+"124
+[; ;main.c: 124:             if(timer_counter_max <= timer_counter){
 [e $ ! <= _timer_counter_max _timer_counter 126  ]
 {
-"124
-[; ;main.c: 124:                 PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
 "125
-[; ;main.c: 125:                 irrigacao_ativa = 0;
-[e = _irrigacao_ativa -> 0 `i ]
+[; ;main.c: 125:                 PORTBbits.RB1 = 0;
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
 "126
-[; ;main.c: 126:                 PORTBbits.RB7 =1;
-[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 126:                 irrigacao_ativa = 0;
+[e = _irrigacao_ativa -> 0 `i ]
 "127
 [; ;main.c: 127:             }
 }
@@ -850,264 +894,340 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 127 ]
 "133
-[; ;main.c: 133:         PORTBbits.RB5 = !PORTBbits.RB5;
-[e = . . _PORTBbits 0 5 -> -> ! != -> . . _PORTBbits 0 5 `i -> 0 `i `i `uc ]
-"134
-[; ;main.c: 134:         PIR1bits.TMR1IF = 0;
+[; ;main.c: 133:         PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"135
-[; ;main.c: 135:         TMR1H = 0x0B;
+"134
+[; ;main.c: 134:         TMR1H = 0x0B;
 [e = _TMR1H -> -> 11 `i `uc ]
-"136
-[; ;main.c: 136:         TMR1L = 0xDC;
+"135
+[; ;main.c: 135:         TMR1L = 0xDC;
 [e = _TMR1L -> -> 220 `i `uc ]
-"137
-[; ;main.c: 137:     }
+"136
+[; ;main.c: 136:     }
 }
 [e :U 124 ]
-"138
-[; ;main.c: 138:     return;
+"137
+[; ;main.c: 137:     return;
 [e $UE 123  ]
-"139
-[; ;main.c: 139: }
+"138
+[; ;main.c: 138: }
 [e :UE 123 ]
 }
-"140
-[; ;main.c: 140: void irrigar(){
+"141
+[; ;main.c: 141: void irrigar(){
 [v _irrigar `(v ~T0 @X0 1 ef ]
 {
 [e :U _irrigar ]
 [f ]
-"141
-[; ;main.c: 141:     irrigacao_ativa = 1;
-[e = _irrigacao_ativa -> 1 `i ]
 "142
-[; ;main.c: 142:     timer_counter = 0;
-[e = _timer_counter -> 0 `i ]
+[; ;main.c: 142:     irrigacao_ativa = 1;
+[e = _irrigacao_ativa -> 1 `i ]
 "143
-[; ;main.c: 143:     PORTBbits.RB1 = 1;
+[; ;main.c: 143:     timer_counter = 0;
+[e = _timer_counter -> 0 `i ]
+"144
+[; ;main.c: 144:     PORTBbits.RB1 = 1;
 [e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-"145
-[; ;main.c: 145:     T1CONbits.TMR1ON = 1;
+"147
+[; ;main.c: 147:     T1CONbits.TMR1ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"146
-[; ;main.c: 146:     while(irrigacao_ativa);
+"150
+[; ;main.c: 150:     while(irrigacao_ativa);
 [e $U 129  ]
 [e :U 130 ]
 [e :U 129 ]
 [e $ != _irrigacao_ativa -> 0 `i 130  ]
 [e :U 131 ]
-"148
-[; ;main.c: 148:     T1CONbits.TMR1ON = 0;
+"153
+[; ;main.c: 153:     T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"150
-[; ;main.c: 150: }
-[e :UE 128 ]
-}
-"151
-[; ;main.c: 151: void handleExternalInterruption()
-[v _handleExternalInterruption `(v ~T0 @X0 1 ef ]
-"152
-[; ;main.c: 152: {
-{
-[e :U _handleExternalInterruption ]
-[f ]
-"154
-[; ;main.c: 154:     return;
-[e $UE 132  ]
 "155
 [; ;main.c: 155: }
-[e :UE 132 ]
+[e :UE 128 ]
 }
-[v $root$_interrupcao `(v ~T0 @X0 0 e ]
 "157
-[; ;main.c: 157: void __attribute__((picinterrupt(("")))) interrupcao(void)
-[v _interrupcao `(v ~T1 @X0 1 ef ]
+[; ;main.c: 157: void handleExternalInterruption()
+[v _handleExternalInterruption `(v ~T0 @X0 1 ef ]
 "158
 [; ;main.c: 158: {
 {
+[e :U _handleExternalInterruption ]
+[f ]
+"160
+[; ;main.c: 160:     return;
+[e $UE 132  ]
+"161
+[; ;main.c: 161: }
+[e :UE 132 ]
+}
+[v $root$_interrupcao `(v ~T0 @X0 0 e ]
+"163
+[; ;main.c: 163: void __attribute__((picinterrupt(("")))) interrupcao(void)
+[v _interrupcao `(v ~T1 @X0 1 ef ]
+"164
+[; ;main.c: 164: {
+{
 [e :U _interrupcao ]
 [f ]
-"159
-[; ;main.c: 159:     handleTimerInterruption();
+"165
+[; ;main.c: 165:     handleTimerInterruption();
 [e ( _handleTimerInterruption ..  ]
-"160
-[; ;main.c: 160:     handleExternalInterruption();
+"166
+[; ;main.c: 166:     handleExternalInterruption();
 [e ( _handleExternalInterruption ..  ]
-"161
-[; ;main.c: 161:     return;
+"167
+[; ;main.c: 167:     return;
 [e $UE 133  ]
-"162
-[; ;main.c: 162: }
+"168
+[; ;main.c: 168: }
 [e :UE 133 ]
 }
-"164
-[; ;main.c: 164: void setupExternalInterruption()
+"170
+[; ;main.c: 170: void setupExternalInterruption()
 [v _setupExternalInterruption `(v ~T0 @X0 1 ef ]
-"165
-[; ;main.c: 165: {
+"171
+[; ;main.c: 171: {
 {
 [e :U _setupExternalInterruption ]
 [f ]
-"166
-[; ;main.c: 166:     return;
+"172
+[; ;main.c: 172:     return;
 [e $UE 134  ]
-"167
-[; ;main.c: 167: }
+"173
+[; ;main.c: 173: }
 [e :UE 134 ]
 }
-"169
-[; ;main.c: 169: void handleMenu()
+"175
+[; ;main.c: 175: void handleMenu()
 [v _handleMenu `(v ~T0 @X0 1 ef ]
-"170
-[; ;main.c: 170: {
+"176
+[; ;main.c: 176: {
 {
 [e :U _handleMenu ]
 [f ]
-"171
-[; ;main.c: 171:     return;
+"177
+[; ;main.c: 177:     return;
 [e $UE 135  ]
-"172
-[; ;main.c: 172: }
+"178
+[; ;main.c: 178: }
 [e :UE 135 ]
 }
-"173
-[; ;main.c: 173: void verifyMenu()
+"179
+[; ;main.c: 179: void verifyMenu()
 [v _verifyMenu `(v ~T0 @X0 1 ef ]
-"174
-[; ;main.c: 174: {
+"180
+[; ;main.c: 180: {
 {
 [e :U _verifyMenu ]
 [f ]
-"175
-[; ;main.c: 175:     if (PORTBbits.RB2)
+"181
+[; ;main.c: 181:     if (PORTBbits.RB2)
 [e $ ! != -> . . _PORTBbits 0 2 `i -> 0 `i 137  ]
-"176
-[; ;main.c: 176:     {
+"182
+[; ;main.c: 182:     {
 {
-"177
-[; ;main.c: 177:         handleMenu();
+"183
+[; ;main.c: 183:         handleMenu();
 [e ( _handleMenu ..  ]
-"178
-[; ;main.c: 178:     }
+"184
+[; ;main.c: 184:     }
 }
 [e :U 137 ]
-"179
-[; ;main.c: 179:     return;
+"185
+[; ;main.c: 185:     return;
 [e $UE 136  ]
-"180
-[; ;main.c: 180: }
+"186
+[; ;main.c: 186: }
 [e :UE 136 ]
 }
-"181
-[; ;main.c: 181: void verifySensor()
+"189
+[; ;main.c: 189: int getADConverterValue(){
+[v _getADConverterValue `(i ~T0 @X0 1 ef ]
+{
+[e :U _getADConverterValue ]
+[f ]
+"190
+[; ;main.c: 190:     ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"191
+[; ;main.c: 191:     _delay((unsigned long)((10)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"192
+[; ;main.c: 192:     float leitura = 100*ADRESH/256;
+[v _leitura `f ~T0 @X0 1 a ]
+[e = _leitura -> / * -> 100 `i -> _ADRESH `i -> 256 `i `f ]
+"193
+[; ;main.c: 193:     return leitura;
+[e ) -> _leitura `i ]
+[e $UE 138  ]
+"194
+[; ;main.c: 194: }
+[e :UE 138 ]
+}
+"195
+[; ;main.c: 195: void verifySensor()
 [v _verifySensor `(v ~T0 @X0 1 ef ]
-"182
-[; ;main.c: 182: {
+"196
+[; ;main.c: 196: {
 {
 [e :U _verifySensor ]
 [f ]
-"183
-[; ;main.c: 183:     return;
-[e $UE 138  ]
-"184
-[; ;main.c: 184: }
-[e :UE 138 ]
+"197
+[; ;main.c: 197:     PORTD = getADConverterValue();
+[e = _PORTD -> ( _getADConverterValue ..  `uc ]
+"198
+[; ;main.c: 198:     if(getADConverterValue()<umidade_minima){
+[e $ ! < ( _getADConverterValue ..  _umidade_minima 140  ]
+{
+"199
+[; ;main.c: 199:         irrigar();
+[e ( _irrigar ..  ]
+"200
+[; ;main.c: 200:     }
 }
-"186
-[; ;main.c: 186: void setupWatchdogTimer()
+[e :U 140 ]
+"201
+[; ;main.c: 201:     return;
+[e $UE 139  ]
+"202
+[; ;main.c: 202: }
+[e :UE 139 ]
+}
+"204
+[; ;main.c: 204: void setupWatchdogTimer()
 [v _setupWatchdogTimer `(v ~T0 @X0 1 ef ]
-"187
-[; ;main.c: 187: {
+"205
+[; ;main.c: 205: {
 {
 [e :U _setupWatchdogTimer ]
 [f ]
-"188
-[; ;main.c: 188:     return;
-[e $UE 139  ]
-"189
-[; ;main.c: 189: }
-[e :UE 139 ]
+"206
+[; ;main.c: 206:     return;
+[e $UE 141  ]
+"207
+[; ;main.c: 207: }
+[e :UE 141 ]
+}
+"210
+[; ;main.c: 210: void setupADC(){
+[v _setupADC `(v ~T0 @X0 1 ef ]
+{
+[e :U _setupADC ]
+[f ]
+"215
+[; ;main.c: 215:     ADCON1bits.PCFG0 = 1;
+[e = . . _ADCON1bits 1 0 -> -> 1 `i `uc ]
+"216
+[; ;main.c: 216:     ADCON1bits.PCFG1 = 1;
+[e = . . _ADCON1bits 1 1 -> -> 1 `i `uc ]
+"217
+[; ;main.c: 217:     ADCON1bits.PCFG2 = 1;
+[e = . . _ADCON1bits 1 2 -> -> 1 `i `uc ]
+"218
+[; ;main.c: 218:     ADCON1bits.PCFG3 = 1;
+[e = . . _ADCON1bits 1 3 -> -> 1 `i `uc ]
+"221
+[; ;main.c: 221:     ADCON1bits.ADCS2 = 1;
+[e = . . _ADCON1bits 0 2 -> -> 1 `i `uc ]
+"222
+[; ;main.c: 222:     ADCON0bits.ADCS1 = 1;
+[e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
+"223
+[; ;main.c: 223:     ADCON0bits.ADCS0 = 0;
+[e = . . _ADCON0bits 1 5 -> -> 0 `i `uc ]
+"226
+[; ;main.c: 226:     ADCON1bits.ADFM = 0;
+[e = . . _ADCON1bits 0 3 -> -> 0 `i `uc ]
+"229
+[; ;main.c: 229:     ADRESL = 0;
+[e = _ADRESL -> -> 0 `i `uc ]
+"230
+[; ;main.c: 230:     ADRESH = 0;
+[e = _ADRESH -> -> 0 `i `uc ]
+"234
+[; ;main.c: 234:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
+"237
+[; ;main.c: 237:     ADCON0bits.CHS0 = 0;
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+"238
+[; ;main.c: 238:     ADCON0bits.CHS1 = 0;
+[e = . . _ADCON0bits 1 3 -> -> 0 `i `uc ]
+"239
+[; ;main.c: 239:     ADCON0bits.CHS2 = 0;
+[e = . . _ADCON0bits 1 4 -> -> 0 `i `uc ]
+"242
+[; ;main.c: 242:     return;
+[e $UE 142  ]
+"243
+[; ;main.c: 243: }
+[e :UE 142 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"191
-[; ;main.c: 191: void main(void)
+"246
+[; ;main.c: 246: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"192
-[; ;main.c: 192: {
+"247
+[; ;main.c: 247: {
 {
 [e :U _main ]
 [f ]
-"194
-[; ;main.c: 194:     TRISA = 0b00000001;
+"249
+[; ;main.c: 249:     TRISA = 0b00000001;
 [e = _TRISA -> -> 1 `i `uc ]
-"195
-[; ;main.c: 195:     TRISB = 0b00011101;
+"250
+[; ;main.c: 250:     TRISB = 0b00011101;
 [e = _TRISB -> -> 29 `i `uc ]
-"196
-[; ;main.c: 196:     TRISD = 0b00000000;
+"251
+[; ;main.c: 251:     TRISD = 0b00000000;
 [e = _TRISD -> -> 0 `i `uc ]
-"197
-[; ;main.c: 197:     OPTION_REGbits.nRBPU = 0;
+"252
+[; ;main.c: 252:     OPTION_REGbits.nRBPU = 0;
 [e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"198
-[; ;main.c: 198:     PORTB = 0;
+"253
+[; ;main.c: 253:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"200
-[; ;main.c: 200:     setupExternalInterruption();
+"255
+[; ;main.c: 255:     setupExternalInterruption();
 [e ( _setupExternalInterruption ..  ]
-"201
-[; ;main.c: 201:     setupWatchdogTimer();
+"256
+[; ;main.c: 256:     setupWatchdogTimer();
 [e ( _setupWatchdogTimer ..  ]
-"202
-[; ;main.c: 202:     setupTimer();
+"257
+[; ;main.c: 257:     setupTimer();
 [e ( _setupTimer ..  ]
-"203
-[; ;main.c: 203:     Lcd_Init();
+"258
+[; ;main.c: 258:     setupADC();
+[e ( _setupADC ..  ]
+"259
+[; ;main.c: 259:     Lcd_Init();
 [e ( _Lcd_Init ..  ]
-"204
-[; ;main.c: 204:     int a = 0;
+"260
+[; ;main.c: 260:     int a = 0;
 [v _a `i ~T0 @X0 1 a ]
 [e = _a -> 0 `i ]
-"205
-[; ;main.c: 205:     while (1)
-[e :U 142 ]
-"206
-[; ;main.c: 206:     {
+"261
+[; ;main.c: 261:     while (1)
+[e :U 145 ]
+"262
+[; ;main.c: 262:     {
 {
-"207
-[; ;main.c: 207:         verifySensor();
+"263
+[; ;main.c: 263:         verifySensor();
 [e ( _verifySensor ..  ]
-"208
-[; ;main.c: 208:         verifyMenu();
+"264
+[; ;main.c: 264:         verifyMenu();
 [e ( _verifyMenu ..  ]
-"211
-[; ;main.c: 211:         if(PORTBbits.RB3 == 0&& a == 0){
-[e $ ! && == -> . . _PORTBbits 0 3 `i -> 0 `i == _a -> 0 `i 144  ]
-{
-"212
-[; ;main.c: 212:             a = 1;
-[e = _a -> 1 `i ]
-"213
-[; ;main.c: 213:             irrigar();
-[e ( _irrigar ..  ]
-"214
-[; ;main.c: 214:             _delay((unsigned long)((5000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"215
-[; ;main.c: 215:         }
+"267
+[; ;main.c: 267:     }
 }
 [e :U 144 ]
-"216
-[; ;main.c: 216:     }
-}
-[e :U 141 ]
-[e $U 142  ]
-[e :U 143 ]
-"217
-[; ;main.c: 217:     return;
-[e $UE 140  ]
-"218
-[; ;main.c: 218: }
-[e :UE 140 ]
+[e $U 145  ]
+[e :U 146 ]
+"268
+[; ;main.c: 268:     return;
+[e $UE 143  ]
+"269
+[; ;main.c: 269: }
+[e :UE 143 ]
 }

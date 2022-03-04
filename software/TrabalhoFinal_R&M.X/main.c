@@ -50,6 +50,7 @@
 int timer_counter = 0;
 int timer_counter_max = 10;
 int irrigacao_ativa = 0;
+int umidade_minima = 10; // em %
 
 
 // 5s = 200ml
@@ -83,16 +84,16 @@ void setupNewVolumeFlow(int new_ml)
 void setupTimer()
 {
     // Configs de interrupção
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIE1bits.TMR1IE = 1;
+    INTCONbits.GIE      = 1;
+    INTCONbits.PEIE     = 1;
+    PIE1bits.TMR1IE     = 1;
     
     /* Configuração do Timer1 como temporazidaor*/
-    T1CONbits.TMR1CS = 0;
+    T1CONbits.TMR1CS    = 0;
     
     // Define o pre-scaler em 1:8
-    T1CONbits.T1CKPS0 = 1;
-    T1CONbits.T1CKPS1 = 1;
+    T1CONbits.T1CKPS0   = 1;
+    T1CONbits.T1CKPS1   = 1;
     
     /* Calculos para o contador
      * clock = 4Mhz -> clock/4 = 1Mhz
@@ -100,10 +101,10 @@ void setupTimer()
      * Para uma interrupção a cada 500ms são necessárias 62500 ciclos de máquina
      * 65536 - 62500 = 3036     
      */
-    TMR1H = 0x0B;
-    TMR1L = 0xDC;
+    TMR1H               = 0x0B;
+    TMR1L               = 0xDC;
     
-    T1CONbits.TMR1ON = 0;
+    T1CONbits.TMR1ON    = 0;
     
     
     // inicia o contador com um valor padrão de ML
@@ -152,6 +153,7 @@ void irrigar(){
     T1CONbits.TMR1ON = 0;
     
 }
+
 void handleExternalInterruption()
 {
 
@@ -182,8 +184,20 @@ void verifyMenu()
     }
     return;
 }
+
+// Retorna o valor em %
+int getADConverterValue(){
+    ADCON0bits.GO       = 1;
+    __delay_us(10);
+    float leitura = 100*ADRESH/256;
+    return leitura;
+}
 void verifySensor()
 {
+    PORTD = getADConverterValue();
+    if(getADConverterValue()<umidade_minima){
+        irrigar();
+    }
     return;
 }
 
@@ -191,6 +205,43 @@ void setupWatchdogTimer()
 {
     return;
 }
+
+
+void setupADC(){
+    
+    
+    // define o A0 como entrada analogica
+    // e o A3 e A2 como VREFs
+    ADCON1bits.PCFG0    = 1;
+    ADCON1bits.PCFG1    = 1;
+    ADCON1bits.PCFG2    = 1;
+    ADCON1bits.PCFG3    = 1;
+    
+    // clock de conversão
+    ADCON1bits.ADCS2    = 1;
+    ADCON0bits.ADCS1    = 1;
+    ADCON0bits.ADCS0    = 0;
+    
+    // Configura a conversão em 8 bits
+    ADCON1bits.ADFM     = 0;
+    
+    // inicialização do conversor
+    ADRESL              = 0;
+    ADRESH              = 0;
+    
+    
+    // Liga o AD
+    ADCON0bits.ADON     = 1;
+    
+    // Seleciona a POrta A0 p ler
+    ADCON0bits.CHS0     = 0;
+    ADCON0bits.CHS1     = 0;
+    ADCON0bits.CHS2     = 0;
+    
+       
+    return;
+}
+
 
 void main(void)
 {
@@ -204,6 +255,7 @@ void main(void)
     setupExternalInterruption();
     setupWatchdogTimer();
     setupTimer(); 
+    setupADC();
     Lcd_Init();
     int a = 0;
     while (1)

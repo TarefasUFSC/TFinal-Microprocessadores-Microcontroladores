@@ -1977,6 +1977,7 @@ void Lcd_Shift_Left()
 int timer_counter = 0;
 int timer_counter_max = 10;
 int irrigacao_ativa = 0;
+int umidade_minima = 10;
 
 
 
@@ -1995,6 +1996,8 @@ void changeTimerMaxConter(int mili_s){
     return;
 
 }
+
+
 
 void setupNewVolumeFlow(int new_ml)
 {
@@ -2044,37 +2047,40 @@ void handleTimerInterruption()
     if(TMR1IF){
         if(irrigacao_ativa){
 
-            PORTD = timer_counter;
-
             timer_counter++;
             if(timer_counter_max <= timer_counter){
                 PORTBbits.RB1 = 0;
                 irrigacao_ativa = 0;
-                PORTBbits.RB7 =1;
             }
         }
         else{
             timer_counter = 0;
             PORTBbits.RB1 = 0;
         }
-        PORTBbits.RB5 = !PORTBbits.RB5;
         PIR1bits.TMR1IF = 0;
         TMR1H = 0x0B;
         TMR1L = 0xDC;
     }
     return;
 }
+
+
 void irrigar(){
     irrigacao_ativa = 1;
     timer_counter = 0;
     PORTBbits.RB1 = 1;
 
+
     T1CONbits.TMR1ON = 1;
+
+
     while(irrigacao_ativa);
+
 
     T1CONbits.TMR1ON = 0;
 
 }
+
 void handleExternalInterruption()
 {
 
@@ -2105,8 +2111,20 @@ void verifyMenu()
     }
     return;
 }
+
+
+int getADConverterValue(){
+    ADCON0bits.GO = 1;
+    _delay((unsigned long)((10)*(4000000/4000000.0)));
+    float leitura = 100*ADRESH/256;
+    return leitura;
+}
 void verifySensor()
 {
+    PORTD = getADConverterValue();
+    if(getADConverterValue()<umidade_minima){
+        irrigar();
+    }
     return;
 }
 
@@ -2114,6 +2132,43 @@ void setupWatchdogTimer()
 {
     return;
 }
+
+
+void setupADC(){
+
+
+
+
+    ADCON1bits.PCFG0 = 1;
+    ADCON1bits.PCFG1 = 1;
+    ADCON1bits.PCFG2 = 1;
+    ADCON1bits.PCFG3 = 1;
+
+
+    ADCON1bits.ADCS2 = 1;
+    ADCON0bits.ADCS1 = 1;
+    ADCON0bits.ADCS0 = 0;
+
+
+    ADCON1bits.ADFM = 0;
+
+
+    ADRESL = 0;
+    ADRESH = 0;
+
+
+
+    ADCON0bits.ADON = 1;
+
+
+    ADCON0bits.CHS0 = 0;
+    ADCON0bits.CHS1 = 0;
+    ADCON0bits.CHS2 = 0;
+
+
+    return;
+}
+
 
 void main(void)
 {
@@ -2127,6 +2182,7 @@ void main(void)
     setupExternalInterruption();
     setupWatchdogTimer();
     setupTimer();
+    setupADC();
     Lcd_Init();
     int a = 0;
     while (1)
@@ -2135,11 +2191,6 @@ void main(void)
         verifyMenu();
 
 
-        if(PORTBbits.RB3 == 0&& a == 0){
-            a = 1;
-            irrigar();
-            _delay((unsigned long)((5000)*(4000000/4000.0)));
-        }
     }
     return;
 }
