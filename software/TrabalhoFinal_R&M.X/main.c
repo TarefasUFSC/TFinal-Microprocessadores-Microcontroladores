@@ -74,6 +74,8 @@ int setup_menu = 0;
 int MLxMS = 25;
 
 
+int ext_int_ativa = 0;
+
 /****************************************************************/
 
 
@@ -81,16 +83,17 @@ int MLxMS = 25;
 void changeTimerMaxConter(int mili_s){
     
     timer_counter_max = (mili_s/500);
+    PORTC = timer_counter_max;
     return;
     
 }
 
 
 // passa o parametro da nova qtd de ml
-void setupNewVolumeFlow(int new_ml)
+void setupNewVolumeFlow()
 {
     // converter ml em ms
-    int new_ms = new_ml*MLxMS;
+    int new_ms = water_volume*MLxMS;
     // chama o setup timer com o novo ms
     changeTimerMaxConter(new_ms);
     return;
@@ -123,7 +126,7 @@ void setupTimer()
     
     
     // inicia o contador com um valor padr�o de ML
-    setupNewVolumeFlow(water_volume);
+    setupNewVolumeFlow();
     return;
 }
 
@@ -161,7 +164,6 @@ void handleTimerInterruption()
 void irrigar(){
     irrigacao_ativa = 1;
     timer_counter = 0;
-    
     // ativa o timer 1
     T1CONbits.TMR1ON = 1;
     
@@ -175,7 +177,9 @@ void irrigar(){
 void handleExternalInterruption()
 {
     if(INTF){
-        if(!irrigacao_ativa){
+        if(!irrigacao_ativa && ext_int_ativa){
+            
+            
             irrigar();
         }
         INTCONbits.INTF = 0;
@@ -192,9 +196,10 @@ void __interrupt() interrupcao(void)
 
 void setupExternalInterruption()
 {
-    OPTION_REGbits.INTEDG   = 1;
+    OPTION_REGbits.INTEDG   = 0;
 	INTCONbits.GIE          = 1;
 	INTCONbits.INTE         = 1;
+    INTCONbits.INTF = 0;
     return;
 }
 
@@ -248,7 +253,7 @@ void handleMenu()
         writeValor(volume);
         if(!BTN_ENTER){
             water_volume = volume;
-            setupNewVolumeFlow(water_volume);
+            setupNewVolumeFlow();
             setup_menu = 3;
             __delay_ms(500);
         }
@@ -295,7 +300,7 @@ int getADConverterValue(){
 }
 void verifySensor()
 {
-    PORTC = getADConverterValue();
+
     if(getADConverterValue()<umidade_minima){
         LED_UMIDADE = 1;
         irrigar();
@@ -370,6 +375,8 @@ void main(void)
     setupADC();
     Lcd_Init();
    
+    __delay_ms(100);
+    ext_int_ativa = 1;
     
     while (1)
     {
