@@ -139,6 +139,8 @@ void irrigar(){
     VALVULA = 1;
     
     T1CONbits.TMR1ON = 1;
+    
+    // não pode usar o menu enquanto tiver aqui
     while(irrigacao_ativa);
     
     T1CONbits.TMR1ON = 0;
