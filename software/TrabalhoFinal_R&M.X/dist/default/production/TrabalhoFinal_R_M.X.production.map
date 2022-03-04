@@ -1,0 +1,315 @@
+Microchip MPLAB XC8 Compiler V2.36
+
+Linker command line:
+
+-W-3 --edf=D:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
+  -h+dist/default/production\TrabalhoFinal_R_M.X.production.sym \
+  --cmf=dist/default/production\TrabalhoFinal_R_M.X.production.cmf -z \
+  -Q16F877A -oC:\Users\Rodrigo\AppData\Local\Temp\xcAs4e8.4 \
+  --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/TrabalhoFinal_R_M.X.production.map \
+  --md=C:\Users\Rodrigo\AppData\Local\Temp\xcAs4e8.dat -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -ACONFIG=02007h-02007h -DCONFIG=2 -AIDLOC=02000h-02003h -DIDLOC=2 \
+  -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
+  -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -k C:\Users\Rodrigo\AppData\Local\Temp\xcAs4e8.o \
+  dist/default/production\TrabalhoFinal_R_M.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 16F877A
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\Rodrigo\AppData\Local\Temp\xcAs4e8.o
+                end_init                              C        C        3        8       0
+                reset_vec                             0        0        3        0       0
+dist/default/production\TrabalhoFinal_R_M.X.production.o
+                cinit                                 F        F        4        8       0
+                intentry                              4        4        8        8       0
+                text12                               F5       F5        1        8       0
+                text11                               F4       F4        1        8       0
+                text10                               D2       D2       11        8       0
+                text9                                96       96       22        8       0
+                text8                                B8       B8       1A        8       0
+                text7                                13       13       5D        8       0
+                text6                                F3       F3        1        8       0
+                text5                                F2       F2        1        8       0
+                text4                                F1       F1        1        8       0
+                text3                                F0       F0        1        8       0
+                text2                                E3       E3        C        8       0
+                text1                                EF       EF        1        8       0
+                maintext                             70       70       26        8       0
+                cstackCOMMON                         70       70        8       70       1
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                end_init                              C        C        3         0
+                cinit                                 F        F        4         0
+                intentry                              4        4        8         0
+                reset_vec                             0        0        3         0
+                text12                               F5       F5        1         0
+                text11                               F4       F4        1         0
+                text10                               D2       D2       11         0
+                text9                                96       96       22         0
+                text8                                B8       B8       1A         0
+                text7                                13       13       5D         0
+                text6                                F3       F3        1         0
+                text5                                F2       F2        1         0
+                text4                                F1       F1        1         0
+                text3                                F0       F0        1         0
+                text2                                E3       E3        C         0
+                text1                                EF       EF        1         0
+                maintext                             70       70       26         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        8         1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+        CLASS   STACK          
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                intentry                       000004  0000F2  0000F6         8       0  CODE        2
+                cstackCOMMON                   000070  000008  000078        70       1  COMMON      1
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            020-06F            50           1
+        BANK1            0A0-0EF            50           1
+        BANK2            110-16F            60           1
+        BANK3            190-1EF            60           1
+        CODE             003-003             1           2
+                         0F6-1FFF           800
+        COMMON           078-07D             6           1
+        CONFIG           2007-2007             1           2
+        CONST            003-003             1           2
+                         0F6-1FFF           100
+        EEDATA           2100-21FF           100           2
+        ENTRY            003-003             1           2
+                         0F6-1FFF           100
+        IDLOC            2000-2003             4           2
+        RAM              020-06F            50           1
+                         0A0-0EF            50
+                         110-16F            60
+                         190-1EF            60
+        SFR0             000-01F            20           1
+        SFR1             080-09F            20           1
+        SFR2             100-10F            10           1
+        SFR3             180-18F            10           1
+        STRCODE          003-003             1           2
+                         0F6-1FFF          1F0A
+        STRING           003-003             1           2
+                         0F6-1FFF           100
+
+                                  Symbol Table
+
+Lcd_Cmd@a                           cstackCOMMON 075
+Lcd_Port@a                          cstackCOMMON 072
+_Lcd_Cmd                            text8        0B8
+_Lcd_Init                           text7        013
+_Lcd_Port                           text9        096
+_PORTBbits                          (abs)        006
+_PORTDbits                          (abs)        008
+__Habs1                             abs1         000
+__Hbank0                            bank0        000
+__Hbank1                            bank1        000
+__Hbank2                            bank2        000
+__Hbank3                            bank3        000
+__Hcinit                            cinit        013
+__Hclrtext                          clrtext      000
+__Hcode                             code         000
+__Hcommon                           common       000
+__HcstackCOMMON                     cstackCOMMON 000
+__Heeprom_data                      eeprom_data  000
+__Hend_init                         end_init     00F
+__Hfunctab                          functab      000
+__Hinit                             init         00C
+__Hintentry                         intentry     00C
+__Hmaintext                         maintext     000
+__Hpowerup                          powerup      000
+__Hram                              ram          000
+__Hreset_vec                        reset_vec    003
+__Hsfr0                             sfr0         000
+__Hsfr1                             sfr1         000
+__Hsfr2                             sfr2         000
+__Hsfr3                             sfr3         000
+__Hspace_0                          (abs)        0F6
+__Hspace_1                          (abs)        078
+__Hspace_2                          (abs)        000
+__Hspace_3                          (abs)        000
+__Hstack                            stack        000
+__Hstrings                          strings      000
+__Htext                             text         000
+__Labs1                             abs1         000
+__Lbank0                            bank0        000
+__Lbank1                            bank1        000
+__Lbank2                            bank2        000
+__Lbank3                            bank3        000
+__Lcinit                            cinit        00F
+__Lclrtext                          clrtext      000
+__Lcode                             code         000
+__Lcommon                           common       000
+__LcstackCOMMON                     cstackCOMMON 000
+__Leeprom_data                      eeprom_data  000
+__Lend_init                         end_init     00C
+__Lfunctab                          functab      000
+__Linit                             init         00C
+__Lintentry                         intentry     004
+__Lmaintext                         maintext     000
+__Lpowerup                          powerup      000
+__Lram                              ram          000
+__Lreset_vec                        reset_vec    000
+__Lsfr0                             sfr0         000
+__Lsfr1                             sfr1         000
+__Lsfr2                             sfr2         000
+__Lsfr3                             sfr3         000
+__Lspace_0                          (abs)        000
+__Lspace_1                          (abs)        000
+__Lspace_2                          (abs)        000
+__Lspace_3                          (abs)        000
+__Lstack                            stack        000
+__Lstrings                          strings      000
+__Ltext                             text         000
+__S0                                (abs)        0F6
+__S1                                (abs)        078
+__S3                                (abs)        000
+___int_sp                           stack        000
+___latbits                          (abs)        002
+___sp                               stack        000
+___stackhi                          (abs)        000
+___stacklo                          (abs)        000
+__end_of_Lcd_Cmd                    text8        0D2
+__end_of_Lcd_Init                   text7        070
+__end_of_Lcd_Port                   text9        0B8
+__end_of__initialization            cinit        00F
+__end_of_handleExternalInterruption text12       0F6
+__end_of_handleMenu                 text3        0F1
+__end_of_handleTimerInterruption    text11       0F5
+__end_of_interrupcao                text10       0E3
+__end_of_main                       maintext     096
+__end_of_setupExternalInterruption  text6        0F4
+__end_of_setupTimer                 text5        0F3
+__end_of_setupWatchdogTimer         text4        0F2
+__end_of_verifyMenu                 text2        0EF
+__end_of_verifySensor               text1        0F0
+__initialization                    cinit        00F
+__pcstackCOMMON                     cstackCOMMON 070
+__pintentry                         intentry     004
+__pmaintext                         maintext     070
+__ptext1                            text1        0EF
+__ptext10                           text10       0D2
+__ptext11                           text11       0F4
+__ptext12                           text12       0F5
+__ptext2                            text2        0E3
+__ptext3                            text3        0F0
+__ptext4                            text4        0F1
+__ptext5                            text5        0F2
+__ptext6                            text6        0F3
+__ptext7                            text7        013
+__ptext8                            text8        0B8
+__ptext9                            text9        096
+_handleExternalInterruption         text12       0F5
+_handleMenu                         text3        0F0
+_handleTimerInterruption            text11       0F4
+_interrupcao                        text10       0D2
+_main                               maintext     070
+_setupExternalInterruption          text6        0F3
+_setupTimer                         text5        0F2
+_setupWatchdogTimer                 text4        0F1
+_verifyMenu                         text2        0E3
+_verifySensor                       text1        0EF
+btemp                               (abs)        07E
+end_of_initialization               cinit        00F
+interrupt_function                  intentry     004
+intlevel0                           functab      000
+intlevel1                           functab      000
+intlevel2                           functab      000
+intlevel3                           functab      000
+intlevel4                           functab      000
+intlevel5                           functab      000
+reset_vec                           reset_vec    000
+saved_w                             (abs)        07E
+setupTimer@mili_s                   cstackCOMMON 072
+start                               init         00C
+start_initialization                cinit        00F
+wtemp0                              (abs)        07E
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+./lcd.h
+		_Lcd_Init      		CODE           	0013	0000	93
+		_Lcd_Cmd       		CODE           	00B8	0000	26
+		_Lcd_Port      		CODE           	0096	0000	34
+
+./lcd.h estimated size: 153
+
+shared
+		__initialization		CODE           	000F	0000	1
+
+shared estimated size: 1
+
+main.c
+		_handleExternalInterruption		CODE           	00F5	0000	1
+		_setupWatchdogTimer		CODE           	00F1	0000	1
+		_setupExternalInterruption		CODE           	00F3	0000	1
+		_main          		CODE           	0070	0000	38
+		_handleTimerInterruption		CODE           	00F4	0000	1
+		_interrupcao   		CODE           	00D2	0000	17
+		_verifyMenu    		CODE           	00E3	0000	12
+		_verifySensor  		CODE           	00EF	0000	1
+		_handleMenu    		CODE           	00F0	0000	1
+		_setupTimer    		CODE           	00F2	0000	1
+
+main.c estimated size: 74
+

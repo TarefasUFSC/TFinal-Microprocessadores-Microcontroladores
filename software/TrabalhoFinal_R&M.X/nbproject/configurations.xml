@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>lcd.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -30,7 +31,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool></platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.35</languageToolchainVersion>
+        <languageToolchainVersion>2.36</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -39,7 +40,6 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../lcd.h</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
