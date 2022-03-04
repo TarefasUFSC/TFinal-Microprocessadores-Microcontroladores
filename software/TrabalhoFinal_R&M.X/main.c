@@ -218,7 +218,6 @@ int getADConverterValue(){
 }
 void verifySensor()
 {
-    PORTD = getADConverterValue();
     if(getADConverterValue()<umidade_minima){
         LED_UMIDADE = 1;
         irrigar();
