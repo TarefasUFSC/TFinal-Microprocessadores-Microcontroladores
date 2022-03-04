@@ -1818,7 +1818,43 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 18 "main.c" 2
-# 45 "main.c"
+
+
+# 1 "D:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c90\\math.h" 1 3
+
+
+
+# 1 "D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__unsupported.h" 1 3
+# 4 "D:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c90\\math.h" 2 3
+# 30 "D:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c90\\math.h" 3
+extern double fabs(double);
+extern double floor(double);
+extern double ceil(double);
+extern double modf(double, double *);
+extern double sqrt(double);
+extern double atof(const char *);
+extern double sin(double) ;
+extern double cos(double) ;
+extern double tan(double) ;
+extern double asin(double) ;
+extern double acos(double) ;
+extern double atan(double);
+extern double atan2(double, double) ;
+extern double log(double);
+extern double log10(double);
+extern double pow(double, double) ;
+extern double exp(double) ;
+extern double sinh(double) ;
+extern double cosh(double) ;
+extern double tanh(double);
+extern double eval_poly(double, const double *, int);
+extern double frexp(double, int *);
+extern double ldexp(double, int);
+extern double fmod(double, double);
+extern double trunc(double);
+extern double round(double);
+# 20 "main.c" 2
+# 47 "main.c"
 # 1 "./lcd.h" 1
 
 
@@ -1849,9 +1885,9 @@ void Lcd_Cmd(char a)
 {
  PORTDbits.RD1 = 0;
  Lcd_Port(a);
- PORTDbits.RD3 = 1;
+ PORTDbits.RD0 = 1;
         _delay((unsigned long)((4)*(4000000/4000.0)));
-        PORTDbits.RD3 = 0;
+        PORTDbits.RD0 = 0;
 }
 
 void Lcd_Clear()
@@ -1907,13 +1943,13 @@ void Lcd_Write_Char(char a)
    y = a&0xF0;
    PORTDbits.RD1 = 1;
    Lcd_Port(y>>4);
-   PORTDbits.RD3 = 1;
+   PORTDbits.RD0 = 1;
    _delay((unsigned long)((40)*(4000000/4000000.0)));
-   PORTDbits.RD3 = 0;
+   PORTDbits.RD0 = 0;
    Lcd_Port(temp);
-   PORTDbits.RD3 = 1;
+   PORTDbits.RD0 = 1;
    _delay((unsigned long)((40)*(4000000/4000000.0)));
-   PORTDbits.RD3 = 0;
+   PORTDbits.RD0 = 0;
 }
 
 void Lcd_Write_String(char *a)
@@ -1934,29 +1970,111 @@ void Lcd_Shift_Left()
  Lcd_Cmd(0x01);
  Lcd_Cmd(0x08);
 }
-# 45 "main.c" 2
+# 47 "main.c" 2
 
 
 
-void setupTimer(int mili_s)
-{
+int timer_counter = 0;
+int timer_counter_max = 10;
+int irrigacao_ativa = 0;
+
+
+
+
+
+int MLxMS = 25;
+
+
+
+
+
+
+void changeTimerMaxConter(int mili_s){
+
+    timer_counter_max = (mili_s/500);
     return;
+
 }
 
 void setupNewVolumeFlow(int new_ml)
 {
 
-    int new_ms;
+    int new_ms = new_ml*MLxMS;
 
-    setupTimer(new_ms);
+    changeTimerMaxConter(new_ms);
     return;
 }
+
+void setupTimer()
+{
+
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.TMR1IE = 1;
+
+
+    T1CONbits.TMR1CS = 0;
+
+
+    T1CONbits.T1CKPS0 = 1;
+    T1CONbits.T1CKPS1 = 1;
+
+
+
+
+
+
+
+    TMR1H = 0x0B;
+    TMR1L = 0xDC;
+
+    T1CONbits.TMR1ON = 0;
+
+
+
+    setupNewVolumeFlow(200);
+    return;
+}
+
+
+
 
 void handleTimerInterruption()
 {
+    if(TMR1IF){
+        if(irrigacao_ativa){
+
+            PORTD = timer_counter;
+
+            timer_counter++;
+            if(timer_counter_max <= timer_counter){
+                PORTBbits.RB1 = 0;
+                irrigacao_ativa = 0;
+                PORTBbits.RB7 =1;
+            }
+        }
+        else{
+            timer_counter = 0;
+            PORTBbits.RB1 = 0;
+        }
+        PORTBbits.RB5 = !PORTBbits.RB5;
+        PIR1bits.TMR1IF = 0;
+        TMR1H = 0x0B;
+        TMR1L = 0xDC;
+    }
     return;
 }
+void irrigar(){
+    irrigacao_ativa = 1;
+    timer_counter = 0;
+    PORTBbits.RB1 = 1;
 
+    T1CONbits.TMR1ON = 1;
+    while(irrigacao_ativa);
+
+    T1CONbits.TMR1ON = 0;
+
+}
 void handleExternalInterruption()
 {
 
@@ -2000,15 +2118,28 @@ void setupWatchdogTimer()
 void main(void)
 {
 
+    TRISA = 0b00000001;
+    TRISB = 0b00011101;
+    TRISD = 0b00000000;
+    OPTION_REGbits.nRBPU = 0;
+    PORTB = 0;
+
     setupExternalInterruption();
     setupWatchdogTimer();
-    setupTimer(500);
+    setupTimer();
     Lcd_Init();
-
+    int a = 0;
     while (1)
     {
         verifySensor();
         verifyMenu();
+
+
+        if(PORTBbits.RB3 == 0&& a == 0){
+            a = 1;
+            irrigar();
+            _delay((unsigned long)((5000)*(4000000/4000.0)));
+        }
     }
     return;
 }

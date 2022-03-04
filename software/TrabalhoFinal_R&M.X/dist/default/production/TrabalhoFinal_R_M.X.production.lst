@@ -1,798 +1,798 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Fri Mar 04 15:05:35 2022
+                                                                                               Fri Mar 04 16:10:47 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F877A
      2                           	pagewidth 120
      3                           	opt	flic
-     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
-     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
-     6                           	psect	maintext,global,class=CODE,split=1,delta=2
-     7                           	psect	text1,local,class=CODE,merge=1,delta=2
-     8                           	psect	text2,local,class=CODE,merge=1,delta=2
-     9                           	psect	text3,local,class=CODE,merge=1,delta=2
-    10                           	psect	text4,local,class=CODE,merge=1,delta=2
-    11                           	psect	text5,local,class=CODE,merge=1,delta=2
-    12                           	psect	text6,local,class=CODE,merge=1,delta=2
-    13                           	psect	text7,local,class=CODE,merge=1,delta=2
-    14                           	psect	text8,local,class=CODE,merge=1,delta=2
-    15                           	psect	text9,local,class=CODE,merge=1,delta=2
-    16                           	psect	text10,local,class=CODE,merge=1,delta=2
-    17                           	psect	intentry,global,class=CODE,delta=2
-    18                           	psect	text11,local,class=CODE,merge=1,delta=2
-    19                           	psect	text12,local,class=CODE,merge=1,delta=2
-    20                           	dabs	1,0x7E,2
-    21  0000                     
-    22                           ; Version 2.20
-    23                           ; Generated 12/02/2020 GMT
-    24                           ; 
-    25                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
-    26                           ; All rights reserved.
-    27                           ; 
-    28                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+     4                           	psect	idataBANK0,global,class=CODE,delta=2,noexec
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     7                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1,noexec
+     8                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     9                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+    10                           	psect	maintext,global,class=CODE,split=1,delta=2
+    11                           	psect	text1,local,class=CODE,merge=1,delta=2
+    12                           	psect	text2,local,class=CODE,merge=1,delta=2
+    13                           	psect	text3,local,class=CODE,merge=1,delta=2
+    14                           	psect	text4,local,class=CODE,merge=1,delta=2
+    15                           	psect	text5,local,class=CODE,merge=1,delta=2
+    16                           	psect	text6,local,class=CODE,merge=1,delta=2
+    17                           	psect	text7,local,class=CODE,merge=1,delta=2
+    18                           	psect	text8,local,class=CODE,merge=1,delta=2,group=1
+    19                           	psect	text9,local,class=CODE,merge=1,delta=2,group=1
+    20                           	psect	text10,local,class=CODE,merge=1,delta=2
+    21                           	psect	text11,local,class=CODE,merge=1,delta=2
+    22                           	psect	text12,local,class=CODE,merge=1,delta=2
+    23                           	psect	text13,local,class=CODE,merge=1,delta=2
+    24                           	psect	text14,local,class=CODE,merge=1,delta=2
+    25                           	psect	text15,local,class=CODE,merge=1,delta=2
+    26                           	psect	intentry,global,class=CODE,delta=2
+    27                           	psect	text16,local,class=CODE,merge=1,delta=2
+    28                           	psect	text17,local,class=CODE,merge=1,delta=2
+    29                           	dabs	1,0x7E,2
+    30  0000                     
+    31                           ; Version 2.20
+    32                           ; Generated 12/02/2020 GMT
+    33                           ; 
+    34                           ; Copyright © 2020, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    35                           ; All rights reserved.
+    36                           ; 
+    37                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
       +                          ip").
-    29                           ; 
-    30                           ; Redistribution and use in source and binary forms, with or without modification, are
-    31                           ; permitted provided that the following conditions are met:
-    32                           ; 
-    33                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+    38                           ; 
+    39                           ; Redistribution and use in source and binary forms, with or without modification, are
+    40                           ; permitted provided that the following conditions are met:
+    41                           ; 
+    42                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
       +                          t of
-    34                           ;        conditions and the following disclaimer.
-    35                           ; 
-    36                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+    43                           ;        conditions and the following disclaimer.
+    44                           ; 
+    45                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
       +                          list
-    37                           ;        of conditions and the following disclaimer in the documentation and/or other
-    38                           ;        materials provided with the distribution.
-    39                           ; 
-    40                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+    46                           ;        of conditions and the following disclaimer in the documentation and/or other
+    47                           ;        materials provided with the distribution.
+    48                           ; 
+    49                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
       +                          is
-    41                           ;        software without specific prior written permission.
-    42                           ; 
-    43                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
-    44                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
-      +                          OR
-    45                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
-      +                          T,
-    46                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
-    47                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
-    48                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
-      +                          RICT
-    49                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
-      +                          SE OF
-    50                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    50                           ;        software without specific prior written permission.
     51                           ; 
-    52                           ; 
-    53                           ; Code-generator required, PIC16F877A Definitions
-    54                           ; 
-    55                           ; SFR Addresses
-    56  0000                     	;# 
-    57  0001                     	;# 
-    58  0002                     	;# 
-    59  0003                     	;# 
-    60  0004                     	;# 
-    61  0005                     	;# 
-    62  0006                     	;# 
-    63  0007                     	;# 
-    64  0008                     	;# 
-    65  0009                     	;# 
-    66  000A                     	;# 
-    67  000B                     	;# 
-    68  000C                     	;# 
-    69  000D                     	;# 
-    70  000E                     	;# 
-    71  000E                     	;# 
-    72  000F                     	;# 
-    73  0010                     	;# 
-    74  0011                     	;# 
-    75  0012                     	;# 
-    76  0013                     	;# 
-    77  0014                     	;# 
-    78  0015                     	;# 
-    79  0015                     	;# 
-    80  0016                     	;# 
-    81  0017                     	;# 
-    82  0018                     	;# 
-    83  0019                     	;# 
-    84  001A                     	;# 
-    85  001B                     	;# 
-    86  001B                     	;# 
-    87  001C                     	;# 
-    88  001D                     	;# 
-    89  001E                     	;# 
-    90  001F                     	;# 
-    91  0081                     	;# 
-    92  0085                     	;# 
-    93  0086                     	;# 
-    94  0087                     	;# 
-    95  0088                     	;# 
-    96  0089                     	;# 
-    97  008C                     	;# 
-    98  008D                     	;# 
-    99  008E                     	;# 
-   100  0091                     	;# 
-   101  0092                     	;# 
-   102  0093                     	;# 
-   103  0094                     	;# 
-   104  0098                     	;# 
-   105  0099                     	;# 
-   106  009C                     	;# 
-   107  009D                     	;# 
-   108  009E                     	;# 
-   109  009F                     	;# 
-   110  010C                     	;# 
-   111  010D                     	;# 
-   112  010E                     	;# 
-   113  010F                     	;# 
-   114  018C                     	;# 
-   115  018D                     	;# 
-   116  0000                     	;# 
-   117  0001                     	;# 
-   118  0002                     	;# 
-   119  0003                     	;# 
-   120  0004                     	;# 
-   121  0005                     	;# 
-   122  0006                     	;# 
-   123  0007                     	;# 
-   124  0008                     	;# 
-   125  0009                     	;# 
-   126  000A                     	;# 
-   127  000B                     	;# 
-   128  000C                     	;# 
-   129  000D                     	;# 
-   130  000E                     	;# 
-   131  000E                     	;# 
-   132  000F                     	;# 
-   133  0010                     	;# 
-   134  0011                     	;# 
-   135  0012                     	;# 
-   136  0013                     	;# 
-   137  0014                     	;# 
-   138  0015                     	;# 
-   139  0015                     	;# 
-   140  0016                     	;# 
-   141  0017                     	;# 
-   142  0018                     	;# 
-   143  0019                     	;# 
-   144  001A                     	;# 
-   145  001B                     	;# 
-   146  001B                     	;# 
-   147  001C                     	;# 
-   148  001D                     	;# 
-   149  001E                     	;# 
-   150  001F                     	;# 
-   151  0081                     	;# 
-   152  0085                     	;# 
-   153  0086                     	;# 
-   154  0087                     	;# 
-   155  0088                     	;# 
-   156  0089                     	;# 
-   157  008C                     	;# 
-   158  008D                     	;# 
-   159  008E                     	;# 
-   160  0091                     	;# 
-   161  0092                     	;# 
-   162  0093                     	;# 
-   163  0094                     	;# 
-   164  0098                     	;# 
-   165  0099                     	;# 
-   166  009C                     	;# 
-   167  009D                     	;# 
-   168  009E                     	;# 
-   169  009F                     	;# 
-   170  010C                     	;# 
-   171  010D                     	;# 
-   172  010E                     	;# 
-   173  010F                     	;# 
-   174  018C                     	;# 
-   175  018D                     	;# 
-   176  0006                     _PORTBbits	set	6
-   177  0008                     _PORTDbits	set	8
-   178                           
-   179                           	psect	cinit
-   180  000F                     start_initialization:	
-   181                           ; #config settings
-   182                           
-   183  000F                     __initialization:
-   184  000F                     end_of_initialization:	
-   185                           ;End of C runtime variable initialization code
-   186                           
-   187  000F                     __end_of__initialization:
-   188  000F  0183               	clrf	3
-   189  0010  120A  118A  2870   	ljmp	_main	;jump to C main() function
-   190                           
-   191                           	psect	cstackCOMMON
-   192  0070                     __pcstackCOMMON:
-   193  0070                     ?_Lcd_Port:
-   194  0070                     ?_Lcd_Cmd:	
-   195                           ; 1 bytes @ 0x0
-   196                           
-   197  0070                     ?_Lcd_Init:	
-   198                           ; 1 bytes @ 0x0
-   199                           
-   200  0070                     ?_handleTimerInterruption:	
-   201                           ; 1 bytes @ 0x0
-   202                           
-   203  0070                     ??_handleTimerInterruption:	
-   204                           ; 1 bytes @ 0x0
-   205                           
-   206  0070                     ?_handleExternalInterruption:	
-   207                           ; 1 bytes @ 0x0
-   208                           
-   209  0070                     ??_handleExternalInterruption:	
-   210                           ; 1 bytes @ 0x0
+    52                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    53                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    54                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    55                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    56                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    57                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    58                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    59                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    60                           ; 
+    61                           ; 
+    62                           ; Code-generator required, PIC16F877A Definitions
+    63                           ; 
+    64                           ; SFR Addresses
+    65  0000                     	;# 
+    66  0001                     	;# 
+    67  0002                     	;# 
+    68  0003                     	;# 
+    69  0004                     	;# 
+    70  0005                     	;# 
+    71  0006                     	;# 
+    72  0007                     	;# 
+    73  0008                     	;# 
+    74  0009                     	;# 
+    75  000A                     	;# 
+    76  000B                     	;# 
+    77  000C                     	;# 
+    78  000D                     	;# 
+    79  000E                     	;# 
+    80  000E                     	;# 
+    81  000F                     	;# 
+    82  0010                     	;# 
+    83  0011                     	;# 
+    84  0012                     	;# 
+    85  0013                     	;# 
+    86  0014                     	;# 
+    87  0015                     	;# 
+    88  0015                     	;# 
+    89  0016                     	;# 
+    90  0017                     	;# 
+    91  0018                     	;# 
+    92  0019                     	;# 
+    93  001A                     	;# 
+    94  001B                     	;# 
+    95  001B                     	;# 
+    96  001C                     	;# 
+    97  001D                     	;# 
+    98  001E                     	;# 
+    99  001F                     	;# 
+   100  0081                     	;# 
+   101  0085                     	;# 
+   102  0086                     	;# 
+   103  0087                     	;# 
+   104  0088                     	;# 
+   105  0089                     	;# 
+   106  008C                     	;# 
+   107  008D                     	;# 
+   108  008E                     	;# 
+   109  0091                     	;# 
+   110  0092                     	;# 
+   111  0093                     	;# 
+   112  0094                     	;# 
+   113  0098                     	;# 
+   114  0099                     	;# 
+   115  009C                     	;# 
+   116  009D                     	;# 
+   117  009E                     	;# 
+   118  009F                     	;# 
+   119  010C                     	;# 
+   120  010D                     	;# 
+   121  010E                     	;# 
+   122  010F                     	;# 
+   123  018C                     	;# 
+   124  018D                     	;# 
+   125  0000                     	;# 
+   126  0001                     	;# 
+   127  0002                     	;# 
+   128  0003                     	;# 
+   129  0004                     	;# 
+   130  0005                     	;# 
+   131  0006                     	;# 
+   132  0007                     	;# 
+   133  0008                     	;# 
+   134  0009                     	;# 
+   135  000A                     	;# 
+   136  000B                     	;# 
+   137  000C                     	;# 
+   138  000D                     	;# 
+   139  000E                     	;# 
+   140  000E                     	;# 
+   141  000F                     	;# 
+   142  0010                     	;# 
+   143  0011                     	;# 
+   144  0012                     	;# 
+   145  0013                     	;# 
+   146  0014                     	;# 
+   147  0015                     	;# 
+   148  0015                     	;# 
+   149  0016                     	;# 
+   150  0017                     	;# 
+   151  0018                     	;# 
+   152  0019                     	;# 
+   153  001A                     	;# 
+   154  001B                     	;# 
+   155  001B                     	;# 
+   156  001C                     	;# 
+   157  001D                     	;# 
+   158  001E                     	;# 
+   159  001F                     	;# 
+   160  0081                     	;# 
+   161  0085                     	;# 
+   162  0086                     	;# 
+   163  0087                     	;# 
+   164  0088                     	;# 
+   165  0089                     	;# 
+   166  008C                     	;# 
+   167  008D                     	;# 
+   168  008E                     	;# 
+   169  0091                     	;# 
+   170  0092                     	;# 
+   171  0093                     	;# 
+   172  0094                     	;# 
+   173  0098                     	;# 
+   174  0099                     	;# 
+   175  009C                     	;# 
+   176  009D                     	;# 
+   177  009E                     	;# 
+   178  009F                     	;# 
+   179  010C                     	;# 
+   180  010D                     	;# 
+   181  010E                     	;# 
+   182  010F                     	;# 
+   183  018C                     	;# 
+   184  018D                     	;# 
+   185                           
+   186                           	psect	idataBANK0
+   187  0277                     __pidataBANK0:
+   188                           
+   189                           ;initializer for _MLxMS
+   190  0277  3419               	retlw	25
+   191  0278  3400               	retlw	0
+   192                           
+   193                           ;initializer for _timer_counter_max
+   194  0279  340A               	retlw	10
+   195  027A  3400               	retlw	0
+   196  0006                     _PORTB	set	6
+   197  000C                     _PIR1bits	set	12
+   198  0006                     _PORTBbits	set	6
+   199  0008                     _PORTD	set	8
+   200  000E                     _TMR1L	set	14
+   201  000F                     _TMR1H	set	15
+   202  0010                     _T1CONbits	set	16
+   203  000B                     _INTCONbits	set	11
+   204  0008                     _PORTDbits	set	8
+   205  0060                     _TMR1IF	set	96
+   206  0081                     _OPTION_REGbits	set	129
+   207  0088                     _TRISD	set	136
+   208  0086                     _TRISB	set	134
+   209  0085                     _TRISA	set	133
+   210  008C                     _PIE1bits	set	140
    211                           
-   212  0070                     ?_interrupcao:	
-   213                           ; 1 bytes @ 0x0
-   214                           
-   215  0070                     ??_interrupcao:	
-   216                           ; 1 bytes @ 0x0
+   212                           	psect	cinit
+   213  000F                     start_initialization:	
+   214                           ; #config settings
+   215                           
+   216  000F                     __initialization:
    217                           
-   218  0070                     ?_setupExternalInterruption:	
-   219                           ; 1 bytes @ 0x0
-   220                           
-   221  0070                     ?_handleMenu:	
-   222                           ; 1 bytes @ 0x0
-   223                           
-   224  0070                     ?_verifyMenu:	
-   225                           ; 1 bytes @ 0x0
-   226                           
-   227  0070                     ?_verifySensor:	
-   228                           ; 1 bytes @ 0x0
-   229                           
-   230  0070                     ?_setupWatchdogTimer:	
-   231                           ; 1 bytes @ 0x0
-   232                           
-   233  0070                     ?_main:	
-   234                           ; 1 bytes @ 0x0
+   218                           ; Initialize objects allocated to BANK0
+   219  000F  120A  118A  2277  120A  118A  	fcall	__pidataBANK0	;fetch initializer
+   220  0014  00B0               	movwf	__pdataBANK0& (0+127)
+   221  0015  120A  118A  2278  120A  118A  	fcall	__pidataBANK0+1	;fetch initializer
+   222  001A  00B1               	movwf	(__pdataBANK0+1)& (0+127)
+   223  001B  120A  118A  2279  120A  118A  	fcall	__pidataBANK0+2	;fetch initializer
+   224  0020  00B2               	movwf	(__pdataBANK0+2)& (0+127)
+   225  0021  120A  118A  227A  120A  118A  	fcall	__pidataBANK0+3	;fetch initializer
+   226  0026  00B3               	movwf	(__pdataBANK0+3)& (0+127)
+   227                           
+   228                           ; Clear objects allocated to COMMON
+   229  0027  01F7               	clrf	__pbssCOMMON& (0+127)
+   230  0028  01F8               	clrf	(__pbssCOMMON+1)& (0+127)
+   231  0029  01F9               	clrf	(__pbssCOMMON+2)& (0+127)
+   232  002A  01FA               	clrf	(__pbssCOMMON+3)& (0+127)
+   233  002B                     end_of_initialization:	
+   234                           ;End of C runtime variable initialization code
    235                           
-   236                           
-   237                           ; 1 bytes @ 0x0
-   238  0070                     	ds	2
-   239  0072                     ??_Lcd_Port:
-   240  0072                     ?_setupTimer:	
-   241                           ; 1 bytes @ 0x2
-   242                           
-   243  0072                     ??_setupExternalInterruption:	
-   244                           ; 1 bytes @ 0x2
-   245                           
-   246  0072                     ??_handleMenu:	
-   247                           ; 1 bytes @ 0x2
-   248                           
-   249  0072                     ??_verifyMenu:	
-   250                           ; 1 bytes @ 0x2
-   251                           
-   252  0072                     ??_verifySensor:	
-   253                           ; 1 bytes @ 0x2
-   254                           
-   255  0072                     ??_setupWatchdogTimer:	
-   256                           ; 1 bytes @ 0x2
-   257                           
-   258  0072                     Lcd_Port@a:	
-   259                           ; 1 bytes @ 0x2
-   260                           
-   261  0072                     setupTimer@mili_s:	
-   262                           ; 1 bytes @ 0x2
-   263                           
-   264                           
-   265                           ; 2 bytes @ 0x2
-   266  0072                     	ds	1
-   267  0073                     ??_Lcd_Cmd:
+   236  002B                     __end_of__initialization:
+   237  002B  0183               	clrf	3
+   238  002C  120A  118A  28FB   	ljmp	_main	;jump to C main() function
+   239                           
+   240                           	psect	bssCOMMON
+   241  0077                     __pbssCOMMON:
+   242  0077                     _irrigacao_ativa:
+   243  0077                     	ds	2
+   244  0079                     _timer_counter:
+   245  0079                     	ds	2
+   246                           
+   247                           	psect	dataBANK0
+   248  0030                     __pdataBANK0:
+   249  0030                     _MLxMS:
+   250  0030                     	ds	2
+   251  0032                     _timer_counter_max:
+   252  0032                     	ds	2
+   253                           
+   254                           	psect	cstackCOMMON
+   255  0070                     __pcstackCOMMON:
+   256  0070                     ?_Lcd_Port:
+   257  0070                     ?_Lcd_Cmd:	
+   258                           ; 1 bytes @ 0x0
+   259                           
+   260  0070                     ?_Lcd_Init:	
+   261                           ; 1 bytes @ 0x0
+   262                           
+   263  0070                     ?_setupTimer:	
+   264                           ; 1 bytes @ 0x0
+   265                           
+   266  0070                     ?_handleTimerInterruption:	
+   267                           ; 1 bytes @ 0x0
    268                           
-   269                           ; 1 bytes @ 0x3
-   270  0073                     	ds	1
-   271  0074                     ??_setupTimer:
-   272                           
-   273                           ; 1 bytes @ 0x4
-   274  0074                     	ds	1
-   275  0075                     Lcd_Cmd@a:
-   276                           
-   277                           ; 1 bytes @ 0x5
-   278  0075                     	ds	1
-   279  0076                     ??_Lcd_Init:
+   269  0070                     ??_handleTimerInterruption:	
+   270                           ; 1 bytes @ 0x0
+   271                           
+   272  0070                     ?_irrigar:	
+   273                           ; 1 bytes @ 0x0
+   274                           
+   275  0070                     ?_handleExternalInterruption:	
+   276                           ; 1 bytes @ 0x0
+   277                           
+   278  0070                     ??_handleExternalInterruption:	
+   279                           ; 1 bytes @ 0x0
    280                           
-   281                           ; 1 bytes @ 0x6
-   282  0076                     	ds	2
-   283  0078                     ??_main:
-   284                           
-   285                           	psect	maintext
-   286  0070                     __pmaintext:	
-   287                           ; 1 bytes @ 0x8
-   288 ;;
-   289 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
-   290 ;;
-   291 ;; *************** function _main *****************
-   292 ;; Defined at:
-   293 ;;		line 107 in file "main.c"
-   294 ;; Parameters:    Size  Location     Type
-   295 ;;		None
-   296 ;; Auto vars:     Size  Location     Type
-   297 ;;		None
-   298 ;; Return value:  Size  Location     Type
-   299 ;;                  1    wreg      void 
-   300 ;; Registers used:
-   301 ;;		wreg, status,2, status,0, pclath, cstack
-   302 ;; Tracked objects:
-   303 ;;		On entry : B00/0
-   304 ;;		On exit  : 0/0
-   305 ;;		Unchanged: 0/0
-   306 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   307 ;;      Params:         0       0       0       0       0
-   308 ;;      Locals:         0       0       0       0       0
-   309 ;;      Temps:          0       0       0       0       0
-   310 ;;      Totals:         0       0       0       0       0
-   311 ;;Total ram usage:        0 bytes
-   312 ;; Hardware stack levels required when called: 5
-   313 ;; This function calls:
-   314 ;;		_Lcd_Init
-   315 ;;		_setupExternalInterruption
-   316 ;;		_setupTimer
-   317 ;;		_setupWatchdogTimer
-   318 ;;		_verifyMenu
-   319 ;;		_verifySensor
-   320 ;; This function is called by:
-   321 ;;		Startup code after reset
-   322 ;; This function uses a non-reentrant model
-   323 ;;
+   281  0070                     ?_interrupcao:	
+   282                           ; 1 bytes @ 0x0
+   283                           
+   284  0070                     ?_setupExternalInterruption:	
+   285                           ; 1 bytes @ 0x0
+   286                           
+   287  0070                     ?_handleMenu:	
+   288                           ; 1 bytes @ 0x0
+   289                           
+   290  0070                     ?_verifyMenu:	
+   291                           ; 1 bytes @ 0x0
+   292                           
+   293  0070                     ?_verifySensor:	
+   294                           ; 1 bytes @ 0x0
+   295                           
+   296  0070                     ?_setupWatchdogTimer:	
+   297                           ; 1 bytes @ 0x0
+   298                           
+   299  0070                     ?_main:	
+   300                           ; 1 bytes @ 0x0
+   301                           
+   302                           
+   303                           ; 1 bytes @ 0x0
+   304  0070                     	ds	1
+   305  0071                     ??_interrupcao:
+   306                           
+   307                           ; 1 bytes @ 0x1
+   308  0071                     	ds	2
+   309  0073                     ??_Lcd_Port:
+   310  0073                     ??_irrigar:	
+   311                           ; 1 bytes @ 0x3
+   312                           
+   313  0073                     ??_setupExternalInterruption:	
+   314                           ; 1 bytes @ 0x3
+   315                           
+   316  0073                     ??_handleMenu:	
+   317                           ; 1 bytes @ 0x3
+   318                           
+   319  0073                     ??_verifyMenu:	
+   320                           ; 1 bytes @ 0x3
+   321                           
+   322  0073                     ??_verifySensor:	
+   323                           ; 1 bytes @ 0x3
    324                           
-   325  0070                     _main:	
-   326                           ;psect for function _main
+   325  0073                     ??_setupWatchdogTimer:	
+   326                           ; 1 bytes @ 0x3
    327                           
-   328  0070                     l804:	
-   329                           ;incstack = 0
-   330                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
-   331                           
-   332                           
-   333                           ;main.c: 110:     setupExternalInterruption();
-   334  0070  120A  118A  20F3  120A  118A  	fcall	_setupExternalInterruption
-   335                           
-   336                           ;main.c: 111:     setupWatchdogTimer();
-   337  0075  120A  118A  20F1  120A  118A  	fcall	_setupWatchdogTimer
-   338  007A                     l806:
+   328  0073                     ?___wmul:	
+   329                           ; 1 bytes @ 0x3
+   330                           
+   331  0073                     ?___awdiv:	
+   332                           ; 2 bytes @ 0x3
+   333                           
+   334  0073                     Lcd_Port@a:	
+   335                           ; 2 bytes @ 0x3
+   336                           
+   337  0073                     ___wmul@multiplier:	
+   338                           ; 1 bytes @ 0x3
    339                           
-   340                           ;main.c: 112:     setupTimer(500);
-   341  007A  30F4               	movlw	244
-   342  007B  00F2               	movwf	setupTimer@mili_s
-   343  007C  3001               	movlw	1
-   344  007D  00F3               	movwf	setupTimer@mili_s+1
-   345  007E  120A  118A  20F2  120A  118A  	fcall	_setupTimer
-   346  0083                     l808:
+   340  0073                     ___awdiv@divisor:	
+   341                           ; 2 bytes @ 0x3
+   342                           
+   343                           
+   344                           ; 2 bytes @ 0x3
+   345  0073                     	ds	1
+   346  0074                     ??_Lcd_Cmd:
    347                           
-   348                           ;main.c: 113:     Lcd_Init();
-   349  0083  120A  118A  2013  120A  118A  	fcall	_Lcd_Init
-   350  0088                     l85:	
-   351                           ;main.c: 115:     while (1)
-   352                           
+   348                           ; 1 bytes @ 0x4
+   349  0074                     	ds	1
+   350  0075                     ___wmul@multiplicand:
+   351  0075                     ___awdiv@dividend:	
+   352                           ; 2 bytes @ 0x5
    353                           
-   354                           ;main.c: 116:     {;main.c: 117:         verifySensor();
-   355  0088  120A  118A  20EF  120A  118A  	fcall	_verifySensor
-   356                           
-   357                           ;main.c: 118:         verifyMenu();
-   358  008D  120A  118A  20E3  120A  118A  	fcall	_verifyMenu
-   359  0092  2888               	goto	l85
-   360  0093  120A  118A  280C   	ljmp	start
-   361  0096                     __end_of_main:
-   362                           
-   363                           	psect	text1
-   364  00EF                     __ptext1:	
-   365 ;; *************** function _verifySensor *****************
-   366 ;; Defined at:
-   367 ;;		line 97 in file "main.c"
-   368 ;; Parameters:    Size  Location     Type
-   369 ;;		None
-   370 ;; Auto vars:     Size  Location     Type
-   371 ;;		None
-   372 ;; Return value:  Size  Location     Type
-   373 ;;                  1    wreg      void 
-   374 ;; Registers used:
-   375 ;;		None
-   376 ;; Tracked objects:
-   377 ;;		On entry : 0/0
-   378 ;;		On exit  : 0/0
-   379 ;;		Unchanged: 0/0
-   380 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   381 ;;      Params:         0       0       0       0       0
-   382 ;;      Locals:         0       0       0       0       0
-   383 ;;      Temps:          0       0       0       0       0
-   384 ;;      Totals:         0       0       0       0       0
-   385 ;;Total ram usage:        0 bytes
-   386 ;; Hardware stack levels used: 1
-   387 ;; Hardware stack levels required when called: 2
-   388 ;; This function calls:
-   389 ;;		Nothing
-   390 ;; This function is called by:
-   391 ;;		_main
-   392 ;; This function uses a non-reentrant model
-   393 ;;
-   394                           
-   395  00EF                     _verifySensor:	
-   396                           ;psect for function _verifySensor
-   397                           
-   398  00EF                     l746:	
-   399                           ;incstack = 0
-   400                           ; Regs used in _verifySensor: []
+   354                           
+   355                           ; 2 bytes @ 0x5
+   356  0075                     	ds	1
+   357  0076                     Lcd_Cmd@a:
+   358                           
+   359                           ; 1 bytes @ 0x6
+   360  0076                     	ds	1
+   361  0077                     ??_changeTimerMaxConter:
+   362  0077                     ??_setupNewVolumeFlow:	
+   363                           ; 1 bytes @ 0x7
+   364                           
+   365  0077                     ??_setupTimer:	
+   366                           ; 1 bytes @ 0x7
+   367                           
+   368  0077                     ??___wmul:	
+   369                           ; 1 bytes @ 0x7
+   370                           
+   371                           
+   372                           	psect	cstackBANK0
+   373  0020                     __pcstackBANK0:	
+   374                           ; 1 bytes @ 0x7
+   375                           
+   376  0020                     ??_Lcd_Init:
+   377  0020                     ??___awdiv:	
+   378                           ; 1 bytes @ 0x0
+   379                           
+   380  0020                     ___wmul@product:	
+   381                           ; 1 bytes @ 0x0
+   382                           
+   383                           
+   384                           ; 2 bytes @ 0x0
+   385  0020                     	ds	1
+   386  0021                     ___awdiv@counter:
+   387                           
+   388                           ; 1 bytes @ 0x1
+   389  0021                     	ds	1
+   390  0022                     ___awdiv@sign:
+   391                           
+   392                           ; 1 bytes @ 0x2
+   393  0022                     	ds	1
+   394  0023                     ___awdiv@quotient:
+   395                           
+   396                           ; 2 bytes @ 0x3
+   397  0023                     	ds	2
+   398  0025                     ?_changeTimerMaxConter:
+   399  0025                     changeTimerMaxConter@mili_s:	
+   400                           ; 1 bytes @ 0x5
    401                           
-   402  00EF                     l77:	
-   403                           ;main.c: 99:     return;
-   404                           
-   405  00EF  0008               	return
-   406  00F0                     __end_of_verifySensor:
-   407                           
-   408                           	psect	text2
-   409  00E3                     __ptext2:	
-   410 ;; *************** function _verifyMenu *****************
-   411 ;; Defined at:
-   412 ;;		line 89 in file "main.c"
-   413 ;; Parameters:    Size  Location     Type
-   414 ;;		None
-   415 ;; Auto vars:     Size  Location     Type
-   416 ;;		None
-   417 ;; Return value:  Size  Location     Type
-   418 ;;                  1    wreg      void 
-   419 ;; Registers used:
-   420 ;;		status,2, status,0, pclath, cstack
-   421 ;; Tracked objects:
-   422 ;;		On entry : 0/0
-   423 ;;		On exit  : 0/0
-   424 ;;		Unchanged: 0/0
-   425 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   426 ;;      Params:         0       0       0       0       0
-   427 ;;      Locals:         0       0       0       0       0
-   428 ;;      Temps:          0       0       0       0       0
-   429 ;;      Totals:         0       0       0       0       0
-   430 ;;Total ram usage:        0 bytes
-   431 ;; Hardware stack levels used: 1
-   432 ;; Hardware stack levels required when called: 3
-   433 ;; This function calls:
-   434 ;;		_handleMenu
-   435 ;; This function is called by:
-   436 ;;		_main
-   437 ;; This function uses a non-reentrant model
-   438 ;;
-   439                           
-   440  00E3                     _verifyMenu:	
-   441                           ;psect for function _verifyMenu
-   442                           
-   443  00E3                     l740:	
-   444                           ;incstack = 0
-   445                           ; Regs used in _verifyMenu: [status,2+status,0+pclath+cstack]
-   446                           
-   447                           
-   448                           ;main.c: 91:     if (PORTBbits.RB2)
-   449  00E3  1283               	bcf	3,5	;RP0=0, select bank0
-   450  00E4  1303               	bcf	3,6	;RP1=0, select bank0
-   451  00E5  1D06               	btfss	6,2	;volatile
-   452  00E6  28E8               	goto	u61
-   453  00E7  28E9               	goto	u60
-   454  00E8                     u61:
-   455  00E8  28EE               	goto	l74
-   456  00E9                     u60:
-   457  00E9                     l742:
-   458                           
-   459                           ;main.c: 92:     {;main.c: 93:         handleMenu();
-   460  00E9  120A  118A  20F0  120A  118A  	fcall	_handleMenu
-   461  00EE                     l74:
-   462  00EE  0008               	return
-   463  00EF                     __end_of_verifyMenu:
+   402                           
+   403                           ; 2 bytes @ 0x5
+   404  0025                     	ds	2
+   405  0027                     ?_setupNewVolumeFlow:
+   406  0027                     setupNewVolumeFlow@new_ml:	
+   407                           ; 1 bytes @ 0x7
+   408                           
+   409                           
+   410                           ; 2 bytes @ 0x7
+   411  0027                     	ds	2
+   412  0029                     setupNewVolumeFlow@new_ms:
+   413                           
+   414                           ; 2 bytes @ 0x9
+   415  0029                     	ds	2
+   416  002B                     ??_main:
+   417                           
+   418                           ; 1 bytes @ 0xB
+   419  002B                     	ds	3
+   420  002E                     main@a:
+   421                           
+   422                           ; 2 bytes @ 0xE
+   423  002E                     	ds	2
+   424                           
+   425                           	psect	maintext
+   426  00FB                     __pmaintext:	
+   427 ;;
+   428 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   429 ;;
+   430 ;; *************** function _main *****************
+   431 ;; Defined at:
+   432 ;;		line 191 in file "main.c"
+   433 ;; Parameters:    Size  Location     Type
+   434 ;;		None
+   435 ;; Auto vars:     Size  Location     Type
+   436 ;;  a               2   14[BANK0 ] int 
+   437 ;; Return value:  Size  Location     Type
+   438 ;;                  1    wreg      void 
+   439 ;; Registers used:
+   440 ;;		wreg, status,2, status,0, pclath, cstack
+   441 ;; Tracked objects:
+   442 ;;		On entry : B00/0
+   443 ;;		On exit  : 0/0
+   444 ;;		Unchanged: 0/0
+   445 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   446 ;;      Params:         0       0       0       0       0
+   447 ;;      Locals:         0       2       0       0       0
+   448 ;;      Temps:          0       3       0       0       0
+   449 ;;      Totals:         0       5       0       0       0
+   450 ;;Total ram usage:        5 bytes
+   451 ;; Hardware stack levels required when called: 6
+   452 ;; This function calls:
+   453 ;;		_Lcd_Init
+   454 ;;		_irrigar
+   455 ;;		_setupExternalInterruption
+   456 ;;		_setupTimer
+   457 ;;		_setupWatchdogTimer
+   458 ;;		_verifyMenu
+   459 ;;		_verifySensor
+   460 ;; This function is called by:
+   461 ;;		Startup code after reset
+   462 ;; This function uses a non-reentrant model
+   463 ;;
    464                           
-   465                           	psect	text3
-   466  00F0                     __ptext3:	
-   467 ;; *************** function _handleMenu *****************
-   468 ;; Defined at:
-   469 ;;		line 85 in file "main.c"
-   470 ;; Parameters:    Size  Location     Type
-   471 ;;		None
-   472 ;; Auto vars:     Size  Location     Type
-   473 ;;		None
-   474 ;; Return value:  Size  Location     Type
-   475 ;;                  1    wreg      void 
-   476 ;; Registers used:
-   477 ;;		None
-   478 ;; Tracked objects:
-   479 ;;		On entry : 0/0
-   480 ;;		On exit  : 0/0
-   481 ;;		Unchanged: 0/0
-   482 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   483 ;;      Params:         0       0       0       0       0
-   484 ;;      Locals:         0       0       0       0       0
-   485 ;;      Temps:          0       0       0       0       0
-   486 ;;      Totals:         0       0       0       0       0
-   487 ;;Total ram usage:        0 bytes
-   488 ;; Hardware stack levels used: 1
-   489 ;; Hardware stack levels required when called: 2
-   490 ;; This function calls:
-   491 ;;		Nothing
-   492 ;; This function is called by:
-   493 ;;		_verifyMenu
-   494 ;; This function uses a non-reentrant model
-   495 ;;
-   496                           
-   497  00F0                     _handleMenu:	
-   498                           ;psect for function _handleMenu
-   499                           
-   500  00F0                     l700:	
-   501                           ;incstack = 0
-   502                           ; Regs used in _handleMenu: []
-   503                           
-   504  00F0                     l70:	
-   505                           ;main.c: 87:     return;
-   506                           
-   507  00F0  0008               	return
-   508  00F1                     __end_of_handleMenu:
+   465  00FB                     _main:	
+   466                           ;psect for function _main
+   467                           
+   468  00FB                     l1312:	
+   469                           ;incstack = 0
+   470                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   471                           
+   472                           
+   473                           ;main.c: 194:     TRISA = 0b00000001;
+   474  00FB  3001               	movlw	1
+   475  00FC  1683               	bsf	3,5	;RP0=1, select bank1
+   476  00FD  1303               	bcf	3,6	;RP1=0, select bank1
+   477  00FE  0085               	movwf	5	;volatile
+   478                           
+   479                           ;main.c: 195:     TRISB = 0b00011101;
+   480  00FF  301D               	movlw	29
+   481  0100  0086               	movwf	6	;volatile
+   482  0101                     l1314:
+   483                           
+   484                           ;main.c: 196:     TRISD = 0b00000000;
+   485  0101  0188               	clrf	8	;volatile
+   486  0102                     l1316:
+   487                           
+   488                           ;main.c: 197:     OPTION_REGbits.nRBPU = 0;
+   489  0102  1381               	bcf	1,7	;volatile
+   490  0103                     l1318:
+   491                           
+   492                           ;main.c: 198:     PORTB = 0;
+   493  0103  1283               	bcf	3,5	;RP0=0, select bank0
+   494  0104  1303               	bcf	3,6	;RP1=0, select bank0
+   495  0105  0186               	clrf	6	;volatile
+   496  0106                     l1320:
+   497                           
+   498                           ;main.c: 200:     setupExternalInterruption();
+   499  0106  120A  118A  227E  120A  118A  	fcall	_setupExternalInterruption
+   500  010B                     l1322:
+   501                           
+   502                           ;main.c: 201:     setupWatchdogTimer();
+   503  010B  120A  118A  227D  120A  118A  	fcall	_setupWatchdogTimer
+   504  0110                     l1324:
+   505                           
+   506                           ;main.c: 202:     setupTimer();
+   507  0110  120A  118A  2217  120A  118A  	fcall	_setupTimer
+   508  0115                     l1326:
    509                           
-   510                           	psect	text4
-   511  00F1                     __ptext4:	
-   512 ;; *************** function _setupWatchdogTimer *****************
-   513 ;; Defined at:
-   514 ;;		line 102 in file "main.c"
-   515 ;; Parameters:    Size  Location     Type
-   516 ;;		None
-   517 ;; Auto vars:     Size  Location     Type
-   518 ;;		None
-   519 ;; Return value:  Size  Location     Type
-   520 ;;                  1    wreg      void 
-   521 ;; Registers used:
-   522 ;;		None
-   523 ;; Tracked objects:
-   524 ;;		On entry : 0/0
-   525 ;;		On exit  : 0/0
-   526 ;;		Unchanged: 0/0
-   527 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   528 ;;      Params:         0       0       0       0       0
-   529 ;;      Locals:         0       0       0       0       0
-   530 ;;      Temps:          0       0       0       0       0
-   531 ;;      Totals:         0       0       0       0       0
-   532 ;;Total ram usage:        0 bytes
-   533 ;; Hardware stack levels used: 1
-   534 ;; Hardware stack levels required when called: 2
-   535 ;; This function calls:
-   536 ;;		Nothing
-   537 ;; This function is called by:
-   538 ;;		_main
-   539 ;; This function uses a non-reentrant model
-   540 ;;
-   541                           
-   542  00F1                     _setupWatchdogTimer:	
-   543                           ;psect for function _setupWatchdogTimer
-   544                           
-   545  00F1                     l748:	
-   546                           ;incstack = 0
-   547                           ; Regs used in _setupWatchdogTimer: []
+   510                           ;main.c: 203:     Lcd_Init();
+   511  0115  120A  118A  2098  120A  118A  	fcall	_Lcd_Init
+   512  011A                     l1328:
+   513                           
+   514                           ;main.c: 204:     int a = 0;
+   515  011A  1283               	bcf	3,5	;RP0=0, select bank0
+   516  011B  1303               	bcf	3,6	;RP1=0, select bank0
+   517  011C  01AE               	clrf	main@a
+   518  011D  01AF               	clrf	main@a+1
+   519  011E                     l1330:
+   520                           
+   521                           ;main.c: 206:     {;main.c: 207:         verifySensor();
+   522  011E  120A  118A  227B  120A  118A  	fcall	_verifySensor
+   523  0123                     l1332:
+   524                           
+   525                           ;main.c: 208:         verifyMenu();
+   526  0123  120A  118A  226B  120A  118A  	fcall	_verifyMenu
+   527  0128                     l1334:
+   528                           
+   529                           ;main.c: 211:         if(PORTBbits.RB3 == 0&& a == 0){
+   530  0128  1283               	bcf	3,5	;RP0=0, select bank0
+   531  0129  1303               	bcf	3,6	;RP1=0, select bank0
+   532  012A  1986               	btfsc	6,3	;volatile
+   533  012B  292D               	goto	u811
+   534  012C  292E               	goto	u810
+   535  012D                     u811:
+   536  012D  291E               	goto	l1330
+   537  012E                     u810:
+   538  012E                     l1336:
+   539  012E  082E               	movf	main@a,w
+   540  012F  042F               	iorwf	main@a+1,w
+   541  0130  1D03               	btfss	3,2
+   542  0131  2933               	goto	u821
+   543  0132  2934               	goto	u820
+   544  0133                     u821:
+   545  0133  291E               	goto	l1330
+   546  0134                     u820:
+   547  0134                     l1338:
    548                           
-   549  00F1                     l80:	
-   550                           ;main.c: 104:     return;
-   551                           
-   552  00F1  0008               	return
-   553  00F2                     __end_of_setupWatchdogTimer:
-   554                           
-   555                           	psect	text5
-   556  00F2                     __ptext5:	
-   557 ;; *************** function _setupTimer *****************
-   558 ;; Defined at:
-   559 ;;		line 48 in file "main.c"
-   560 ;; Parameters:    Size  Location     Type
-   561 ;;  mili_s          2    2[COMMON] int 
-   562 ;; Auto vars:     Size  Location     Type
-   563 ;;		None
-   564 ;; Return value:  Size  Location     Type
-   565 ;;                  1    wreg      void 
-   566 ;; Registers used:
-   567 ;;		None
-   568 ;; Tracked objects:
-   569 ;;		On entry : 0/0
-   570 ;;		On exit  : 0/0
-   571 ;;		Unchanged: 0/0
-   572 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   573 ;;      Params:         2       0       0       0       0
-   574 ;;      Locals:         0       0       0       0       0
-   575 ;;      Temps:          0       0       0       0       0
-   576 ;;      Totals:         2       0       0       0       0
-   577 ;;Total ram usage:        2 bytes
-   578 ;; Hardware stack levels used: 1
-   579 ;; Hardware stack levels required when called: 2
-   580 ;; This function calls:
-   581 ;;		Nothing
-   582 ;; This function is called by:
-   583 ;;		_main
-   584 ;;		_setupNewVolumeFlow
-   585 ;; This function uses a non-reentrant model
-   586 ;;
-   587                           
-   588  00F2                     _setupTimer:	
-   589                           ;psect for function _setupTimer
-   590                           
-   591  00F2                     l798:	
-   592                           ;incstack = 0
-   593                           ; Regs used in _setupTimer: []
-   594                           
-   595  00F2                     l50:	
-   596                           ;main.c: 48: void setupTimer(int mili_s);main.c: 49: {;main.c: 50:     return;
-   597                           
-   598  00F2  0008               	return
-   599  00F3                     __end_of_setupTimer:
-   600                           
-   601                           	psect	text6
-   602  00F3                     __ptext6:	
-   603 ;; *************** function _setupExternalInterruption *****************
-   604 ;; Defined at:
-   605 ;;		line 80 in file "main.c"
-   606 ;; Parameters:    Size  Location     Type
-   607 ;;		None
-   608 ;; Auto vars:     Size  Location     Type
-   609 ;;		None
-   610 ;; Return value:  Size  Location     Type
-   611 ;;                  1    wreg      void 
-   612 ;; Registers used:
-   613 ;;		None
-   614 ;; Tracked objects:
-   615 ;;		On entry : 0/0
-   616 ;;		On exit  : 0/0
-   617 ;;		Unchanged: 0/0
-   618 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   619 ;;      Params:         0       0       0       0       0
-   620 ;;      Locals:         0       0       0       0       0
-   621 ;;      Temps:          0       0       0       0       0
-   622 ;;      Totals:         0       0       0       0       0
-   623 ;;Total ram usage:        0 bytes
-   624 ;; Hardware stack levels used: 1
-   625 ;; Hardware stack levels required when called: 2
-   626 ;; This function calls:
-   627 ;;		Nothing
-   628 ;; This function is called by:
-   629 ;;		_main
-   630 ;; This function uses a non-reentrant model
-   631 ;;
-   632                           
-   633  00F3                     _setupExternalInterruption:	
-   634                           ;psect for function _setupExternalInterruption
-   635                           
-   636  00F3                     l738:	
-   637                           ;incstack = 0
-   638                           ; Regs used in _setupExternalInterruption: []
-   639                           
-   640  00F3                     l67:	
-   641                           ;main.c: 82:     return;
-   642                           
-   643  00F3  0008               	return
-   644  00F4                     __end_of_setupExternalInterruption:
-   645                           
-   646                           	psect	text7
-   647  0013                     __ptext7:	
-   648 ;; *************** function _Lcd_Init *****************
-   649 ;; Defined at:
-   650 ;;		line 62 in file "./lcd.h"
-   651 ;; Parameters:    Size  Location     Type
-   652 ;;		None
-   653 ;; Auto vars:     Size  Location     Type
-   654 ;;		None
-   655 ;; Return value:  Size  Location     Type
-   656 ;;                  1    wreg      void 
-   657 ;; Registers used:
-   658 ;;		wreg, status,2, status,0, pclath, cstack
-   659 ;; Tracked objects:
-   660 ;;		On entry : 0/0
-   661 ;;		On exit  : 0/0
-   662 ;;		Unchanged: 0/0
-   663 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   664 ;;      Params:         0       0       0       0       0
-   665 ;;      Locals:         0       0       0       0       0
-   666 ;;      Temps:          2       0       0       0       0
-   667 ;;      Totals:         2       0       0       0       0
-   668 ;;Total ram usage:        2 bytes
-   669 ;; Hardware stack levels used: 1
-   670 ;; Hardware stack levels required when called: 4
-   671 ;; This function calls:
-   672 ;;		_Lcd_Cmd
-   673 ;;		_Lcd_Port
-   674 ;; This function is called by:
-   675 ;;		_main
-   676 ;; This function uses a non-reentrant model
-   677 ;;
-   678                           
-   679  0013                     _Lcd_Init:	
-   680                           ;psect for function _Lcd_Init
-   681                           
-   682  0013                     l702:	
-   683                           ;incstack = 0
-   684                           ; Regs used in _Lcd_Init: [wreg+status,2+status,0+pclath+cstack]
-   685                           
-   686                           
-   687                           ;./lcd.h: 64:   Lcd_Port(0x00);
-   688  0013  3000               	movlw	0
-   689  0014  120A  118A  2096  120A  118A  	fcall	_Lcd_Port
-   690  0019                     l704:
-   691                           
-   692                           ;./lcd.h: 65:    _delay((unsigned long)((20)*(4000000/4000.0)));
-   693  0019  301A               	movlw	26
-   694  001A  00F7               	movwf	??_Lcd_Init+1
-   695  001B  30F8               	movlw	248
-   696  001C  00F6               	movwf	??_Lcd_Init
-   697  001D                     u127:
-   698  001D  0BF6               	decfsz	??_Lcd_Init,f
-   699  001E  281D               	goto	u127
-   700  001F  0BF7               	decfsz	??_Lcd_Init+1,f
-   701  0020  281D               	goto	u127
-   702  0021  0000               	nop
-   703  0022                     l706:
-   704                           
-   705                           ;./lcd.h: 66:   Lcd_Cmd(0x03);
-   706  0022  3003               	movlw	3
-   707  0023  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   708                           
-   709                           ;./lcd.h: 67:  _delay((unsigned long)((5)*(4000000/4000.0)));
-   710  0028  3007               	movlw	7
-   711  0029  00F7               	movwf	??_Lcd_Init+1
-   712  002A  307D               	movlw	125
-   713  002B  00F6               	movwf	??_Lcd_Init
-   714  002C                     u137:
-   715  002C  0BF6               	decfsz	??_Lcd_Init,f
-   716  002D  282C               	goto	u137
-   717  002E  0BF7               	decfsz	??_Lcd_Init+1,f
-   718  002F  282C               	goto	u137
-   719  0030                     l708:
-   720                           
-   721                           ;./lcd.h: 68:   Lcd_Cmd(0x03);
-   722  0030  3003               	movlw	3
-   723  0031  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   724  0036                     l710:
-   725                           
-   726                           ;./lcd.h: 69:  _delay((unsigned long)((11)*(4000000/4000.0)));
-   727  0036  300F               	movlw	15
-   728  0037  00F7               	movwf	??_Lcd_Init+1
-   729  0038  3047               	movlw	71
-   730  0039  00F6               	movwf	??_Lcd_Init
-   731  003A                     u147:
-   732  003A  0BF6               	decfsz	??_Lcd_Init,f
-   733  003B  283A               	goto	u147
-   734  003C  0BF7               	decfsz	??_Lcd_Init+1,f
-   735  003D  283A               	goto	u147
-   736  003E  283F               	nop2
-   737                           
-   738                           ;./lcd.h: 70:   Lcd_Cmd(0x03);
-   739  003F  3003               	movlw	3
-   740  0040  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   741                           
-   742                           ;./lcd.h: 72:   Lcd_Cmd(0x02);
-   743  0045  3002               	movlw	2
-   744  0046  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   745                           
-   746                           ;./lcd.h: 73:   Lcd_Cmd(0x02);
-   747  004B  3002               	movlw	2
-   748  004C  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   749                           
-   750                           ;./lcd.h: 74:   Lcd_Cmd(0x08);
-   751  0051  3008               	movlw	8
-   752  0052  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   753                           
-   754                           ;./lcd.h: 75:   Lcd_Cmd(0x00);
-   755  0057  3000               	movlw	0
-   756  0058  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   757                           
-   758                           ;./lcd.h: 76:   Lcd_Cmd(0x0C);
-   759  005D  300C               	movlw	12
-   760  005E  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   761                           
-   762                           ;./lcd.h: 77:   Lcd_Cmd(0x00);
-   763  0063  3000               	movlw	0
-   764  0064  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   765                           
-   766                           ;./lcd.h: 78:   Lcd_Cmd(0x06);
-   767  0069  3006               	movlw	6
-   768  006A  120A  118A  20B8  120A  118A  	fcall	_Lcd_Cmd
-   769  006F                     l32:
-   770  006F  0008               	return
-   771  0070                     __end_of_Lcd_Init:
+   549                           ;main.c: 212:             a = 1;
+   550  0134  3001               	movlw	1
+   551  0135  00AE               	movwf	main@a
+   552  0136  3000               	movlw	0
+   553  0137  00AF               	movwf	main@a+1
+   554  0138                     l1340:
+   555                           
+   556                           ;main.c: 213:             irrigar();
+   557  0138  120A  118A  2246  120A  118A  	fcall	_irrigar
+   558  013D                     l1342:
+   559                           
+   560                           ;main.c: 214:             _delay((unsigned long)((5000)*(4000000/4000.0)));
+   561  013D  301A               	movlw	26
+   562  013E  1283               	bcf	3,5	;RP0=0, select bank0
+   563  013F  1303               	bcf	3,6	;RP1=0, select bank0
+   564  0140  00AD               	movwf	??_main+2
+   565  0141  305E               	movlw	94
+   566  0142  00AC               	movwf	??_main+1
+   567  0143  306D               	movlw	109
+   568  0144  00AB               	movwf	??_main
+   569  0145                     u837:
+   570  0145  0BAB               	decfsz	??_main,f
+   571  0146  2945               	goto	u837
+   572  0147  0BAC               	decfsz	??_main+1,f
+   573  0148  2945               	goto	u837
+   574  0149  0BAD               	decfsz	??_main+2,f
+   575  014A  2945               	goto	u837
+   576  014B  294C               	nop2
+   577  014C  291E               	goto	l1330
+   578  014D  120A  118A  280C   	ljmp	start
+   579  0150                     __end_of_main:
+   580                           
+   581                           	psect	text1
+   582  027B                     __ptext1:	
+   583 ;; *************** function _verifySensor *****************
+   584 ;; Defined at:
+   585 ;;		line 181 in file "main.c"
+   586 ;; Parameters:    Size  Location     Type
+   587 ;;		None
+   588 ;; Auto vars:     Size  Location     Type
+   589 ;;		None
+   590 ;; Return value:  Size  Location     Type
+   591 ;;                  1    wreg      void 
+   592 ;; Registers used:
+   593 ;;		None
+   594 ;; Tracked objects:
+   595 ;;		On entry : 0/0
+   596 ;;		On exit  : 0/0
+   597 ;;		Unchanged: 0/0
+   598 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   599 ;;      Params:         0       0       0       0       0
+   600 ;;      Locals:         0       0       0       0       0
+   601 ;;      Temps:          0       0       0       0       0
+   602 ;;      Totals:         0       0       0       0       0
+   603 ;;Total ram usage:        0 bytes
+   604 ;; Hardware stack levels used: 1
+   605 ;; Hardware stack levels required when called: 2
+   606 ;; This function calls:
+   607 ;;		Nothing
+   608 ;; This function is called by:
+   609 ;;		_main
+   610 ;; This function uses a non-reentrant model
+   611 ;;
+   612                           
+   613  027B                     _verifySensor:	
+   614                           ;psect for function _verifySensor
+   615                           
+   616  027B                     l1150:	
+   617                           ;incstack = 0
+   618                           ; Regs used in _verifySensor: []
+   619                           
+   620  027B                     l124:	
+   621                           ;main.c: 183:     return;
+   622                           
+   623  027B  0008               	return
+   624  027C                     __end_of_verifySensor:
+   625                           
+   626                           	psect	text2
+   627  026B                     __ptext2:	
+   628 ;; *************** function _verifyMenu *****************
+   629 ;; Defined at:
+   630 ;;		line 173 in file "main.c"
+   631 ;; Parameters:    Size  Location     Type
+   632 ;;		None
+   633 ;; Auto vars:     Size  Location     Type
+   634 ;;		None
+   635 ;; Return value:  Size  Location     Type
+   636 ;;                  1    wreg      void 
+   637 ;; Registers used:
+   638 ;;		status,2, status,0, pclath, cstack
+   639 ;; Tracked objects:
+   640 ;;		On entry : 0/0
+   641 ;;		On exit  : 0/0
+   642 ;;		Unchanged: 0/0
+   643 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   644 ;;      Params:         0       0       0       0       0
+   645 ;;      Locals:         0       0       0       0       0
+   646 ;;      Temps:          0       0       0       0       0
+   647 ;;      Totals:         0       0       0       0       0
+   648 ;;Total ram usage:        0 bytes
+   649 ;; Hardware stack levels used: 1
+   650 ;; Hardware stack levels required when called: 3
+   651 ;; This function calls:
+   652 ;;		_handleMenu
+   653 ;; This function is called by:
+   654 ;;		_main
+   655 ;; This function uses a non-reentrant model
+   656 ;;
+   657                           
+   658  026B                     _verifyMenu:	
+   659                           ;psect for function _verifyMenu
+   660                           
+   661  026B                     l1144:	
+   662                           ;incstack = 0
+   663                           ; Regs used in _verifyMenu: [status,2+status,0+pclath+cstack]
+   664                           
+   665                           
+   666                           ;main.c: 175:     if (PORTBbits.RB2)
+   667  026B  1283               	bcf	3,5	;RP0=0, select bank0
+   668  026C  1303               	bcf	3,6	;RP1=0, select bank0
+   669  026D  1D06               	btfss	6,2	;volatile
+   670  026E  2A70               	goto	u591
+   671  026F  2A71               	goto	u590
+   672  0270                     u591:
+   673  0270  2A76               	goto	l121
+   674  0271                     u590:
+   675  0271                     l1146:
+   676                           
+   677                           ;main.c: 176:     {;main.c: 177:         handleMenu();
+   678  0271  120A  118A  227C  120A  118A  	fcall	_handleMenu
+   679  0276                     l121:
+   680  0276  0008               	return
+   681  0277                     __end_of_verifyMenu:
+   682                           
+   683                           	psect	text3
+   684  027C                     __ptext3:	
+   685 ;; *************** function _handleMenu *****************
+   686 ;; Defined at:
+   687 ;;		line 169 in file "main.c"
+   688 ;; Parameters:    Size  Location     Type
+   689 ;;		None
+   690 ;; Auto vars:     Size  Location     Type
+   691 ;;		None
+   692 ;; Return value:  Size  Location     Type
+   693 ;;                  1    wreg      void 
+   694 ;; Registers used:
+   695 ;;		None
+   696 ;; Tracked objects:
+   697 ;;		On entry : 0/0
+   698 ;;		On exit  : 0/0
+   699 ;;		Unchanged: 0/0
+   700 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   701 ;;      Params:         0       0       0       0       0
+   702 ;;      Locals:         0       0       0       0       0
+   703 ;;      Temps:          0       0       0       0       0
+   704 ;;      Totals:         0       0       0       0       0
+   705 ;;Total ram usage:        0 bytes
+   706 ;; Hardware stack levels used: 1
+   707 ;; Hardware stack levels required when called: 2
+   708 ;; This function calls:
+   709 ;;		Nothing
+   710 ;; This function is called by:
+   711 ;;		_verifyMenu
+   712 ;; This function uses a non-reentrant model
+   713 ;;
+   714                           
+   715  027C                     _handleMenu:	
+   716                           ;psect for function _handleMenu
+   717                           
+   718  027C                     l1064:	
+   719                           ;incstack = 0
+   720                           ; Regs used in _handleMenu: []
+   721                           
+   722  027C                     l117:	
+   723                           ;main.c: 171:     return;
+   724                           
+   725  027C  0008               	return
+   726  027D                     __end_of_handleMenu:
+   727                           
+   728                           	psect	text4
+   729  027D                     __ptext4:	
+   730 ;; *************** function _setupWatchdogTimer *****************
+   731 ;; Defined at:
+   732 ;;		line 186 in file "main.c"
+   733 ;; Parameters:    Size  Location     Type
+   734 ;;		None
+   735 ;; Auto vars:     Size  Location     Type
+   736 ;;		None
+   737 ;; Return value:  Size  Location     Type
+   738 ;;                  1    wreg      void 
+   739 ;; Registers used:
+   740 ;;		None
+   741 ;; Tracked objects:
+   742 ;;		On entry : 0/0
+   743 ;;		On exit  : 0/0
+   744 ;;		Unchanged: 0/0
+   745 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   746 ;;      Params:         0       0       0       0       0
+   747 ;;      Locals:         0       0       0       0       0
+   748 ;;      Temps:          0       0       0       0       0
+   749 ;;      Totals:         0       0       0       0       0
+   750 ;;Total ram usage:        0 bytes
+   751 ;; Hardware stack levels used: 1
+   752 ;; Hardware stack levels required when called: 2
+   753 ;; This function calls:
+   754 ;;		Nothing
+   755 ;; This function is called by:
+   756 ;;		_main
+   757 ;; This function uses a non-reentrant model
+   758 ;;
+   759                           
+   760  027D                     _setupWatchdogTimer:	
+   761                           ;psect for function _setupWatchdogTimer
+   762                           
+   763  027D                     l1152:	
+   764                           ;incstack = 0
+   765                           ; Regs used in _setupWatchdogTimer: []
+   766                           
+   767  027D                     l127:	
+   768                           ;main.c: 188:     return;
+   769                           
+   770  027D  0008               	return
+   771  027E                     __end_of_setupWatchdogTimer:
    772                           
-   773                           	psect	text8
-   774  00B8                     __ptext8:	
-   775 ;; *************** function _Lcd_Cmd *****************
+   773                           	psect	text5
+   774  0217                     __ptext5:	
+   775 ;; *************** function _setupTimer *****************
    776 ;; Defined at:
-   777 ;;		line 26 in file "./lcd.h"
+   777 ;;		line 81 in file "main.c"
    778 ;; Parameters:    Size  Location     Type
-   779 ;;  a               1    wreg     unsigned char 
+   779 ;;		None
    780 ;; Auto vars:     Size  Location     Type
-   781 ;;  a               1    5[COMMON] unsigned char 
+   781 ;;		None
    782 ;; Return value:  Size  Location     Type
    783 ;;                  1    wreg      void 
    784 ;; Registers used:
@@ -803,370 +803,1246 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
    789 ;;		Unchanged: 0/0
    790 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
    791 ;;      Params:         0       0       0       0       0
-   792 ;;      Locals:         1       0       0       0       0
-   793 ;;      Temps:          2       0       0       0       0
-   794 ;;      Totals:         3       0       0       0       0
-   795 ;;Total ram usage:        3 bytes
+   792 ;;      Locals:         0       0       0       0       0
+   793 ;;      Temps:          0       0       0       0       0
+   794 ;;      Totals:         0       0       0       0       0
+   795 ;;Total ram usage:        0 bytes
    796 ;; Hardware stack levels used: 1
-   797 ;; Hardware stack levels required when called: 3
+   797 ;; Hardware stack levels required when called: 5
    798 ;; This function calls:
-   799 ;;		_Lcd_Port
+   799 ;;		_setupNewVolumeFlow
    800 ;; This function is called by:
-   801 ;;		_Lcd_Init
-   802 ;;		_Lcd_Clear
-   803 ;;		_Lcd_Set_Cursor
-   804 ;;		_Lcd_Shift_Right
-   805 ;;		_Lcd_Shift_Left
-   806 ;; This function uses a non-reentrant model
-   807 ;;
-   808                           
-   809  00B8                     _Lcd_Cmd:	
-   810                           ;psect for function _Lcd_Cmd
+   801 ;;		_main
+   802 ;; This function uses a non-reentrant model
+   803 ;;
+   804                           
+   805  0217                     _setupTimer:	
+   806                           ;psect for function _setupTimer
+   807                           
+   808  0217                     l1302:	
+   809                           ;incstack = 0
+   810                           ; Regs used in _setupTimer: [wreg+status,2+status,0+pclath+cstack]
    811                           
    812                           
-   813                           ;incstack = 0
-   814                           ; Regs used in _Lcd_Cmd: [wreg+status,2+status,0+pclath+cstack]
-   815                           ;Lcd_Cmd@a stored from wreg
-   816  00B8  00F5               	movwf	Lcd_Cmd@a
-   817  00B9                     l690:
+   813                           ;main.c: 84:     INTCONbits.GIE = 1;
+   814  0217  178B               	bsf	11,7	;volatile
+   815                           
+   816                           ;main.c: 85:     INTCONbits.PEIE = 1;
+   817  0218  170B               	bsf	11,6	;volatile
    818                           
-   819                           ;./lcd.h: 26: void Lcd_Cmd(char a);./lcd.h: 27: {;./lcd.h: 28:  PORTDbits.RD1 = 0;
-   820  00B9  1283               	bcf	3,5	;RP0=0, select bank0
-   821  00BA  1303               	bcf	3,6	;RP1=0, select bank0
-   822  00BB  1088               	bcf	8,1	;volatile
-   823  00BC                     l692:
-   824                           
-   825                           ;./lcd.h: 29:  Lcd_Port(a);
-   826  00BC  0875               	movf	Lcd_Cmd@a,w
-   827  00BD  120A  118A  2096  120A  118A  	fcall	_Lcd_Port
-   828  00C2                     l694:
-   829                           
-   830                           ;./lcd.h: 30:  PORTDbits.RD3 = 1;
-   831  00C2  1283               	bcf	3,5	;RP0=0, select bank0
-   832  00C3  1303               	bcf	3,6	;RP1=0, select bank0
-   833  00C4  1588               	bsf	8,3	;volatile
-   834  00C5                     l696:
+   819                           ;main.c: 86:     PIE1bits.TMR1IE = 1;
+   820  0219  1683               	bsf	3,5	;RP0=1, select bank1
+   821  021A  1303               	bcf	3,6	;RP1=0, select bank1
+   822  021B  140C               	bsf	12,0	;volatile
+   823                           
+   824                           ;main.c: 89:     T1CONbits.TMR1CS = 0;
+   825  021C  1283               	bcf	3,5	;RP0=0, select bank0
+   826  021D  1303               	bcf	3,6	;RP1=0, select bank0
+   827  021E  1090               	bcf	16,1	;volatile
+   828                           
+   829                           ;main.c: 92:     T1CONbits.T1CKPS0 = 1;
+   830  021F  1610               	bsf	16,4	;volatile
+   831                           
+   832                           ;main.c: 93:     T1CONbits.T1CKPS1 = 1;
+   833  0220  1690               	bsf	16,5	;volatile
+   834  0221                     l1304:
    835                           
-   836                           ;./lcd.h: 31:         _delay((unsigned long)((4)*(4000000/4000.0)));
-   837  00C5  3006               	movlw	6
-   838  00C6  00F4               	movwf	??_Lcd_Cmd+1
-   839  00C7  3030               	movlw	48
-   840  00C8  00F3               	movwf	??_Lcd_Cmd
-   841  00C9                     u157:
-   842  00C9  0BF3               	decfsz	??_Lcd_Cmd,f
-   843  00CA  28C9               	goto	u157
-   844  00CB  0BF4               	decfsz	??_Lcd_Cmd+1,f
-   845  00CC  28C9               	goto	u157
-   846  00CD  0000               	nop
-   847  00CE                     l698:
+   836                           ;main.c: 101:     TMR1H = 0x0B;
+   837  0221  300B               	movlw	11
+   838  0222  008F               	movwf	15	;volatile
+   839                           
+   840                           ;main.c: 102:     TMR1L = 0xDC;
+   841  0223  30DC               	movlw	220
+   842  0224  008E               	movwf	14	;volatile
+   843  0225                     l1306:
+   844                           
+   845                           ;main.c: 104:     T1CONbits.TMR1ON = 0;
+   846  0225  1010               	bcf	16,0	;volatile
+   847  0226                     l1308:
    848                           
-   849                           ;./lcd.h: 32:         PORTDbits.RD3 = 0;
-   850  00CE  1283               	bcf	3,5	;RP0=0, select bank0
-   851  00CF  1303               	bcf	3,6	;RP1=0, select bank0
-   852  00D0  1188               	bcf	8,3	;volatile
-   853  00D1                     l20:
-   854  00D1  0008               	return
-   855  00D2                     __end_of_Lcd_Cmd:
-   856                           
-   857                           	psect	text9
-   858  0096                     __ptext9:	
-   859 ;; *************** function _Lcd_Port *****************
-   860 ;; Defined at:
-   861 ;;		line 4 in file "./lcd.h"
-   862 ;; Parameters:    Size  Location     Type
-   863 ;;  a               1    wreg     unsigned char 
-   864 ;; Auto vars:     Size  Location     Type
-   865 ;;  a               1    2[COMMON] unsigned char 
-   866 ;; Return value:  Size  Location     Type
-   867 ;;                  1    wreg      void 
-   868 ;; Registers used:
-   869 ;;		wreg
-   870 ;; Tracked objects:
-   871 ;;		On entry : 0/0
-   872 ;;		On exit  : 0/0
-   873 ;;		Unchanged: 0/0
-   874 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   875 ;;      Params:         0       0       0       0       0
-   876 ;;      Locals:         1       0       0       0       0
-   877 ;;      Temps:          0       0       0       0       0
-   878 ;;      Totals:         1       0       0       0       0
-   879 ;;Total ram usage:        1 bytes
-   880 ;; Hardware stack levels used: 1
-   881 ;; Hardware stack levels required when called: 2
-   882 ;; This function calls:
-   883 ;;		Nothing
-   884 ;; This function is called by:
-   885 ;;		_Lcd_Cmd
-   886 ;;		_Lcd_Init
-   887 ;;		_Lcd_Write_Char
-   888 ;; This function uses a non-reentrant model
-   889 ;;
-   890                           
-   891  0096                     _Lcd_Port:	
-   892                           ;psect for function _Lcd_Port
-   893                           
+   849                           ;main.c: 108:     setupNewVolumeFlow(200);
+   850  0226  30C8               	movlw	200
+   851  0227  00A7               	movwf	setupNewVolumeFlow@new_ml
+   852  0228  3000               	movlw	0
+   853  0229  00A8               	movwf	setupNewVolumeFlow@new_ml+1
+   854  022A  120A  118A  21DE  120A  118A  	fcall	_setupNewVolumeFlow
+   855  022F                     l90:
+   856  022F  0008               	return
+   857  0230                     __end_of_setupTimer:
+   858                           
+   859                           	psect	text6
+   860  01DE                     __ptext6:	
+   861 ;; *************** function _setupNewVolumeFlow *****************
+   862 ;; Defined at:
+   863 ;;		line 72 in file "main.c"
+   864 ;; Parameters:    Size  Location     Type
+   865 ;;  new_ml          2    7[BANK0 ] int 
+   866 ;; Auto vars:     Size  Location     Type
+   867 ;;  new_ms          2    9[BANK0 ] int 
+   868 ;; Return value:  Size  Location     Type
+   869 ;;                  1    wreg      void 
+   870 ;; Registers used:
+   871 ;;		wreg, status,2, status,0, pclath, cstack
+   872 ;; Tracked objects:
+   873 ;;		On entry : 0/0
+   874 ;;		On exit  : 0/0
+   875 ;;		Unchanged: 0/0
+   876 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   877 ;;      Params:         0       2       0       0       0
+   878 ;;      Locals:         0       2       0       0       0
+   879 ;;      Temps:          0       0       0       0       0
+   880 ;;      Totals:         0       4       0       0       0
+   881 ;;Total ram usage:        4 bytes
+   882 ;; Hardware stack levels used: 1
+   883 ;; Hardware stack levels required when called: 4
+   884 ;; This function calls:
+   885 ;;		___wmul
+   886 ;;		_changeTimerMaxConter
+   887 ;; This function is called by:
+   888 ;;		_setupTimer
+   889 ;; This function uses a non-reentrant model
+   890 ;;
+   891                           
+   892  01DE                     _setupNewVolumeFlow:	
+   893                           ;psect for function _setupNewVolumeFlow
    894                           
-   895                           ;incstack = 0
-   896                           ; Regs used in _Lcd_Port: [wreg]
-   897                           ;Lcd_Port@a stored from wreg
-   898  0096  00F2               	movwf	Lcd_Port@a
-   899  0097                     l680:
-   900                           
-   901                           ;./lcd.h: 4: void Lcd_Port(char a);./lcd.h: 5: {;./lcd.h: 6:  if(a & 1)
-   902  0097  1C72               	btfss	Lcd_Port@a,0
-   903  0098  289A               	goto	u11
-   904  0099  289B               	goto	u10
-   905  009A                     u11:
-   906  009A  289F               	goto	l9
-   907  009B                     u10:
-   908  009B                     l682:
-   909                           
-   910                           ;./lcd.h: 7:   PORTDbits.RD4 = 1;
-   911  009B  1283               	bcf	3,5	;RP0=0, select bank0
-   912  009C  1303               	bcf	3,6	;RP1=0, select bank0
-   913  009D  1608               	bsf	8,4	;volatile
-   914  009E  28A2               	goto	l10
-   915  009F                     l9:	
-   916                           ;./lcd.h: 8:  else
-   917                           
+   895  01DE                     l1288:	
+   896                           ;incstack = 0
+   897                           ; Regs used in _setupNewVolumeFlow: [wreg+status,2+status,0+pclath+cstack]
+   898                           
+   899                           
+   900                           ;main.c: 72: void setupNewVolumeFlow(int new_ml);main.c: 73: {;main.c: 75:     int new_m
+      +                          s = new_ml*MLxMS;
+   901  01DE  1283               	bcf	3,5	;RP0=0, select bank0
+   902  01DF  1303               	bcf	3,6	;RP1=0, select bank0
+   903  01E0  0828               	movf	setupNewVolumeFlow@new_ml+1,w
+   904  01E1  00F4               	movwf	___wmul@multiplier+1
+   905  01E2  0827               	movf	setupNewVolumeFlow@new_ml,w
+   906  01E3  00F3               	movwf	___wmul@multiplier
+   907  01E4  3019               	movlw	25
+   908  01E5  00F5               	movwf	___wmul@multiplicand
+   909  01E6  3000               	movlw	0
+   910  01E7  00F6               	movwf	___wmul@multiplicand+1
+   911  01E8  120A  118A  2191  120A  118A  	fcall	___wmul
+   912  01ED  0874               	movf	?___wmul+1,w
+   913  01EE  1283               	bcf	3,5	;RP0=0, select bank0
+   914  01EF  1303               	bcf	3,6	;RP1=0, select bank0
+   915  01F0  00AA               	movwf	setupNewVolumeFlow@new_ms+1
+   916  01F1  0873               	movf	?___wmul,w
+   917  01F2  00A9               	movwf	setupNewVolumeFlow@new_ms
    918                           
-   919                           ;./lcd.h: 9:   PORTDbits.RD4 = 0;
-   920  009F  1283               	bcf	3,5	;RP0=0, select bank0
-   921  00A0  1303               	bcf	3,6	;RP1=0, select bank0
-   922  00A1  1208               	bcf	8,4	;volatile
-   923  00A2                     l10:
-   924                           
-   925                           ;./lcd.h: 11:  if(a & 2)
-   926  00A2  1CF2               	btfss	Lcd_Port@a,1
-   927  00A3  28A5               	goto	u21
-   928  00A4  28A6               	goto	u20
-   929  00A5                     u21:
-   930  00A5  28A8               	goto	l11
-   931  00A6                     u20:
-   932  00A6                     l684:
-   933                           
-   934                           ;./lcd.h: 12:   PORTDbits.RD5 = 1;
-   935  00A6  1688               	bsf	8,5	;volatile
-   936  00A7  28A9               	goto	l12
-   937  00A8                     l11:	
-   938                           ;./lcd.h: 13:  else
-   939                           
-   940                           
-   941                           ;./lcd.h: 14:   PORTDbits.RD5 = 0;
-   942  00A8  1288               	bcf	8,5	;volatile
-   943  00A9                     l12:
-   944                           
-   945                           ;./lcd.h: 16:  if(a & 4)
-   946  00A9  1D72               	btfss	Lcd_Port@a,2
-   947  00AA  28AC               	goto	u31
-   948  00AB  28AD               	goto	u30
-   949  00AC                     u31:
-   950  00AC  28AF               	goto	l13
-   951  00AD                     u30:
-   952  00AD                     l686:
-   953                           
-   954                           ;./lcd.h: 17:   PORTDbits.RD6 = 1;
-   955  00AD  1708               	bsf	8,6	;volatile
-   956  00AE  28B0               	goto	l14
-   957  00AF                     l13:	
-   958                           ;./lcd.h: 18:  else
-   959                           
+   919                           ;main.c: 77:     changeTimerMaxConter(new_ms);
+   920  01F3  082A               	movf	setupNewVolumeFlow@new_ms+1,w
+   921  01F4  00A6               	movwf	changeTimerMaxConter@mili_s+1
+   922  01F5  0829               	movf	setupNewVolumeFlow@new_ms,w
+   923  01F6  00A5               	movwf	changeTimerMaxConter@mili_s
+   924  01F7  120A  118A  2230  120A  118A  	fcall	_changeTimerMaxConter
+   925  01FC                     l87:
+   926  01FC  0008               	return
+   927  01FD                     __end_of_setupNewVolumeFlow:
+   928                           
+   929                           	psect	text7
+   930  0230                     __ptext7:	
+   931 ;; *************** function _changeTimerMaxConter *****************
+   932 ;; Defined at:
+   933 ;;		line 65 in file "main.c"
+   934 ;; Parameters:    Size  Location     Type
+   935 ;;  mili_s          2    5[BANK0 ] int 
+   936 ;; Auto vars:     Size  Location     Type
+   937 ;;		None
+   938 ;; Return value:  Size  Location     Type
+   939 ;;                  1    wreg      void 
+   940 ;; Registers used:
+   941 ;;		wreg, status,2, status,0, pclath, cstack
+   942 ;; Tracked objects:
+   943 ;;		On entry : 0/0
+   944 ;;		On exit  : 0/0
+   945 ;;		Unchanged: 0/0
+   946 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   947 ;;      Params:         0       2       0       0       0
+   948 ;;      Locals:         0       0       0       0       0
+   949 ;;      Temps:          0       0       0       0       0
+   950 ;;      Totals:         0       2       0       0       0
+   951 ;;Total ram usage:        2 bytes
+   952 ;; Hardware stack levels used: 1
+   953 ;; Hardware stack levels required when called: 3
+   954 ;; This function calls:
+   955 ;;		___awdiv
+   956 ;; This function is called by:
+   957 ;;		_setupNewVolumeFlow
+   958 ;; This function uses a non-reentrant model
+   959 ;;
    960                           
-   961                           ;./lcd.h: 19:   PORTDbits.RD6 = 0;
-   962  00AF  1308               	bcf	8,6	;volatile
-   963  00B0                     l14:
-   964                           
-   965                           ;./lcd.h: 21:  if(a & 8)
-   966  00B0  1DF2               	btfss	Lcd_Port@a,3
-   967  00B1  28B3               	goto	u41
-   968  00B2  28B4               	goto	u40
-   969  00B3                     u41:
-   970  00B3  28B6               	goto	l15
-   971  00B4                     u40:
-   972  00B4                     l688:
-   973                           
-   974                           ;./lcd.h: 22:   PORTDbits.RD7 = 1;
-   975  00B4  1788               	bsf	8,7	;volatile
-   976  00B5  28B7               	goto	l17
-   977  00B6                     l15:	
-   978                           ;./lcd.h: 23:  else
-   979                           
-   980                           
-   981                           ;./lcd.h: 24:   PORTDbits.RD7 = 0;
-   982  00B6  1388               	bcf	8,7	;volatile
-   983  00B7                     l17:
-   984  00B7  0008               	return
-   985  00B8                     __end_of_Lcd_Port:
-   986                           
-   987                           	psect	text10
-   988  00D2                     __ptext10:	
-   989 ;; *************** function _interrupcao *****************
-   990 ;; Defined at:
-   991 ;;		line 73 in file "main.c"
-   992 ;; Parameters:    Size  Location     Type
-   993 ;;		None
-   994 ;; Auto vars:     Size  Location     Type
-   995 ;;		None
-   996 ;; Return value:  Size  Location     Type
-   997 ;;                  1    wreg      void 
-   998 ;; Registers used:
-   999 ;;		status,2, status,0, pclath, cstack
-  1000 ;; Tracked objects:
-  1001 ;;		On entry : 0/0
-  1002 ;;		On exit  : 0/0
-  1003 ;;		Unchanged: 0/0
-  1004 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1005 ;;      Params:         0       0       0       0       0
-  1006 ;;      Locals:         0       0       0       0       0
-  1007 ;;      Temps:          2       0       0       0       0
-  1008 ;;      Totals:         2       0       0       0       0
-  1009 ;;Total ram usage:        2 bytes
-  1010 ;; Hardware stack levels used: 1
-  1011 ;; Hardware stack levels required when called: 1
-  1012 ;; This function calls:
-  1013 ;;		_handleExternalInterruption
-  1014 ;;		_handleTimerInterruption
-  1015 ;; This function is called by:
-  1016 ;;		Interrupt level 1
-  1017 ;; This function uses a non-reentrant model
-  1018 ;;
-  1019                           
-  1020  00D2                     _interrupcao:	
-  1021                           ;psect for function _interrupcao
-  1022                           
-  1023  00D2                     i1l788:
-  1024                           
-  1025                           ;main.c: 75:     handleTimerInterruption();
-  1026  00D2  120A  118A  20F4  120A  118A  	fcall	_handleTimerInterruption
-  1027                           
-  1028                           ;main.c: 76:     handleExternalInterruption();
-  1029  00D7  120A  118A  20F5  120A  118A  	fcall	_handleExternalInterruption
-  1030  00DC                     i1l64:
-  1031  00DC  0871               	movf	??_interrupcao+1,w
-  1032  00DD  008A               	movwf	10
-  1033  00DE  0E70               	swapf	??_interrupcao,w
-  1034  00DF  0083               	movwf	3
-  1035  00E0  0EFE               	swapf	btemp,f
-  1036  00E1  0E7E               	swapf	btemp,w
-  1037  00E2  0009               	retfie
-  1038  00E3                     __end_of_interrupcao:
-  1039                           
-  1040                           	psect	intentry
-  1041  0004                     __pintentry:	
-  1042                           ;incstack = 0
-  1043                           ; Regs used in _interrupcao: [status,2+status,0+pclath+cstack]
-  1044                           
-  1045  0004                     interrupt_function:
-  1046  007E                     saved_w	set	btemp
-  1047  0004  00FE               	movwf	btemp
-  1048  0005  0E03               	swapf	3,w
-  1049  0006  00F0               	movwf	??_interrupcao
-  1050  0007  080A               	movf	10,w
-  1051  0008  00F1               	movwf	??_interrupcao+1
-  1052  0009  120A  118A  28D2   	ljmp	_interrupcao
-  1053                           
-  1054                           	psect	text11
-  1055  00F4                     __ptext11:	
-  1056 ;; *************** function _handleTimerInterruption *****************
-  1057 ;; Defined at:
-  1058 ;;		line 62 in file "main.c"
-  1059 ;; Parameters:    Size  Location     Type
-  1060 ;;		None
-  1061 ;; Auto vars:     Size  Location     Type
-  1062 ;;		None
-  1063 ;; Return value:  Size  Location     Type
-  1064 ;;                  1    wreg      void 
-  1065 ;; Registers used:
-  1066 ;;		None
-  1067 ;; Tracked objects:
-  1068 ;;		On entry : 0/0
-  1069 ;;		On exit  : 0/0
-  1070 ;;		Unchanged: 0/0
-  1071 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1072 ;;      Params:         0       0       0       0       0
-  1073 ;;      Locals:         0       0       0       0       0
-  1074 ;;      Temps:          0       0       0       0       0
-  1075 ;;      Totals:         0       0       0       0       0
-  1076 ;;Total ram usage:        0 bytes
-  1077 ;; Hardware stack levels used: 1
-  1078 ;; This function calls:
-  1079 ;;		Nothing
-  1080 ;; This function is called by:
-  1081 ;;		_interrupcao
-  1082 ;; This function uses a non-reentrant model
-  1083 ;;
-  1084                           
-  1085  00F4                     _handleTimerInterruption:	
-  1086                           ;psect for function _handleTimerInterruption
-  1087                           
-  1088  00F4                     i1l734:	
-  1089                           ;incstack = 0
-  1090                           ; Regs used in _handleTimerInterruption: []
-  1091                           
-  1092  00F4                     i1l56:	
-  1093                           ;main.c: 64:     return;
-  1094                           
-  1095  00F4  0008               	return
-  1096  00F5                     __end_of_handleTimerInterruption:
-  1097                           
-  1098                           	psect	text12
-  1099  00F5                     __ptext12:	
-  1100 ;; *************** function _handleExternalInterruption *****************
-  1101 ;; Defined at:
-  1102 ;;		line 67 in file "main.c"
-  1103 ;; Parameters:    Size  Location     Type
-  1104 ;;		None
-  1105 ;; Auto vars:     Size  Location     Type
-  1106 ;;		None
-  1107 ;; Return value:  Size  Location     Type
-  1108 ;;                  1    wreg      void 
-  1109 ;; Registers used:
-  1110 ;;		None
-  1111 ;; Tracked objects:
-  1112 ;;		On entry : 0/0
-  1113 ;;		On exit  : 0/0
-  1114 ;;		Unchanged: 0/0
-  1115 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1116 ;;      Params:         0       0       0       0       0
-  1117 ;;      Locals:         0       0       0       0       0
-  1118 ;;      Temps:          0       0       0       0       0
-  1119 ;;      Totals:         0       0       0       0       0
-  1120 ;;Total ram usage:        0 bytes
-  1121 ;; Hardware stack levels used: 1
-  1122 ;; This function calls:
-  1123 ;;		Nothing
-  1124 ;; This function is called by:
-  1125 ;;		_interrupcao
-  1126 ;; This function uses a non-reentrant model
-  1127 ;;
-  1128                           
-  1129  00F5                     _handleExternalInterruption:	
-  1130                           ;psect for function _handleExternalInterruption
-  1131                           
-  1132  00F5                     i1l736:	
-  1133                           ;incstack = 0
-  1134                           ; Regs used in _handleExternalInterruption: []
-  1135                           
-  1136  00F5                     i1l59:	
-  1137                           ;main.c: 70:     return;
-  1138                           
-  1139  00F5  0008               	return
-  1140  00F6                     __end_of_handleExternalInterruption:
-  1141  007E                     btemp	set	126	;btemp
-  1142  007E                     wtemp0	set	126
+   961  0230                     _changeTimerMaxConter:	
+   962                           ;psect for function _changeTimerMaxConter
+   963                           
+   964  0230                     l1270:	
+   965                           ;incstack = 0
+   966                           ; Regs used in _changeTimerMaxConter: [wreg+status,2+status,0+pclath+cstack]
+   967                           
+   968                           
+   969                           ;main.c: 67:     timer_counter_max = (mili_s/500);
+   970  0230  30F4               	movlw	244
+   971  0231  00F3               	movwf	___awdiv@divisor
+   972  0232  3001               	movlw	1
+   973  0233  00F4               	movwf	___awdiv@divisor+1
+   974  0234  1283               	bcf	3,5	;RP0=0, select bank0
+   975  0235  1303               	bcf	3,6	;RP1=0, select bank0
+   976  0236  0826               	movf	changeTimerMaxConter@mili_s+1,w
+   977  0237  00F6               	movwf	___awdiv@dividend+1
+   978  0238  0825               	movf	changeTimerMaxConter@mili_s,w
+   979  0239  00F5               	movwf	___awdiv@dividend
+   980  023A  120A  118A  202F  120A  118A  	fcall	___awdiv
+   981  023F  0874               	movf	?___awdiv+1,w
+   982  0240  1283               	bcf	3,5	;RP0=0, select bank0
+   983  0241  1303               	bcf	3,6	;RP1=0, select bank0
+   984  0242  00B3               	movwf	_timer_counter_max+1
+   985  0243  0873               	movf	?___awdiv,w
+   986  0244  00B2               	movwf	_timer_counter_max
+   987  0245                     l84:
+   988  0245  0008               	return
+   989  0246                     __end_of_changeTimerMaxConter:
+   990                           
+   991                           	psect	text8
+   992  002F                     __ptext8:	
+   993 ;; *************** function ___awdiv *****************
+   994 ;; Defined at:
+   995 ;;		line 5 in file "D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c"
+   996 ;; Parameters:    Size  Location     Type
+   997 ;;  divisor         2    3[COMMON] int 
+   998 ;;  dividend        2    5[COMMON] int 
+   999 ;; Auto vars:     Size  Location     Type
+  1000 ;;  quotient        2    3[BANK0 ] int 
+  1001 ;;  sign            1    2[BANK0 ] unsigned char 
+  1002 ;;  counter         1    1[BANK0 ] unsigned char 
+  1003 ;; Return value:  Size  Location     Type
+  1004 ;;                  2    3[COMMON] int 
+  1005 ;; Registers used:
+  1006 ;;		wreg, status,2, status,0
+  1007 ;; Tracked objects:
+  1008 ;;		On entry : 0/0
+  1009 ;;		On exit  : 0/0
+  1010 ;;		Unchanged: 0/0
+  1011 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1012 ;;      Params:         4       0       0       0       0
+  1013 ;;      Locals:         0       4       0       0       0
+  1014 ;;      Temps:          0       1       0       0       0
+  1015 ;;      Totals:         4       5       0       0       0
+  1016 ;;Total ram usage:        9 bytes
+  1017 ;; Hardware stack levels used: 1
+  1018 ;; Hardware stack levels required when called: 2
+  1019 ;; This function calls:
+  1020 ;;		Nothing
+  1021 ;; This function is called by:
+  1022 ;;		_changeTimerMaxConter
+  1023 ;; This function uses a non-reentrant model
+  1024 ;;
+  1025                           
+  1026  002F                     ___awdiv:	
+  1027                           ;psect for function ___awdiv
+  1028                           
+  1029  002F                     l1226:	
+  1030                           ;incstack = 0
+  1031                           ; Regs used in ___awdiv: [wreg+status,2+status,0]
+  1032                           
+  1033  002F  1283               	bcf	3,5	;RP0=0, select bank0
+  1034  0030  1303               	bcf	3,6	;RP1=0, select bank0
+  1035  0031  01A2               	clrf	___awdiv@sign
+  1036  0032                     l1228:
+  1037  0032  1FF4               	btfss	___awdiv@divisor+1,7
+  1038  0033  2835               	goto	u671
+  1039  0034  2836               	goto	u670
+  1040  0035                     u671:
+  1041  0035  283D               	goto	l1234
+  1042  0036                     u670:
+  1043  0036                     l1230:
+  1044  0036  09F3               	comf	___awdiv@divisor,f
+  1045  0037  09F4               	comf	___awdiv@divisor+1,f
+  1046  0038  0AF3               	incf	___awdiv@divisor,f
+  1047  0039  1903               	skipnz
+  1048  003A  0AF4               	incf	___awdiv@divisor+1,f
+  1049  003B                     l1232:
+  1050  003B  01A2               	clrf	___awdiv@sign
+  1051  003C  0AA2               	incf	___awdiv@sign,f
+  1052  003D                     l1234:
+  1053  003D  1FF6               	btfss	___awdiv@dividend+1,7
+  1054  003E  2840               	goto	u681
+  1055  003F  2841               	goto	u680
+  1056  0040                     u681:
+  1057  0040  284A               	goto	l1240
+  1058  0041                     u680:
+  1059  0041                     l1236:
+  1060  0041  09F5               	comf	___awdiv@dividend,f
+  1061  0042  09F6               	comf	___awdiv@dividend+1,f
+  1062  0043  0AF5               	incf	___awdiv@dividend,f
+  1063  0044  1903               	skipnz
+  1064  0045  0AF6               	incf	___awdiv@dividend+1,f
+  1065  0046                     l1238:
+  1066  0046  3001               	movlw	1
+  1067  0047  00A0               	movwf	??___awdiv
+  1068  0048  0820               	movf	??___awdiv,w
+  1069  0049  06A2               	xorwf	___awdiv@sign,f
+  1070  004A                     l1240:
+  1071  004A  01A3               	clrf	___awdiv@quotient
+  1072  004B  01A4               	clrf	___awdiv@quotient+1
+  1073  004C                     l1242:
+  1074  004C  0873               	movf	___awdiv@divisor,w
+  1075  004D  0474               	iorwf	___awdiv@divisor+1,w
+  1076  004E  1903               	btfsc	3,2
+  1077  004F  2851               	goto	u691
+  1078  0050  2852               	goto	u690
+  1079  0051                     u691:
+  1080  0051  2889               	goto	l1262
+  1081  0052                     u690:
+  1082  0052                     l1244:
+  1083  0052  01A1               	clrf	___awdiv@counter
+  1084  0053  0AA1               	incf	___awdiv@counter,f
+  1085  0054  2860               	goto	l1250
+  1086  0055                     l1246:
+  1087  0055  3001               	movlw	1
+  1088  0056                     u705:
+  1089  0056  1003               	clrc
+  1090  0057  0DF3               	rlf	___awdiv@divisor,f
+  1091  0058  0DF4               	rlf	___awdiv@divisor+1,f
+  1092  0059  3EFF               	addlw	-1
+  1093  005A  1D03               	skipz
+  1094  005B  2856               	goto	u705
+  1095  005C                     l1248:
+  1096  005C  3001               	movlw	1
+  1097  005D  00A0               	movwf	??___awdiv
+  1098  005E  0820               	movf	??___awdiv,w
+  1099  005F  07A1               	addwf	___awdiv@counter,f
+  1100  0060                     l1250:
+  1101  0060  1FF4               	btfss	___awdiv@divisor+1,7
+  1102  0061  2863               	goto	u711
+  1103  0062  2864               	goto	u710
+  1104  0063                     u711:
+  1105  0063  2855               	goto	l1246
+  1106  0064                     u710:
+  1107  0064                     l1252:
+  1108  0064  3001               	movlw	1
+  1109  0065                     u725:
+  1110  0065  1003               	clrc
+  1111  0066  0DA3               	rlf	___awdiv@quotient,f
+  1112  0067  0DA4               	rlf	___awdiv@quotient+1,f
+  1113  0068  3EFF               	addlw	-1
+  1114  0069  1D03               	skipz
+  1115  006A  2865               	goto	u725
+  1116  006B  0874               	movf	___awdiv@divisor+1,w
+  1117  006C  0276               	subwf	___awdiv@dividend+1,w
+  1118  006D  1D03               	skipz
+  1119  006E  2871               	goto	u735
+  1120  006F  0873               	movf	___awdiv@divisor,w
+  1121  0070  0275               	subwf	___awdiv@dividend,w
+  1122  0071                     u735:
+  1123  0071  1C03               	skipc
+  1124  0072  2874               	goto	u731
+  1125  0073  2875               	goto	u730
+  1126  0074                     u731:
+  1127  0074  287C               	goto	l1258
+  1128  0075                     u730:
+  1129  0075                     l1254:
+  1130  0075  0873               	movf	___awdiv@divisor,w
+  1131  0076  02F5               	subwf	___awdiv@dividend,f
+  1132  0077  0874               	movf	___awdiv@divisor+1,w
+  1133  0078  1C03               	skipc
+  1134  0079  03F6               	decf	___awdiv@dividend+1,f
+  1135  007A  02F6               	subwf	___awdiv@dividend+1,f
+  1136  007B                     l1256:
+  1137  007B  1423               	bsf	___awdiv@quotient,0
+  1138  007C                     l1258:
+  1139  007C  3001               	movlw	1
+  1140  007D                     u745:
+  1141  007D  1003               	clrc
+  1142  007E  0CF4               	rrf	___awdiv@divisor+1,f
+  1143  007F  0CF3               	rrf	___awdiv@divisor,f
+  1144  0080  3EFF               	addlw	-1
+  1145  0081  1D03               	skipz
+  1146  0082  287D               	goto	u745
+  1147  0083                     l1260:
+  1148  0083  3001               	movlw	1
+  1149  0084  02A1               	subwf	___awdiv@counter,f
+  1150  0085  1D03               	btfss	3,2
+  1151  0086  2888               	goto	u751
+  1152  0087  2889               	goto	u750
+  1153  0088                     u751:
+  1154  0088  2864               	goto	l1252
+  1155  0089                     u750:
+  1156  0089                     l1262:
+  1157  0089  0822               	movf	___awdiv@sign,w
+  1158  008A  1903               	btfsc	3,2
+  1159  008B  288D               	goto	u761
+  1160  008C  288E               	goto	u760
+  1161  008D                     u761:
+  1162  008D  2893               	goto	l1266
+  1163  008E                     u760:
+  1164  008E                     l1264:
+  1165  008E  09A3               	comf	___awdiv@quotient,f
+  1166  008F  09A4               	comf	___awdiv@quotient+1,f
+  1167  0090  0AA3               	incf	___awdiv@quotient,f
+  1168  0091  1903               	skipnz
+  1169  0092  0AA4               	incf	___awdiv@quotient+1,f
+  1170  0093                     l1266:
+  1171  0093  0824               	movf	___awdiv@quotient+1,w
+  1172  0094  00F4               	movwf	?___awdiv+1
+  1173  0095  0823               	movf	___awdiv@quotient,w
+  1174  0096  00F3               	movwf	?___awdiv
+  1175  0097                     l375:
+  1176  0097  0008               	return
+  1177  0098                     __end_of___awdiv:
+  1178                           
+  1179                           	psect	text9
+  1180  0191                     __ptext9:	
+  1181 ;; *************** function ___wmul *****************
+  1182 ;; Defined at:
+  1183 ;;		line 15 in file "D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul16.c"
+  1184 ;; Parameters:    Size  Location     Type
+  1185 ;;  multiplier      2    3[COMMON] unsigned int 
+  1186 ;;  multiplicand    2    5[COMMON] unsigned int 
+  1187 ;; Auto vars:     Size  Location     Type
+  1188 ;;  product         2    0[BANK0 ] unsigned int 
+  1189 ;; Return value:  Size  Location     Type
+  1190 ;;                  2    3[COMMON] unsigned int 
+  1191 ;; Registers used:
+  1192 ;;		wreg, status,2, status,0
+  1193 ;; Tracked objects:
+  1194 ;;		On entry : 0/0
+  1195 ;;		On exit  : 0/0
+  1196 ;;		Unchanged: 0/0
+  1197 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1198 ;;      Params:         4       0       0       0       0
+  1199 ;;      Locals:         0       2       0       0       0
+  1200 ;;      Temps:          0       0       0       0       0
+  1201 ;;      Totals:         4       2       0       0       0
+  1202 ;;Total ram usage:        6 bytes
+  1203 ;; Hardware stack levels used: 1
+  1204 ;; Hardware stack levels required when called: 2
+  1205 ;; This function calls:
+  1206 ;;		Nothing
+  1207 ;; This function is called by:
+  1208 ;;		_setupNewVolumeFlow
+  1209 ;; This function uses a non-reentrant model
+  1210 ;;
+  1211                           
+  1212  0191                     ___wmul:	
+  1213                           ;psect for function ___wmul
+  1214                           
+  1215  0191                     l1274:	
+  1216                           ;incstack = 0
+  1217                           ; Regs used in ___wmul: [wreg+status,2+status,0]
+  1218                           
+  1219  0191  1283               	bcf	3,5	;RP0=0, select bank0
+  1220  0192  1303               	bcf	3,6	;RP1=0, select bank0
+  1221  0193  01A0               	clrf	___wmul@product
+  1222  0194  01A1               	clrf	___wmul@product+1
+  1223  0195                     l1276:
+  1224  0195  1C73               	btfss	___wmul@multiplier,0
+  1225  0196  2998               	goto	u771
+  1226  0197  2999               	goto	u770
+  1227  0198                     u771:
+  1228  0198  29A1               	goto	l222
+  1229  0199                     u770:
+  1230  0199                     l1278:
+  1231  0199  0875               	movf	___wmul@multiplicand,w
+  1232  019A  1283               	bcf	3,5	;RP0=0, select bank0
+  1233  019B  1303               	bcf	3,6	;RP1=0, select bank0
+  1234  019C  07A0               	addwf	___wmul@product,f
+  1235  019D  1803               	skipnc
+  1236  019E  0AA1               	incf	___wmul@product+1,f
+  1237  019F  0876               	movf	___wmul@multiplicand+1,w
+  1238  01A0  07A1               	addwf	___wmul@product+1,f
+  1239  01A1                     l222:
+  1240  01A1  3001               	movlw	1
+  1241  01A2                     u785:
+  1242  01A2  1003               	clrc
+  1243  01A3  0DF5               	rlf	___wmul@multiplicand,f
+  1244  01A4  0DF6               	rlf	___wmul@multiplicand+1,f
+  1245  01A5  3EFF               	addlw	-1
+  1246  01A6  1D03               	skipz
+  1247  01A7  29A2               	goto	u785
+  1248  01A8                     l1280:
+  1249  01A8  3001               	movlw	1
+  1250  01A9                     u795:
+  1251  01A9  1003               	clrc
+  1252  01AA  0CF4               	rrf	___wmul@multiplier+1,f
+  1253  01AB  0CF3               	rrf	___wmul@multiplier,f
+  1254  01AC  3EFF               	addlw	-1
+  1255  01AD  1D03               	skipz
+  1256  01AE  29A9               	goto	u795
+  1257  01AF                     l1282:
+  1258  01AF  0873               	movf	___wmul@multiplier,w
+  1259  01B0  0474               	iorwf	___wmul@multiplier+1,w
+  1260  01B1  1D03               	btfss	3,2
+  1261  01B2  29B4               	goto	u801
+  1262  01B3  29B5               	goto	u800
+  1263  01B4                     u801:
+  1264  01B4  2995               	goto	l1276
+  1265  01B5                     u800:
+  1266  01B5                     l1284:
+  1267  01B5  1283               	bcf	3,5	;RP0=0, select bank0
+  1268  01B6  1303               	bcf	3,6	;RP1=0, select bank0
+  1269  01B7  0821               	movf	___wmul@product+1,w
+  1270  01B8  00F4               	movwf	?___wmul+1
+  1271  01B9  0820               	movf	___wmul@product,w
+  1272  01BA  00F3               	movwf	?___wmul
+  1273  01BB                     l224:
+  1274  01BB  0008               	return
+  1275  01BC                     __end_of___wmul:
+  1276                           
+  1277                           	psect	text10
+  1278  027E                     __ptext10:	
+  1279 ;; *************** function _setupExternalInterruption *****************
+  1280 ;; Defined at:
+  1281 ;;		line 164 in file "main.c"
+  1282 ;; Parameters:    Size  Location     Type
+  1283 ;;		None
+  1284 ;; Auto vars:     Size  Location     Type
+  1285 ;;		None
+  1286 ;; Return value:  Size  Location     Type
+  1287 ;;                  1    wreg      void 
+  1288 ;; Registers used:
+  1289 ;;		None
+  1290 ;; Tracked objects:
+  1291 ;;		On entry : 0/0
+  1292 ;;		On exit  : 0/0
+  1293 ;;		Unchanged: 0/0
+  1294 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1295 ;;      Params:         0       0       0       0       0
+  1296 ;;      Locals:         0       0       0       0       0
+  1297 ;;      Temps:          0       0       0       0       0
+  1298 ;;      Totals:         0       0       0       0       0
+  1299 ;;Total ram usage:        0 bytes
+  1300 ;; Hardware stack levels used: 1
+  1301 ;; Hardware stack levels required when called: 2
+  1302 ;; This function calls:
+  1303 ;;		Nothing
+  1304 ;; This function is called by:
+  1305 ;;		_main
+  1306 ;; This function uses a non-reentrant model
+  1307 ;;
+  1308                           
+  1309  027E                     _setupExternalInterruption:	
+  1310                           ;psect for function _setupExternalInterruption
+  1311                           
+  1312  027E                     l1142:	
+  1313                           ;incstack = 0
+  1314                           ; Regs used in _setupExternalInterruption: []
+  1315                           
+  1316  027E                     l114:	
+  1317                           ;main.c: 166:     return;
+  1318                           
+  1319  027E  0008               	return
+  1320  027F                     __end_of_setupExternalInterruption:
+  1321                           
+  1322                           	psect	text11
+  1323  0246                     __ptext11:	
+  1324 ;; *************** function _irrigar *****************
+  1325 ;; Defined at:
+  1326 ;;		line 140 in file "main.c"
+  1327 ;; Parameters:    Size  Location     Type
+  1328 ;;		None
+  1329 ;; Auto vars:     Size  Location     Type
+  1330 ;;		None
+  1331 ;; Return value:  Size  Location     Type
+  1332 ;;                  1    wreg      void 
+  1333 ;; Registers used:
+  1334 ;;		wreg, status,2, status,0
+  1335 ;; Tracked objects:
+  1336 ;;		On entry : 0/0
+  1337 ;;		On exit  : 0/0
+  1338 ;;		Unchanged: 0/0
+  1339 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1340 ;;      Params:         0       0       0       0       0
+  1341 ;;      Locals:         0       0       0       0       0
+  1342 ;;      Temps:          0       0       0       0       0
+  1343 ;;      Totals:         0       0       0       0       0
+  1344 ;;Total ram usage:        0 bytes
+  1345 ;; Hardware stack levels used: 1
+  1346 ;; Hardware stack levels required when called: 2
+  1347 ;; This function calls:
+  1348 ;;		Nothing
+  1349 ;; This function is called by:
+  1350 ;;		_main
+  1351 ;; This function uses a non-reentrant model
+  1352 ;;
+  1353                           
+  1354  0246                     _irrigar:	
+  1355                           ;psect for function _irrigar
+  1356                           
+  1357  0246                     l1132:	
+  1358                           ;incstack = 0
+  1359                           ; Regs used in _irrigar: [wreg+status,2+status,0]
+  1360                           
+  1361                           
+  1362                           ;main.c: 141:     irrigacao_ativa = 1;
+  1363  0246  3001               	movlw	1
+  1364  0247  00F7               	movwf	_irrigacao_ativa
+  1365  0248  3000               	movlw	0
+  1366  0249  00F8               	movwf	_irrigacao_ativa+1
+  1367  024A                     l1134:
+  1368                           
+  1369                           ;main.c: 142:     timer_counter = 0;
+  1370  024A  01F9               	clrf	_timer_counter
+  1371  024B  01FA               	clrf	_timer_counter+1
+  1372  024C                     l1136:
+  1373                           
+  1374                           ;main.c: 143:     PORTBbits.RB1 = 1;
+  1375  024C  1283               	bcf	3,5	;RP0=0, select bank0
+  1376  024D  1303               	bcf	3,6	;RP1=0, select bank0
+  1377  024E  1486               	bsf	6,1	;volatile
+  1378  024F                     l1138:
+  1379                           
+  1380                           ;main.c: 145:     T1CONbits.TMR1ON = 1;
+  1381  024F  1410               	bsf	16,0	;volatile
+  1382  0250                     l1140:	
+  1383                           ;main.c: 146:     while(irrigacao_ativa);
+  1384                           
+  1385  0250  0877               	movf	_irrigacao_ativa,w
+  1386  0251  0478               	iorwf	_irrigacao_ativa+1,w
+  1387  0252  1D03               	btfss	3,2
+  1388  0253  2A55               	goto	u581
+  1389  0254  2A56               	goto	u580
+  1390  0255                     u581:
+  1391  0255  2A50               	goto	l1140
+  1392  0256                     u580:
+  1393  0256                     l102:
+  1394                           
+  1395                           ;main.c: 148:     T1CONbits.TMR1ON = 0;
+  1396  0256  1283               	bcf	3,5	;RP0=0, select bank0
+  1397  0257  1303               	bcf	3,6	;RP1=0, select bank0
+  1398  0258  1010               	bcf	16,0	;volatile
+  1399  0259                     l103:
+  1400  0259  0008               	return
+  1401  025A                     __end_of_irrigar:
+  1402                           
+  1403                           	psect	text12
+  1404  0098                     __ptext12:	
+  1405 ;; *************** function _Lcd_Init *****************
+  1406 ;; Defined at:
+  1407 ;;		line 62 in file "./lcd.h"
+  1408 ;; Parameters:    Size  Location     Type
+  1409 ;;		None
+  1410 ;; Auto vars:     Size  Location     Type
+  1411 ;;		None
+  1412 ;; Return value:  Size  Location     Type
+  1413 ;;                  1    wreg      void 
+  1414 ;; Registers used:
+  1415 ;;		wreg, status,2, status,0, pclath, cstack
+  1416 ;; Tracked objects:
+  1417 ;;		On entry : 0/0
+  1418 ;;		On exit  : 0/0
+  1419 ;;		Unchanged: 0/0
+  1420 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1421 ;;      Params:         0       0       0       0       0
+  1422 ;;      Locals:         0       0       0       0       0
+  1423 ;;      Temps:          0       2       0       0       0
+  1424 ;;      Totals:         0       2       0       0       0
+  1425 ;;Total ram usage:        2 bytes
+  1426 ;; Hardware stack levels used: 1
+  1427 ;; Hardware stack levels required when called: 4
+  1428 ;; This function calls:
+  1429 ;;		_Lcd_Cmd
+  1430 ;;		_Lcd_Port
+  1431 ;; This function is called by:
+  1432 ;;		_main
+  1433 ;; This function uses a non-reentrant model
+  1434 ;;
+  1435                           
+  1436  0098                     _Lcd_Init:	
+  1437                           ;psect for function _Lcd_Init
+  1438                           
+  1439  0098                     l1292:	
+  1440                           ;incstack = 0
+  1441                           ; Regs used in _Lcd_Init: [wreg+status,2+status,0+pclath+cstack]
+  1442                           
+  1443                           
+  1444                           ;./lcd.h: 64:   Lcd_Port(0x00);
+  1445  0098  3000               	movlw	0
+  1446  0099  120A  118A  21BC  120A  118A  	fcall	_Lcd_Port
+  1447  009E                     l1294:
+  1448                           
+  1449                           ;./lcd.h: 65:    _delay((unsigned long)((20)*(4000000/4000.0)));
+  1450  009E  301A               	movlw	26
+  1451  009F  1283               	bcf	3,5	;RP0=0, select bank0
+  1452  00A0  1303               	bcf	3,6	;RP1=0, select bank0
+  1453  00A1  00A1               	movwf	??_Lcd_Init+1
+  1454  00A2  30F7               	movlw	247
+  1455  00A3  00A0               	movwf	??_Lcd_Init
+  1456  00A4                     u847:
+  1457  00A4  0BA0               	decfsz	??_Lcd_Init,f
+  1458  00A5  28A4               	goto	u847
+  1459  00A6  0BA1               	decfsz	??_Lcd_Init+1,f
+  1460  00A7  28A4               	goto	u847
+  1461  00A8  28A9               	nop2
+  1462  00A9                     l1296:
+  1463                           
+  1464                           ;./lcd.h: 66:   Lcd_Cmd(0x03);
+  1465  00A9  3003               	movlw	3
+  1466  00AA  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1467                           
+  1468                           ;./lcd.h: 67:  _delay((unsigned long)((5)*(4000000/4000.0)));
+  1469  00AF  3007               	movlw	7
+  1470  00B0  1283               	bcf	3,5	;RP0=0, select bank0
+  1471  00B1  1303               	bcf	3,6	;RP1=0, select bank0
+  1472  00B2  00A1               	movwf	??_Lcd_Init+1
+  1473  00B3  307C               	movlw	124
+  1474  00B4  00A0               	movwf	??_Lcd_Init
+  1475  00B5                     u857:
+  1476  00B5  0BA0               	decfsz	??_Lcd_Init,f
+  1477  00B6  28B5               	goto	u857
+  1478  00B7  0BA1               	decfsz	??_Lcd_Init+1,f
+  1479  00B8  28B5               	goto	u857
+  1480  00B9  0000               	nop
+  1481  00BA                     l1298:
+  1482                           
+  1483                           ;./lcd.h: 68:   Lcd_Cmd(0x03);
+  1484  00BA  3003               	movlw	3
+  1485  00BB  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1486  00C0                     l1300:
+  1487                           
+  1488                           ;./lcd.h: 69:  _delay((unsigned long)((11)*(4000000/4000.0)));
+  1489  00C0  300F               	movlw	15
+  1490  00C1  1283               	bcf	3,5	;RP0=0, select bank0
+  1491  00C2  1303               	bcf	3,6	;RP1=0, select bank0
+  1492  00C3  00A1               	movwf	??_Lcd_Init+1
+  1493  00C4  3047               	movlw	71
+  1494  00C5  00A0               	movwf	??_Lcd_Init
+  1495  00C6                     u867:
+  1496  00C6  0BA0               	decfsz	??_Lcd_Init,f
+  1497  00C7  28C6               	goto	u867
+  1498  00C8  0BA1               	decfsz	??_Lcd_Init+1,f
+  1499  00C9  28C6               	goto	u867
+  1500                           
+  1501                           ;./lcd.h: 70:   Lcd_Cmd(0x03);
+  1502  00CA  3003               	movlw	3
+  1503  00CB  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1504                           
+  1505                           ;./lcd.h: 72:   Lcd_Cmd(0x02);
+  1506  00D0  3002               	movlw	2
+  1507  00D1  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1508                           
+  1509                           ;./lcd.h: 73:   Lcd_Cmd(0x02);
+  1510  00D6  3002               	movlw	2
+  1511  00D7  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1512                           
+  1513                           ;./lcd.h: 74:   Lcd_Cmd(0x08);
+  1514  00DC  3008               	movlw	8
+  1515  00DD  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1516                           
+  1517                           ;./lcd.h: 75:   Lcd_Cmd(0x00);
+  1518  00E2  3000               	movlw	0
+  1519  00E3  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1520                           
+  1521                           ;./lcd.h: 76:   Lcd_Cmd(0x0C);
+  1522  00E8  300C               	movlw	12
+  1523  00E9  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1524                           
+  1525                           ;./lcd.h: 77:   Lcd_Cmd(0x00);
+  1526  00EE  3000               	movlw	0
+  1527  00EF  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1528                           
+  1529                           ;./lcd.h: 78:   Lcd_Cmd(0x06);
+  1530  00F4  3006               	movlw	6
+  1531  00F5  120A  118A  21FD  120A  118A  	fcall	_Lcd_Cmd
+  1532  00FA                     l58:
+  1533  00FA  0008               	return
+  1534  00FB                     __end_of_Lcd_Init:
+  1535                           
+  1536                           	psect	text13
+  1537  01FD                     __ptext13:	
+  1538 ;; *************** function _Lcd_Cmd *****************
+  1539 ;; Defined at:
+  1540 ;;		line 26 in file "./lcd.h"
+  1541 ;; Parameters:    Size  Location     Type
+  1542 ;;  a               1    wreg     unsigned char 
+  1543 ;; Auto vars:     Size  Location     Type
+  1544 ;;  a               1    6[COMMON] unsigned char 
+  1545 ;; Return value:  Size  Location     Type
+  1546 ;;                  1    wreg      void 
+  1547 ;; Registers used:
+  1548 ;;		wreg, status,2, status,0, pclath, cstack
+  1549 ;; Tracked objects:
+  1550 ;;		On entry : 0/0
+  1551 ;;		On exit  : 0/0
+  1552 ;;		Unchanged: 0/0
+  1553 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1554 ;;      Params:         0       0       0       0       0
+  1555 ;;      Locals:         1       0       0       0       0
+  1556 ;;      Temps:          2       0       0       0       0
+  1557 ;;      Totals:         3       0       0       0       0
+  1558 ;;Total ram usage:        3 bytes
+  1559 ;; Hardware stack levels used: 1
+  1560 ;; Hardware stack levels required when called: 3
+  1561 ;; This function calls:
+  1562 ;;		_Lcd_Port
+  1563 ;; This function is called by:
+  1564 ;;		_Lcd_Init
+  1565 ;;		_Lcd_Clear
+  1566 ;;		_Lcd_Set_Cursor
+  1567 ;;		_Lcd_Shift_Right
+  1568 ;;		_Lcd_Shift_Left
+  1569 ;; This function uses a non-reentrant model
+  1570 ;;
+  1571                           
+  1572  01FD                     _Lcd_Cmd:	
+  1573                           ;psect for function _Lcd_Cmd
+  1574                           
+  1575                           
+  1576                           ;incstack = 0
+  1577                           ; Regs used in _Lcd_Cmd: [wreg+status,2+status,0+pclath+cstack]
+  1578                           ;Lcd_Cmd@a stored from wreg
+  1579  01FD  00F6               	movwf	Lcd_Cmd@a
+  1580  01FE                     l1050:
+  1581                           
+  1582                           ;./lcd.h: 26: void Lcd_Cmd(char a);./lcd.h: 27: {;./lcd.h: 28:  PORTDbits.RD1 = 0;
+  1583  01FE  1283               	bcf	3,5	;RP0=0, select bank0
+  1584  01FF  1303               	bcf	3,6	;RP1=0, select bank0
+  1585  0200  1088               	bcf	8,1	;volatile
+  1586  0201                     l1052:
+  1587                           
+  1588                           ;./lcd.h: 29:  Lcd_Port(a);
+  1589  0201  0876               	movf	Lcd_Cmd@a,w
+  1590  0202  120A  118A  21BC  120A  118A  	fcall	_Lcd_Port
+  1591  0207                     l1054:
+  1592                           
+  1593                           ;./lcd.h: 30:  PORTDbits.RD0 = 1;
+  1594  0207  1283               	bcf	3,5	;RP0=0, select bank0
+  1595  0208  1303               	bcf	3,6	;RP1=0, select bank0
+  1596  0209  1408               	bsf	8,0	;volatile
+  1597  020A                     l1056:
+  1598                           
+  1599                           ;./lcd.h: 31:         _delay((unsigned long)((4)*(4000000/4000.0)));
+  1600  020A  3006               	movlw	6
+  1601  020B  00F5               	movwf	??_Lcd_Cmd+1
+  1602  020C  3030               	movlw	48
+  1603  020D  00F4               	movwf	??_Lcd_Cmd
+  1604  020E                     u877:
+  1605  020E  0BF4               	decfsz	??_Lcd_Cmd,f
+  1606  020F  2A0E               	goto	u877
+  1607  0210  0BF5               	decfsz	??_Lcd_Cmd+1,f
+  1608  0211  2A0E               	goto	u877
+  1609  0212  0000               	nop
+  1610  0213                     l1058:
+  1611                           
+  1612                           ;./lcd.h: 32:         PORTDbits.RD0 = 0;
+  1613  0213  1283               	bcf	3,5	;RP0=0, select bank0
+  1614  0214  1303               	bcf	3,6	;RP1=0, select bank0
+  1615  0215  1008               	bcf	8,0	;volatile
+  1616  0216                     l46:
+  1617  0216  0008               	return
+  1618  0217                     __end_of_Lcd_Cmd:
+  1619                           
+  1620                           	psect	text14
+  1621  01BC                     __ptext14:	
+  1622 ;; *************** function _Lcd_Port *****************
+  1623 ;; Defined at:
+  1624 ;;		line 4 in file "./lcd.h"
+  1625 ;; Parameters:    Size  Location     Type
+  1626 ;;  a               1    wreg     unsigned char 
+  1627 ;; Auto vars:     Size  Location     Type
+  1628 ;;  a               1    3[COMMON] unsigned char 
+  1629 ;; Return value:  Size  Location     Type
+  1630 ;;                  1    wreg      void 
+  1631 ;; Registers used:
+  1632 ;;		wreg
+  1633 ;; Tracked objects:
+  1634 ;;		On entry : 0/0
+  1635 ;;		On exit  : 0/0
+  1636 ;;		Unchanged: 0/0
+  1637 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1638 ;;      Params:         0       0       0       0       0
+  1639 ;;      Locals:         1       0       0       0       0
+  1640 ;;      Temps:          0       0       0       0       0
+  1641 ;;      Totals:         1       0       0       0       0
+  1642 ;;Total ram usage:        1 bytes
+  1643 ;; Hardware stack levels used: 1
+  1644 ;; Hardware stack levels required when called: 2
+  1645 ;; This function calls:
+  1646 ;;		Nothing
+  1647 ;; This function is called by:
+  1648 ;;		_Lcd_Cmd
+  1649 ;;		_Lcd_Init
+  1650 ;;		_Lcd_Write_Char
+  1651 ;; This function uses a non-reentrant model
+  1652 ;;
+  1653                           
+  1654  01BC                     _Lcd_Port:	
+  1655                           ;psect for function _Lcd_Port
+  1656                           
+  1657                           
+  1658                           ;incstack = 0
+  1659                           ; Regs used in _Lcd_Port: [wreg]
+  1660                           ;Lcd_Port@a stored from wreg
+  1661  01BC  00F3               	movwf	Lcd_Port@a
+  1662  01BD                     l1022:
+  1663                           
+  1664                           ;./lcd.h: 4: void Lcd_Port(char a);./lcd.h: 5: {;./lcd.h: 6:  if(a & 1)
+  1665  01BD  1C73               	btfss	Lcd_Port@a,0
+  1666  01BE  29C0               	goto	u441
+  1667  01BF  29C1               	goto	u440
+  1668  01C0                     u441:
+  1669  01C0  29C5               	goto	l35
+  1670  01C1                     u440:
+  1671  01C1                     l1024:
+  1672                           
+  1673                           ;./lcd.h: 7:   PORTDbits.RD4 = 1;
+  1674  01C1  1283               	bcf	3,5	;RP0=0, select bank0
+  1675  01C2  1303               	bcf	3,6	;RP1=0, select bank0
+  1676  01C3  1608               	bsf	8,4	;volatile
+  1677  01C4  29C8               	goto	l36
+  1678  01C5                     l35:	
+  1679                           ;./lcd.h: 8:  else
+  1680                           
+  1681                           
+  1682                           ;./lcd.h: 9:   PORTDbits.RD4 = 0;
+  1683  01C5  1283               	bcf	3,5	;RP0=0, select bank0
+  1684  01C6  1303               	bcf	3,6	;RP1=0, select bank0
+  1685  01C7  1208               	bcf	8,4	;volatile
+  1686  01C8                     l36:
+  1687                           
+  1688                           ;./lcd.h: 11:  if(a & 2)
+  1689  01C8  1CF3               	btfss	Lcd_Port@a,1
+  1690  01C9  29CB               	goto	u451
+  1691  01CA  29CC               	goto	u450
+  1692  01CB                     u451:
+  1693  01CB  29CE               	goto	l37
+  1694  01CC                     u450:
+  1695  01CC                     l1026:
+  1696                           
+  1697                           ;./lcd.h: 12:   PORTDbits.RD5 = 1;
+  1698  01CC  1688               	bsf	8,5	;volatile
+  1699  01CD  29CF               	goto	l38
+  1700  01CE                     l37:	
+  1701                           ;./lcd.h: 13:  else
+  1702                           
+  1703                           
+  1704                           ;./lcd.h: 14:   PORTDbits.RD5 = 0;
+  1705  01CE  1288               	bcf	8,5	;volatile
+  1706  01CF                     l38:
+  1707                           
+  1708                           ;./lcd.h: 16:  if(a & 4)
+  1709  01CF  1D73               	btfss	Lcd_Port@a,2
+  1710  01D0  29D2               	goto	u461
+  1711  01D1  29D3               	goto	u460
+  1712  01D2                     u461:
+  1713  01D2  29D5               	goto	l39
+  1714  01D3                     u460:
+  1715  01D3                     l1028:
+  1716                           
+  1717                           ;./lcd.h: 17:   PORTDbits.RD6 = 1;
+  1718  01D3  1708               	bsf	8,6	;volatile
+  1719  01D4  29D6               	goto	l40
+  1720  01D5                     l39:	
+  1721                           ;./lcd.h: 18:  else
+  1722                           
+  1723                           
+  1724                           ;./lcd.h: 19:   PORTDbits.RD6 = 0;
+  1725  01D5  1308               	bcf	8,6	;volatile
+  1726  01D6                     l40:
+  1727                           
+  1728                           ;./lcd.h: 21:  if(a & 8)
+  1729  01D6  1DF3               	btfss	Lcd_Port@a,3
+  1730  01D7  29D9               	goto	u471
+  1731  01D8  29DA               	goto	u470
+  1732  01D9                     u471:
+  1733  01D9  29DC               	goto	l41
+  1734  01DA                     u470:
+  1735  01DA                     l1030:
+  1736                           
+  1737                           ;./lcd.h: 22:   PORTDbits.RD7 = 1;
+  1738  01DA  1788               	bsf	8,7	;volatile
+  1739  01DB  29DD               	goto	l43
+  1740  01DC                     l41:	
+  1741                           ;./lcd.h: 23:  else
+  1742                           
+  1743                           
+  1744                           ;./lcd.h: 24:   PORTDbits.RD7 = 0;
+  1745  01DC  1388               	bcf	8,7	;volatile
+  1746  01DD                     l43:
+  1747  01DD  0008               	return
+  1748  01DE                     __end_of_Lcd_Port:
+  1749                           
+  1750                           	psect	text15
+  1751  025A                     __ptext15:	
+  1752 ;; *************** function _interrupcao *****************
+  1753 ;; Defined at:
+  1754 ;;		line 157 in file "main.c"
+  1755 ;; Parameters:    Size  Location     Type
+  1756 ;;		None
+  1757 ;; Auto vars:     Size  Location     Type
+  1758 ;;		None
+  1759 ;; Return value:  Size  Location     Type
+  1760 ;;                  1    wreg      void 
+  1761 ;; Registers used:
+  1762 ;;		wreg, status,2, status,0, pclath, cstack
+  1763 ;; Tracked objects:
+  1764 ;;		On entry : 0/0
+  1765 ;;		On exit  : 0/0
+  1766 ;;		Unchanged: 0/0
+  1767 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1768 ;;      Params:         0       0       0       0       0
+  1769 ;;      Locals:         0       0       0       0       0
+  1770 ;;      Temps:          2       0       0       0       0
+  1771 ;;      Totals:         2       0       0       0       0
+  1772 ;;Total ram usage:        2 bytes
+  1773 ;; Hardware stack levels used: 1
+  1774 ;; Hardware stack levels required when called: 1
+  1775 ;; This function calls:
+  1776 ;;		_handleExternalInterruption
+  1777 ;;		_handleTimerInterruption
+  1778 ;; This function is called by:
+  1779 ;;		Interrupt level 1
+  1780 ;; This function uses a non-reentrant model
+  1781 ;;
+  1782                           
+  1783  025A                     _interrupcao:	
+  1784                           ;psect for function _interrupcao
+  1785                           
+  1786  025A                     i1l1188:
+  1787                           
+  1788                           ;main.c: 159:     handleTimerInterruption();
+  1789  025A  120A  118A  2150  120A  118A  	fcall	_handleTimerInterruption
+  1790  025F                     i1l1190:
+  1791                           
+  1792                           ;main.c: 160:     handleExternalInterruption();
+  1793  025F  120A  118A  227F  120A  118A  	fcall	_handleExternalInterruption
+  1794  0264                     i1l111:
+  1795  0264  0872               	movf	??_interrupcao+1,w
+  1796  0265  008A               	movwf	10
+  1797  0266  0E71               	swapf	??_interrupcao,w
+  1798  0267  0083               	movwf	3
+  1799  0268  0EFE               	swapf	btemp,f
+  1800  0269  0E7E               	swapf	btemp,w
+  1801  026A  0009               	retfie
+  1802  026B                     __end_of_interrupcao:
+  1803                           
+  1804                           	psect	intentry
+  1805  0004                     __pintentry:	
+  1806                           ;incstack = 0
+  1807                           ; Regs used in _interrupcao: [wreg+status,2+status,0+pclath+cstack]
+  1808                           
+  1809  0004                     interrupt_function:
+  1810  007E                     saved_w	set	btemp
+  1811  0004  00FE               	movwf	btemp
+  1812  0005  0E03               	swapf	3,w
+  1813  0006  00F1               	movwf	??_interrupcao
+  1814  0007  080A               	movf	10,w
+  1815  0008  00F2               	movwf	??_interrupcao+1
+  1816  0009  120A  118A  2A5A   	ljmp	_interrupcao
+  1817                           
+  1818                           	psect	text16
+  1819  0150                     __ptext16:	
+  1820 ;; *************** function _handleTimerInterruption *****************
+  1821 ;; Defined at:
+  1822 ;;		line 115 in file "main.c"
+  1823 ;; Parameters:    Size  Location     Type
+  1824 ;;		None
+  1825 ;; Auto vars:     Size  Location     Type
+  1826 ;;		None
+  1827 ;; Return value:  Size  Location     Type
+  1828 ;;                  1    wreg      void 
+  1829 ;; Registers used:
+  1830 ;;		wreg, status,2, status,0
+  1831 ;; Tracked objects:
+  1832 ;;		On entry : 0/0
+  1833 ;;		On exit  : 0/0
+  1834 ;;		Unchanged: 0/0
+  1835 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1836 ;;      Params:         0       0       0       0       0
+  1837 ;;      Locals:         0       0       0       0       0
+  1838 ;;      Temps:          1       0       0       0       0
+  1839 ;;      Totals:         1       0       0       0       0
+  1840 ;;Total ram usage:        1 bytes
+  1841 ;; Hardware stack levels used: 1
+  1842 ;; This function calls:
+  1843 ;;		Nothing
+  1844 ;; This function is called by:
+  1845 ;;		_interrupcao
+  1846 ;; This function uses a non-reentrant model
+  1847 ;;
+  1848                           
+  1849  0150                     _handleTimerInterruption:	
+  1850                           ;psect for function _handleTimerInterruption
+  1851                           
+  1852  0150                     i1l1106:	
+  1853                           ;incstack = 0
+  1854                           ; Regs used in _handleTimerInterruption: [wreg+status,2+status,0]
+  1855                           
+  1856                           
+  1857                           ;main.c: 117:     if(TMR1IF){
+  1858  0150  1283               	bcf	3,5	;RP0=0, select bank0
+  1859  0151  1303               	bcf	3,6	;RP1=0, select bank0
+  1860  0152  1C0C               	btfss	12,0	;volatile
+  1861  0153  2955               	goto	u53_21
+  1862  0154  2956               	goto	u53_20
+  1863  0155                     u53_21:
+  1864  0155  2990               	goto	i1l97
+  1865  0156                     u53_20:
+  1866  0156                     i1l1108:
+  1867                           
+  1868                           ;main.c: 118:         if(irrigacao_ativa){
+  1869  0156  0877               	movf	_irrigacao_ativa,w
+  1870  0157  0478               	iorwf	_irrigacao_ativa+1,w
+  1871  0158  1903               	btfsc	3,2
+  1872  0159  295B               	goto	u54_21
+  1873  015A  295C               	goto	u54_20
+  1874  015B                     u54_21:
+  1875  015B  2979               	goto	i1l1118
+  1876  015C                     u54_20:
+  1877  015C                     i1l1110:
+  1878                           
+  1879                           ;main.c: 120:             PORTD = timer_counter;
+  1880  015C  0879               	movf	_timer_counter,w
+  1881  015D  0088               	movwf	8	;volatile
+  1882                           
+  1883                           ;main.c: 122:             timer_counter++;
+  1884  015E  3001               	movlw	1
+  1885  015F  07F9               	addwf	_timer_counter,f
+  1886  0160  1803               	skipnc
+  1887  0161  0AFA               	incf	_timer_counter+1,f
+  1888  0162  3000               	movlw	0
+  1889  0163  07FA               	addwf	_timer_counter+1,f
+  1890                           
+  1891                           ;main.c: 123:             if(timer_counter_max <= timer_counter){
+  1892  0164  087A               	movf	_timer_counter+1,w
+  1893  0165  3A80               	xorlw	128
+  1894  0166  00F0               	movwf	??_handleTimerInterruption
+  1895  0167  0833               	movf	_timer_counter_max+1,w
+  1896  0168  3A80               	xorlw	128
+  1897  0169  0270               	subwf	??_handleTimerInterruption,w
+  1898  016A  1D03               	skipz
+  1899  016B  296E               	goto	u55_25
+  1900  016C  0832               	movf	_timer_counter_max,w
+  1901  016D  0279               	subwf	_timer_counter,w
+  1902  016E                     u55_25:
+  1903  016E  1C03               	skipc
+  1904  016F  2971               	goto	u55_21
+  1905  0170  2972               	goto	u55_20
+  1906  0171                     u55_21:
+  1907  0171  297C               	goto	i1l1122
+  1908  0172                     u55_20:
+  1909  0172                     i1l1112:
+  1910                           
+  1911                           ;main.c: 124:                 PORTBbits.RB1 = 0;
+  1912  0172  1283               	bcf	3,5	;RP0=0, select bank0
+  1913  0173  1303               	bcf	3,6	;RP1=0, select bank0
+  1914  0174  1086               	bcf	6,1	;volatile
+  1915  0175                     i1l1114:
+  1916                           
+  1917                           ;main.c: 125:                 irrigacao_ativa = 0;
+  1918  0175  01F7               	clrf	_irrigacao_ativa
+  1919  0176  01F8               	clrf	_irrigacao_ativa+1
+  1920  0177                     i1l1116:
+  1921                           
+  1922                           ;main.c: 126:                 PORTBbits.RB7 =1;
+  1923  0177  1786               	bsf	6,7	;volatile
+  1924  0178  297C               	goto	i1l1122
+  1925  0179                     i1l1118:
+  1926                           
+  1927                           ;main.c: 130:             timer_counter = 0;
+  1928  0179  01F9               	clrf	_timer_counter
+  1929  017A  01FA               	clrf	_timer_counter+1
+  1930  017B                     i1l1120:
+  1931                           
+  1932                           ;main.c: 131:             PORTBbits.RB1 = 0;
+  1933  017B  1086               	bcf	6,1	;volatile
+  1934  017C                     i1l1122:
+  1935                           
+  1936                           ;main.c: 133:         PORTBbits.RB5 = !PORTBbits.RB5;
+  1937  017C  1003               	clrc
+  1938  017D  1283               	bcf	3,5	;RP0=0, select bank0
+  1939  017E  1303               	bcf	3,6	;RP1=0, select bank0
+  1940  017F  1E86               	btfss	6,5	;volatile
+  1941  0180  1403               	setc
+  1942  0181  1803               	btfsc	3,0
+  1943  0182  2984               	goto	u56_21
+  1944  0183  2988               	goto	u56_20
+  1945  0184                     u56_21:
+  1946  0184  1283               	bcf	3,5	;RP0=0, select bank0
+  1947  0185  1303               	bcf	3,6	;RP1=0, select bank0
+  1948  0186  1686               	bsf	6,5	;volatile
+  1949  0187  298B               	goto	u57_24
+  1950  0188                     u56_20:
+  1951  0188  1283               	bcf	3,5	;RP0=0, select bank0
+  1952  0189  1303               	bcf	3,6	;RP1=0, select bank0
+  1953  018A  1286               	bcf	6,5	;volatile
+  1954  018B                     u57_24:
+  1955  018B                     i1l1124:
+  1956                           
+  1957                           ;main.c: 134:         PIR1bits.TMR1IF = 0;
+  1958  018B  100C               	bcf	12,0	;volatile
+  1959  018C                     i1l1126:
+  1960                           
+  1961                           ;main.c: 135:         TMR1H = 0x0B;
+  1962  018C  300B               	movlw	11
+  1963  018D  008F               	movwf	15	;volatile
+  1964  018E                     i1l1128:
+  1965                           
+  1966                           ;main.c: 136:         TMR1L = 0xDC;
+  1967  018E  30DC               	movlw	220
+  1968  018F  008E               	movwf	14	;volatile
+  1969  0190                     i1l97:
+  1970  0190  0008               	return
+  1971  0191                     __end_of_handleTimerInterruption:
+  1972                           
+  1973                           	psect	text17
+  1974  027F                     __ptext17:	
+  1975 ;; *************** function _handleExternalInterruption *****************
+  1976 ;; Defined at:
+  1977 ;;		line 151 in file "main.c"
+  1978 ;; Parameters:    Size  Location     Type
+  1979 ;;		None
+  1980 ;; Auto vars:     Size  Location     Type
+  1981 ;;		None
+  1982 ;; Return value:  Size  Location     Type
+  1983 ;;                  1    wreg      void 
+  1984 ;; Registers used:
+  1985 ;;		None
+  1986 ;; Tracked objects:
+  1987 ;;		On entry : 0/0
+  1988 ;;		On exit  : 0/0
+  1989 ;;		Unchanged: 0/0
+  1990 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1991 ;;      Params:         0       0       0       0       0
+  1992 ;;      Locals:         0       0       0       0       0
+  1993 ;;      Temps:          0       0       0       0       0
+  1994 ;;      Totals:         0       0       0       0       0
+  1995 ;;Total ram usage:        0 bytes
+  1996 ;; Hardware stack levels used: 1
+  1997 ;; This function calls:
+  1998 ;;		Nothing
+  1999 ;; This function is called by:
+  2000 ;;		_interrupcao
+  2001 ;; This function uses a non-reentrant model
+  2002 ;;
+  2003                           
+  2004  027F                     _handleExternalInterruption:	
+  2005                           ;psect for function _handleExternalInterruption
+  2006                           
+  2007  027F                     i1l892:	
+  2008                           ;incstack = 0
+  2009                           ; Regs used in _handleExternalInterruption: []
+  2010                           
+  2011  027F                     i1l106:	
+  2012                           ;main.c: 154:     return;
+  2013                           
+  2014  027F  0008               	return
+  2015  0280                     __end_of_handleExternalInterruption:
+  2016  007E                     btemp	set	126	;btemp
+  2017  007E                     wtemp0	set	126
 
 Data Sizes:
     Strings     0
     Constant    0
-    Data        0
-    BSS         0
+    Data        4
+    BSS         4
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14      8       8
-    BANK0            80      0       0
+    COMMON           14      7      11
+    BANK0            80     16      20
     BANK1            80      0       0
     BANK3            96      0       0
     BANK2            96      0       0
@@ -1177,17 +2053,20 @@ Pointer List with Targets:
 
 Critical Paths under _main in COMMON
 
-    _main->_Lcd_Init
+    _setupNewVolumeFlow->___wmul
+    _changeTimerMaxConter->___awdiv
     _Lcd_Init->_Lcd_Cmd
     _Lcd_Cmd->_Lcd_Port
 
 Critical Paths under _interrupcao in COMMON
 
-    None.
+    _interrupcao->_handleTimerInterruption
 
 Critical Paths under _main in BANK0
 
-    None.
+    _setupTimer->_setupNewVolumeFlow
+    _setupNewVolumeFlow->_changeTimerMaxConter
+    _changeTimerMaxConter->___awdiv
 
 Critical Paths under _interrupcao in BANK0
 
@@ -1222,8 +2101,10 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 0     0      0     287
+ (0) _main                                                 5     5      0    1452
+                                             11 BANK0      5     5      0
                            _Lcd_Init
+                            _irrigar
           _setupExternalInterruption
                          _setupTimer
                  _setupWatchdogTimer
@@ -1239,37 +2120,57 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (1) _setupWatchdogTimer                                   0     0      0       0
  ---------------------------------------------------------------------------------
- (1) _setupTimer                                           2     0      2     152
-                                              2 COMMON     2     0      2
+ (1) _setupTimer                                           0     0      0    1217
+                 _setupNewVolumeFlow
+ ---------------------------------------------------------------------------------
+ (2) _setupNewVolumeFlow                                   4     2      2    1217
+                                              7 BANK0      4     2      2
+                             ___wmul
+               _changeTimerMaxConter
+ ---------------------------------------------------------------------------------
+ (3) _changeTimerMaxConter                                 2     0      2     746
+                                              5 BANK0      2     0      2
+                            ___awdiv
+ ---------------------------------------------------------------------------------
+ (4) ___awdiv                                              9     5      4     625
+                                              3 COMMON     4     0      4
+                                              0 BANK0      5     5      0
+ ---------------------------------------------------------------------------------
+ (3) ___wmul                                               6     2      4     316
+                                              3 COMMON     4     0      4
+                                              0 BANK0      2     2      0
  ---------------------------------------------------------------------------------
  (1) _setupExternalInterruption                            0     0      0       0
  ---------------------------------------------------------------------------------
- (1) _Lcd_Init                                             2     2      0     135
-                                              6 COMMON     2     2      0
+ (1) _irrigar                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _Lcd_Init                                             2     2      0     198
+                                              0 BANK0      2     2      0
                             _Lcd_Cmd
                            _Lcd_Port
  ---------------------------------------------------------------------------------
- (2) _Lcd_Cmd                                              3     3      0      75
-                                              3 COMMON     3     3      0
+ (2) _Lcd_Cmd                                              3     3      0     110
+                                              4 COMMON     3     3      0
                            _Lcd_Port
  ---------------------------------------------------------------------------------
- (2) _Lcd_Port                                             1     1      0      60
-                                              2 COMMON     1     1      0
+ (2) _Lcd_Port                                             1     1      0      88
+                                              3 COMMON     1     1      0
  ---------------------------------------------------------------------------------
- Estimated maximum stack depth 2
+ Estimated maximum stack depth 4
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (4) _interrupcao                                          2     2      0       0
-                                              0 COMMON     2     2      0
+ (5) _interrupcao                                          2     2      0       0
+                                              1 COMMON     2     2      0
          _handleExternalInterruption
             _handleTimerInterruption
  ---------------------------------------------------------------------------------
- (5) _handleTimerInterruption                              0     0      0       0
+ (6) _handleTimerInterruption                              1     1      0       0
+                                              0 COMMON     1     1      0
  ---------------------------------------------------------------------------------
- (5) _handleExternalInterruption                           0     0      0       0
+ (6) _handleExternalInterruption                           0     0      0       0
  ---------------------------------------------------------------------------------
- Estimated maximum stack depth 5
+ Estimated maximum stack depth 6
  ---------------------------------------------------------------------------------
 
  Call Graph Graphs:
@@ -1279,8 +2180,13 @@ Call Graph Tables:
      _Lcd_Cmd
        _Lcd_Port
      _Lcd_Port
+   _irrigar
    _setupExternalInterruption
    _setupTimer
+     _setupNewVolumeFlow
+       ___wmul
+       _changeTimerMaxConter
+         ___awdiv
    _setupWatchdogTimer
    _verifyMenu
      _handleMenu
@@ -1292,106 +2198,189 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BITCOMMON            E      0       0       0        0.0%
-EEDATA             100      0       0       0        0.0%
-NULL                 0      0       0       0        0.0%
-CODE                 0      0       0       0        0.0%
-COMMON               E      8       8       1       57.1%
-BITSFR0              0      0       0       1        0.0%
-SFR0                 0      0       0       1        0.0%
-BITSFR1              0      0       0       2        0.0%
-SFR1                 0      0       0       2        0.0%
-STACK                0      0       0       2        0.0%
-ABS                  0      0       0       3        0.0%
-BITBANK0            50      0       0       4        0.0%
-BITSFR3              0      0       0       4        0.0%
-SFR3                 0      0       0       4        0.0%
-BANK0               50      0       0       5        0.0%
-BITSFR2              0      0       0       5        0.0%
-SFR2                 0      0       0       5        0.0%
-BITBANK1            50      0       0       6        0.0%
-BANK1               50      0       0       7        0.0%
-BITBANK3            60      0       0       8        0.0%
 BANK3               60      0       0       9        0.0%
-BITBANK2            60      0       0      10        0.0%
+BITBANK3            60      0       0       8        0.0%
+SFR3                 0      0       0       4        0.0%
+BITSFR3              0      0       0       4        0.0%
 BANK2               60      0       0      11        0.0%
-DATA                 0      0       0      12        0.0%
+BITBANK2            60      0       0      10        0.0%
+SFR2                 0      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK1            50      0       0       6        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR1              0      0       0       2        0.0%
+BANK0               50     10      14       5       25.0%
+BITBANK0            50      0       0       4        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+COMMON               E      7       B       1       78.6%
+BITCOMMON            E      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+DATA                 0      0      1F      12        0.0%
+ABS                  0      0      1F       3        0.0%
+NULL                 0      0       0       0        0.0%
+STACK                0      0       0       2        0.0%
+EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Fri Mar 04 15:05:35 2022
+Symbol Table                                                                                   Fri Mar 04 16:10:47 2022
 
-                                 l9 009F                                  l10 00A2  
-                                l11 00A8                                  l12 00A9  
-                                l20 00D1                                  l13 00AF  
-                                l14 00B0                                  l15 00B6  
-                                l32 006F                                  l17 00B7  
-                                l50 00F2                                  l70 00F0  
-                                l80 00F1                                  l74 00EE  
-                                l67 00F3                                  l77 00EF  
-                                l85 0088                                  u10 009B  
-                                u11 009A                                  u20 00A6  
-                                u21 00A5                                  u30 00AD  
-                                u31 00AC                                  u40 00B4  
-                                u41 00B3                                  u60 00E9  
-                                u61 00E8                                 l700 00F0  
-                               l710 0036                                 l702 0013  
-                               l704 0019                                 l706 0022  
-                               l708 0030                                 l740 00E3  
-                               l804 0070                                 l742 00E9  
-                               l806 007A                                 l680 0097  
-                               l808 0083                                 l682 009B  
-                               l690 00B9                                 l738 00F3  
-                               l746 00EF                                 l684 00A6  
-                               l692 00BC                                 l748 00F1  
-                               l686 00AD                                 l694 00C2  
-                               l688 00B4                                 l696 00C5  
-                               l698 00CE                                 l798 00F2  
-                               u127 001D                                 u137 002C  
-                               u147 003A                                 u157 00C9  
-      ??_handleExternalInterruption 0070                                i1l56 00F4  
-                              i1l64 00DC                                i1l59 00F5  
-                              _main 0070                                btemp 007E  
-                              start 000C                     __end_of_Lcd_Cmd 00D2  
-       ?_handleExternalInterruption 0070                               ?_main 0070  
-                             i1l734 00F4                               i1l736 00F5  
-                             i1l788 00D2                               pclath 000A  
-                             status 0003                               wtemp0 007E  
-                  __end_of_Lcd_Init 0070                    __end_of_Lcd_Port 00B8  
-                   __initialization 000F                        ?_interrupcao 0070  
-                      __end_of_main 0096                              ??_main 0078  
-          ?_handleTimerInterruption 0070                           ??_Lcd_Cmd 0073  
- __end_of_setupExternalInterruption 00F4                              saved_w 007E  
-           __end_of__initialization 000F                      __pcstackCOMMON 0070  
-                         ?_Lcd_Init 0070                           ?_Lcd_Port 0070  
-                        __pmaintext 0070                          __pintentry 0004  
-                        _handleMenu 00F0                          ??_Lcd_Init 0076  
-                        ??_Lcd_Port 0072                             _Lcd_Cmd 00B8  
-                           __ptext1 00EF                             __ptext2 00E3  
-                           __ptext3 00F0                             __ptext4 00F1  
-                           __ptext5 00F2                             __ptext6 00F3  
-                           __ptext7 0013                             __ptext8 00B8  
-                           __ptext9 0096                end_of_initialization 000F  
-                         Lcd_Port@a 0072                         ?_handleMenu 0070  
-                         _PORTBbits 0006                           _PORTDbits 0008  
-                        _setupTimer 00F2                          _verifyMenu 00E3  
-        __end_of_setupWatchdogTimer 00F2                       ?_verifySensor 0070  
-        ?_setupExternalInterruption 0070                    setupTimer@mili_s 0072  
-               start_initialization 000F                      ??_verifySensor 0072  
-                       ?_setupTimer 0072                         ?_verifyMenu 0070  
-                         ___latbits 0002                            ?_Lcd_Cmd 0070  
-           _handleTimerInterruption 00F4                       ??_interrupcao 0070  
-                 interrupt_function 0004                            Lcd_Cmd@a 0075  
-                      ??_handleMenu 0072                 __end_of_interrupcao 00E3  
-              __end_of_verifySensor 00F0                            _Lcd_Init 0013  
-                          _Lcd_Port 0096           ??_handleTimerInterruption 0070  
-                __end_of_handleMenu 00F1         ??_setupExternalInterruption 0072  
-                _setupWatchdogTimer 00F1  __end_of_handleExternalInterruption 00F6  
-        _handleExternalInterruption 00F5                 ?_setupWatchdogTimer 0070  
-                          __ptext10 00D2                            __ptext11 00F4  
-                          __ptext12 00F5                ??_setupWatchdogTimer 0072  
-                       _interrupcao 00D2     __end_of_handleTimerInterruption 00F5  
-                      ??_setupTimer 0074                        ??_verifyMenu 0072  
-         _setupExternalInterruption 00F3                            intlevel1 0000  
-                __end_of_setupTimer 00F3                  __end_of_verifyMenu 00EF  
-                      _verifySensor 00EF  
+                                l40 01D6                                  l41 01DC  
+                                l43 01DD                                  l35 01C5  
+                                l36 01C8                                  l37 01CE  
+                                l38 01CF                                  l46 0216  
+                                l39 01D5                                  l58 00FA  
+                                l90 022F                                  l84 0245  
+                                l87 01FC                        ___awdiv@sign 0022  
+               ___wmul@multiplicand 0075                     _irrigacao_ativa 0077  
+                               l102 0256                                 l103 0259  
+                               l121 0276                                 l114 027E  
+                               l124 027B                                 l117 027C  
+                               l222 01A1                                 l127 027D  
+                               l224 01BB                                 l375 0097  
+                               u440 01C1                                 u441 01C0  
+                               u450 01CC                                 u451 01CB  
+                               u460 01D3                                 u461 01D2  
+                               u470 01DA                                 u710 0064  
+                               u471 01D9                                 u711 0063  
+                               u800 01B5                                 u801 01B4  
+                               u705 0056                                 u730 0075  
+                               u810 012E                                 u731 0074  
+                               u811 012D                                 u580 0256  
+                               u820 0134                                 u581 0255  
+                               u725 0065                                 u821 0133  
+                               u750 0089                                 u670 0036  
+                               u590 0271                                 u751 0088  
+                               u735 0071                                 u671 0035  
+                               u591 0270                                 u760 008E  
+                               u680 0041                                 u761 008D  
+                               u745 007D                                 u681 0040  
+                               u770 0199                                 u690 0052  
+                               u771 0198                                 u691 0051  
+                               u837 0145                                 u847 00A4  
+                               u857 00B5                                 u785 01A2  
+                               u867 00C6                                 u795 01A9  
+                               u877 020E        ??_handleExternalInterruption 0070  
+                              l1030 01DA                                l1022 01BD  
+                              l1024 01C1                                l1026 01CC  
+                              l1050 01FE                                l1028 01D3  
+                              l1052 0201                                l1300 00C0  
+                              l1140 0250                                l1132 0246  
+                              l1054 0207                                l1134 024A  
+                              l1142 027E                                l1230 0036  
+                              l1302 0217                                l1150 027B  
+                              l1056 020A                                l1136 024C  
+                              l1240 004A                                l1232 003B  
+                              l1304 0221                                l1152 027D  
+                              l1064 027C                                l1144 026B  
+                              l1320 0106                                l1312 00FB  
+                              l1058 0213                                l1138 024F  
+                              l1250 0060                                l1242 004C  
+                              l1234 003D                                l1226 002F  
+                              l1306 0225                                l1146 0271  
+                              l1330 011E                                l1322 010B  
+                              l1314 0101                                l1260 0083  
+                              l1252 0064                                l1244 0052  
+                              l1236 0041                                l1228 0032  
+                              l1308 0226                                l1340 0138  
+                              l1332 0123                                l1324 0110  
+                              l1316 0102                                l1254 0075  
+                              l1246 0055                                l1262 0089  
+                              l1238 0046                                l1270 0230  
+                              l1342 013D                                l1334 0128  
+                              l1326 0115                                l1318 0103  
+                              l1280 01A8                                l1264 008E  
+                              l1256 007B                                l1248 005C  
+                              l1336 012E                                l1328 011A  
+                              l1282 01AF                                l1274 0191  
+                              l1266 0093                                l1258 007C  
+                              l1338 0134                                l1292 0098  
+                              l1284 01B5                                l1276 0195  
+                              l1294 009E                                l1278 0199  
+                              l1296 00A9                                l1288 01DE  
+                              l1298 00BA          __end_of_setupNewVolumeFlow 01FD  
+                              i1l97 0190                                _main 00FB  
+                              btemp 007E                                start 000C  
+                   __end_of_Lcd_Cmd 0217         ?_handleExternalInterruption 0070  
+                             ?_main 0070                     __end_of___awdiv 0098  
+                   ___awdiv@divisor 0073                               i1l111 0264  
+                             i1l106 027F                               i1l892 027F  
+                   ___awdiv@counter 0021                               _TMR1H 000F  
+                             _TMR1L 000E                               _PORTB 0006  
+                             _PORTD 0008                               u53_20 0156  
+                             u53_21 0155                               u54_20 015C  
+                             u54_21 015B                               u55_20 0172  
+                             u55_21 0171                               u55_25 016E  
+                             u56_20 0188                               u56_21 0184  
+                             _TRISA 0085                               u57_24 018B  
+                             _TRISB 0086                               _TRISD 0088  
+                             _MLxMS 0030                   _timer_counter_max 0032  
+                             main@a 002E                     __end_of_irrigar 025A  
+                             pclath 000A                               status 0003  
+                             wtemp0 007E                    __end_of_Lcd_Init 00FB  
+                  __end_of_Lcd_Port 01DE                     __initialization 000F  
+                      ?_interrupcao 0070                        __end_of_main 0150  
+                            ??_main 002B            setupNewVolumeFlow@new_ml 0027  
+          setupNewVolumeFlow@new_ms 0029            ?_handleTimerInterruption 0070  
+                  ___awdiv@dividend 0075                              i1l1110 015C  
+                            i1l1120 017B                              i1l1112 0172  
+                            i1l1114 0175                              i1l1122 017C  
+                            i1l1106 0150                              i1l1124 018B  
+                            i1l1116 0177                              i1l1108 0156  
+                            i1l1126 018C                              i1l1118 0179  
+                            i1l1128 018E                              i1l1190 025F  
+                            i1l1188 025A                           ??_Lcd_Cmd 0074  
+                            _TMR1IF 0060   __end_of_setupExternalInterruption 027F  
+                            ___wmul 0191                           ??___awdiv 0020  
+                  ___awdiv@quotient 0023                           ??_irrigar 0073  
+                            saved_w 007E             __end_of__initialization 002B  
+                    __pcstackCOMMON 0070                        __pidataBANK0 0277  
+                    _OPTION_REGbits 0081                           ?_Lcd_Init 0070  
+                         ?_Lcd_Port 0070                          __pmaintext 00FB  
+                _setupNewVolumeFlow 01DE                             ?___wmul 0073  
+      __end_of_changeTimerMaxConter 0246                          __pintentry 0004  
+                        _handleMenu 027C                 ?_setupNewVolumeFlow 0027  
+                        ??_Lcd_Init 0020                          ??_Lcd_Port 0073  
+                           _Lcd_Cmd 01FD                ??_setupNewVolumeFlow 0077  
+                           ___awdiv 002F                             __ptext1 027B  
+                           __ptext2 026B                             __ptext3 027C  
+                           __ptext4 027D                             __ptext5 0217  
+                           __ptext6 01DE                             __ptext7 0230  
+                           __ptext8 002F                             __ptext9 0191  
+                         _T1CONbits 0010                             _irrigar 0246  
+              end_of_initialization 002B                           Lcd_Port@a 0073  
+                       ?_handleMenu 0070                           _PORTBbits 0006  
+                         _PORTDbits 0008                          _setupTimer 0217  
+                        _verifyMenu 026B                _changeTimerMaxConter 0230  
+        __end_of_setupWatchdogTimer 027E                       ?_verifySensor 0070  
+        ?_setupExternalInterruption 0070                      __end_of___wmul 01BC  
+               start_initialization 000F               ?_changeTimerMaxConter 0025  
+                    ??_verifySensor 0073                            ??___wmul 0077  
+                       __pdataBANK0 0030                         ?_setupTimer 0070  
+                       __pbssCOMMON 0077                         ?_verifyMenu 0070  
+                         ___latbits 0002                       __pcstackBANK0 0020  
+                          ?_Lcd_Cmd 0070             _handleTimerInterruption 0150  
+                     ??_interrupcao 0071                            ?___awdiv 0073  
+                          ?_irrigar 0070              ??_changeTimerMaxConter 0077  
+                 interrupt_function 0004                      ___wmul@product 0020  
+                          _PIE1bits 008C                            Lcd_Cmd@a 0076  
+                          _PIR1bits 000C                        ??_handleMenu 0073  
+               __end_of_interrupcao 026B                   ___wmul@multiplier 0073  
+              __end_of_verifySensor 027C                            _Lcd_Init 0098  
+                          _Lcd_Port 01BC           ??_handleTimerInterruption 0070  
+                __end_of_handleMenu 027D         ??_setupExternalInterruption 0073  
+                _setupWatchdogTimer 027D  __end_of_handleExternalInterruption 0280  
+        _handleExternalInterruption 027F                 ?_setupWatchdogTimer 0070  
+                          __ptext10 027E                            __ptext11 0246  
+                          __ptext12 0098                            __ptext13 01FD  
+                          __ptext14 01BC                            __ptext15 025A  
+                          __ptext16 0150                            __ptext17 027F  
+        changeTimerMaxConter@mili_s 0025                ??_setupWatchdogTimer 0073  
+                       _interrupcao 025A     __end_of_handleTimerInterruption 0191  
+                     _timer_counter 0079                        ??_setupTimer 0077  
+                        _INTCONbits 000B                        ??_verifyMenu 0073  
+         _setupExternalInterruption 027E                            intlevel1 0000  
+                __end_of_setupTimer 0230                  __end_of_verifyMenu 0277  
+                      _verifySensor 027B  
