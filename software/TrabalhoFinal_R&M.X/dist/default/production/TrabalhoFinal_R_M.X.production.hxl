@@ -11,10 +11,12 @@
  Intel Hex-file ranges:
   0h - 5h		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
   8h - 9D7h		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
-  A00h - C53h		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
+  A00h - C4Fh		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
+  400Eh - 400Fh		(dist/default/production\TrabalhoFinal_R_M.X.production.hex)
  Unused ranges:
   6h - 7h
   9D8h - 9FFh
+  C50h - 400Dh
 
 ### Hex Memory Map ###
  Legend:
@@ -219,5 +221,5 @@
 00000C20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000C30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000C40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000C50 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
-00000C60 | --
+----------------------------------------------------------
+00004000 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1

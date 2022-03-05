@@ -11,13 +11,14 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
+$C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
+config CONFIG 4 2007 2007 1 2 1
 $dist/default/production\TrabalhoFinal_R_M.X.production.o
 cinit CODE 0 F F 18 2 1
 text1 CODE 0 4A8 4A8 22 2 1
-text2 CODE 0 5FF 5FF A 2 1
+text2 CODE 0 5FD 5FD A 2 1
 text3 CODE 0 3EF 3EF 36 2 1
 text4 CODE 0 521 521 1F 2 1
 text5 CODE 0 27 27 171 2 1
@@ -26,32 +27,33 @@ text7 CODE 0 2CC 2CC 5B 2 1
 text8 CODE 0 327 327 58 2 1
 text9 CODE 0 45A 45A 29 2 1
 text10 CODE 0 3B8 3B8 37 2 1
-text11 CODE 0 5F2 5F2 D 2 1
-text12 CODE 0 61B 61B 8 2 1
-text13 CODE 0 5A8 5A8 15 2 1
+text11 CODE 0 5F0 5F0 D 2 1
+text12 CODE 0 619 619 8 2 1
+text13 CODE 0 5A6 5A6 15 2 1
 text14 CODE 0 540 540 1F 2 1
-text15 CODE 0 579 579 18 2 1
+text15 CODE 0 590 590 16 2 1
 text16 CODE 0 206 206 69 2 1
 text17 CODE 0 483 483 25 2 1
-text18 CODE 0 623 623 7 2 1
-text19 CODE 0 591 591 17 2 1
+text18 CODE 0 621 621 7 2 1
+text19 CODE 0 579 579 17 2 1
 text20 CODE 0 26F 26F 5D 2 1
 text21 CODE 0 55F 55F 1A 2 1
 text22 CODE 0 4CA 4CA 22 2 1
-text23 CODE 0 5D0 5D0 11 2 1
+text23 CODE 0 5CE 5CE 11 2 1
 text24 CODE 0 425 425 35 2 1
-text25 CODE 0 5E1 5E1 11 2 1
-text26 CODE 0 609 609 A 2 1
+text25 CODE 0 5DF 5DF 11 2 1
+text26 CODE 0 607 607 A 2 1
 maintext CODE 0 37F 37F 39 2 1
 cstackCOMMON COMMON 1 70 70 9 1 1
 cstackBANK0 BANK0 1 20 20 1B 1 1
-inittext CODE 0 5BD 5BD 13 2 1
+inittext CODE 0 5BB 5BB 13 2 1
 intentry CODE 0 4 4 8 2 1
 bssBANK0 BANK0 1 43 43 4 1 1
-idataBANK0 CODE 0 613 613 8 2 1
+idataBANK0 CODE 0 611 611 8 2 1
 strings STRING 0 500 500 21 2 1
 dataBANK0 BANK0 1 3B 3B 8 1 1
 bssCOMMON COMMON 1 79 79 2 1 1
+config CONFIG 4 2007 2007 1 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -68,27 +70,26 @@ BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
 CONST 4EC-4FF 2
-CONST 62A-1FFF 2
+CONST 628-1FFF 2
 ENTRY 3-3 2
 ENTRY 4EC-4FF 2
-ENTRY 62A-1FFF 2
+ENTRY 628-1FFF 2
 IDLOC 2000-2003 2
 CODE 3-3 2
 CODE 4EC-4FF 2
-CODE 62A-1FFF 2
+CODE 628-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 COMMON 7B-7D 1
-CONFIG 2007-2007 2
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
 STRCODE 4EC-4FF 2
-STRCODE 62A-1FFF 2
+STRCODE 628-1FFF 2
 STRING 3-3 2
 STRING 4EC-4FF 2
-STRING 62A-1FFF 2
+STRING 628-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -103,63 +104,63 @@ STRING 62A-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\TrabalhoFinal_R_M.X.production.o
-F cinit CODE >516:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-F cinit CODE >519:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-F cinit CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-10 cinit CODE >594:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-11 cinit CODE >595:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-12 cinit CODE >596:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-13 cinit CODE >597:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-14 cinit CODE >598:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-15 cinit CODE >599:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-16 cinit CODE >600:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-17 cinit CODE >601:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-18 cinit CODE >602:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-1D cinit CODE >606:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-1E cinit CODE >607:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-1F cinit CODE >608:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-20 cinit CODE >609:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-21 cinit CODE >612:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-22 cinit CODE >613:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-23 cinit CODE >619:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-23 cinit CODE >621:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-24 cinit CODE >622:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-4 intentry CODE >188:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-609 text26 CODE >163:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-609 text26 CODE >165:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-60D text26 CODE >166:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-611 text26 CODE >168:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-612 text26 CODE >175:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5E1 text25 CODE >177:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5E1 text25 CODE >179:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5E5 text25 CODE >180:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5EB text25 CODE >181:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5F0 text25 CODE >183:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5F1 text25 CODE >186:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-425 text24 CODE >135:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-425 text24 CODE >137:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-42B text24 CODE >138:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-431 text24 CODE >139:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-433 text24 CODE >139:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-437 text24 CODE >140:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-438 text24 CODE >141:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-439 text24 CODE >142:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-43F text24 CODE >142:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-443 text24 CODE >142:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-447 text24 CODE >143:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-44A text24 CODE >144:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-44C text24 CODE >145:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-44D text24 CODE >148:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-44F text24 CODE >152:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-451 text24 CODE >153:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-452 text24 CODE >155:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-455 text24 CODE >156:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-457 text24 CODE >157:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-459 text24 CODE >160:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5D0 text23 CODE >188:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5D0 text23 CODE >190:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5D5 text23 CODE >191:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5DA text23 CODE >193:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+F cinit CODE >520:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+F cinit CODE >523:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+F cinit CODE >597:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+10 cinit CODE >598:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+11 cinit CODE >599:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+12 cinit CODE >600:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+13 cinit CODE >601:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+14 cinit CODE >602:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+15 cinit CODE >603:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+16 cinit CODE >604:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+17 cinit CODE >605:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+18 cinit CODE >606:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+1D cinit CODE >610:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+1E cinit CODE >611:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+1F cinit CODE >612:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+20 cinit CODE >613:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+21 cinit CODE >616:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+22 cinit CODE >617:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+23 cinit CODE >623:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+23 cinit CODE >625:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+24 cinit CODE >626:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+4 intentry CODE >180:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+607 text26 CODE >155:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+607 text26 CODE >157:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+60B text26 CODE >158:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+60F text26 CODE >160:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+610 text26 CODE >167:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5DF text25 CODE >169:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5DF text25 CODE >171:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5E3 text25 CODE >172:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5E9 text25 CODE >173:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5EE text25 CODE >175:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5EF text25 CODE >178:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+425 text24 CODE >127:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+425 text24 CODE >129:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+42B text24 CODE >130:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+431 text24 CODE >131:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+433 text24 CODE >131:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+437 text24 CODE >132:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+438 text24 CODE >133:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+439 text24 CODE >134:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+43F text24 CODE >134:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+443 text24 CODE >134:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+447 text24 CODE >135:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+44A text24 CODE >136:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+44C text24 CODE >137:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+44D text24 CODE >140:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+44F text24 CODE >144:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+451 text24 CODE >145:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+452 text24 CODE >147:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+455 text24 CODE >148:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+457 text24 CODE >149:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+459 text24 CODE >152:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5CE text23 CODE >180:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5CE text23 CODE >182:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5D3 text23 CODE >183:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5D8 text23 CODE >185:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 4CA text22 CODE >4:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 4CB text22 CODE >6:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 4CF text22 CODE >7:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
@@ -201,28 +202,28 @@ F cinit CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
 2BF text20 CODE >77:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 2C5 text20 CODE >78:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 2CB text20 CODE >79:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
-591 text19 CODE >321:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-591 text19 CODE >326:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-594 text19 CODE >327:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-595 text19 CODE >328:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-596 text19 CODE >329:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-597 text19 CODE >332:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-598 text19 CODE >333:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-59B text19 CODE >334:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-59C text19 CODE >337:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-59F text19 CODE >340:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A0 text19 CODE >341:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A3 text19 CODE >345:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A4 text19 CODE >348:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A5 text19 CODE >349:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A6 text19 CODE >350:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A7 text19 CODE >354:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-623 text18 CODE >195:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-623 text18 CODE >197:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-626 text18 CODE >198:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-627 text18 CODE >199:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-628 text18 CODE >200:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-629 text18 CODE >202:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+579 text19 CODE >313:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+579 text19 CODE >318:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+57C text19 CODE >319:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+57D text19 CODE >320:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+57E text19 CODE >321:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+57F text19 CODE >324:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+580 text19 CODE >325:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+583 text19 CODE >326:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+584 text19 CODE >329:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+587 text19 CODE >332:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+588 text19 CODE >333:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+58B text19 CODE >337:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+58C text19 CODE >340:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+58D text19 CODE >341:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+58E text19 CODE >342:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+58F text19 CODE >346:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+621 text18 CODE >187:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+621 text18 CODE >189:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+624 text18 CODE >190:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+625 text18 CODE >191:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+626 text18 CODE >192:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+627 text18 CODE >194:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 483 text17 CODE >15:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul16.c
 483 text17 CODE >43:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul16.c
 485 text17 CODE >45:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\Umul16.c
@@ -274,37 +275,36 @@ F cinit CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
 268 text16 CODE >39:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c
 26A text16 CODE >40:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c
 26E text16 CODE >41:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c
-579 text15 CODE >82:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-579 text15 CODE >84:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-58E text15 CODE >85:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-590 text15 CODE >88:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-540 text14 CODE >92:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-540 text14 CODE >95:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-555 text14 CODE >97:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-55E text14 CODE >99:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A8 text13 CODE >101:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A8 text13 CODE >104:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5A9 text13 CODE >105:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5AA text13 CODE >106:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5AD text13 CODE >109:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5B0 text13 CODE >112:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5B1 text13 CODE >113:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5B2 text13 CODE >121:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5B4 text13 CODE >122:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5B6 text13 CODE >124:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5B7 text13 CODE >128:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5BC text13 CODE >130:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-61B text12 CODE >310:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-61B text12 CODE >312:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-61E text12 CODE >313:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-61F text12 CODE >314:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-620 text12 CODE >315:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-621 text12 CODE >316:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-622 text12 CODE >318:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5F2 text11 CODE >35:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
-5F2 text11 CODE >37:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
-5F8 text11 CODE >38:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
-5FE text11 CODE >39:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
+590 text15 CODE >75:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+590 text15 CODE >77:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5A5 text15 CODE >80:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+540 text14 CODE >84:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+540 text14 CODE >87:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+555 text14 CODE >89:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+55E text14 CODE >91:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5A6 text13 CODE >93:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5A6 text13 CODE >96:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5A7 text13 CODE >97:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5A8 text13 CODE >98:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5AB text13 CODE >101:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5AE text13 CODE >104:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5AF text13 CODE >105:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5B0 text13 CODE >113:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5B2 text13 CODE >114:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5B4 text13 CODE >116:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5B5 text13 CODE >120:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5BA text13 CODE >122:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+619 text12 CODE >302:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+619 text12 CODE >304:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+61C text12 CODE >305:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+61D text12 CODE >306:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+61E text12 CODE >307:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+61F text12 CODE >308:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+620 text12 CODE >310:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5F0 text11 CODE >35:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
+5F0 text11 CODE >37:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
+5F6 text11 CODE >38:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
+5FC text11 CODE >39:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 3B8 text10 CODE >81:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 3B9 text10 CODE >84:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 3BE text10 CODE >85:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
@@ -376,139 +376,139 @@ F cinit CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
 320 text7 CODE >32:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awmod.c
 322 text7 CODE >33:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awmod.c
 326 text7 CODE >34:D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awmod.c
-198 text6 CODE >204:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-198 text6 CODE >206:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-1AE text6 CODE >207:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-1D1 text6 CODE >208:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-1E5 text6 CODE >209:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-1ED text6 CODE >210:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-1F5 text6 CODE >211:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-1FD text6 CODE >212:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-205 text6 CODE >214:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-27 text5 CODE >216:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-27 text5 CODE >218:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-2D text5 CODE >219:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-31 text5 CODE >221:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-32 text5 CODE >222:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-33 text5 CODE >223:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3D text5 CODE >224:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-45 text5 CODE >225:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4B text5 CODE >226:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-56 text5 CODE >227:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5C text5 CODE >228:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-60 text5 CODE >229:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-64 text5 CODE >230:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-72 text5 CODE >232:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-78 text5 CODE >233:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-7A text5 CODE >233:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-7E text5 CODE >234:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-83 text5 CODE >234:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-87 text5 CODE >234:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-8F text5 CODE >235:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-9A text5 CODE >236:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-A4 text5 CODE >238:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-AA text5 CODE >239:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-AC text5 CODE >239:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-B0 text5 CODE >240:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-B6 text5 CODE >241:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-BF text5 CODE >242:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-C9 text5 CODE >221:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-D1 text5 CODE >245:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-D6 text5 CODE >246:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-D7 text5 CODE >247:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-D8 text5 CODE >248:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-E2 text5 CODE >249:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-EA text5 CODE >250:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-F0 text5 CODE >251:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-FB text5 CODE >252:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-101 text5 CODE >253:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-105 text5 CODE >254:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-10A text5 CODE >255:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-110 text5 CODE >256:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-11E text5 CODE >258:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-124 text5 CODE >259:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-126 text5 CODE >259:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-12A text5 CODE >260:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-12F text5 CODE >260:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-133 text5 CODE >260:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-13B text5 CODE >261:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-146 text5 CODE >262:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-150 text5 CODE >264:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-156 text5 CODE >265:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-158 text5 CODE >265:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-15C text5 CODE >266:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-162 text5 CODE >267:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-16B text5 CODE >268:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-175 text5 CODE >246:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-17E text5 CODE >271:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-183 text5 CODE >272:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-184 text5 CODE >273:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-185 text5 CODE >274:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-188 text5 CODE >275:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-189 text5 CODE >272:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-192 text5 CODE >277:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-197 text5 CODE >279:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-521 text4 CODE >280:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-521 text4 CODE >282:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-527 text4 CODE >284:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-52B text4 CODE >285:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-52C text4 CODE >286:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-53A text4 CODE >287:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-53F text4 CODE >290:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3EF text3 CODE >292:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3EF text3 CODE >293:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3F2 text3 CODE >294:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3F9 text3 CODE >295:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-420 text3 CODE >296:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-424 text3 CODE >297:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5FF text2 CODE >163:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5FF text2 CODE >165:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-603 text2 CODE >166:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-607 text2 CODE >168:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-608 text2 CODE >175:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4A8 text1 CODE >298:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4A8 text1 CODE >300:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4B5 text1 CODE >300:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4B9 text1 CODE >300:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4BD text1 CODE >301:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4C0 text1 CODE >302:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4C5 text1 CODE >303:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4C6 text1 CODE >304:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4C6 text1 CODE >305:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-4C9 text1 CODE >308:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-37F maintext CODE >357:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-37F maintext CODE >360:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-383 maintext CODE >361:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-385 maintext CODE >362:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-386 maintext CODE >363:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-389 maintext CODE >364:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-38C maintext CODE >365:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-38D maintext CODE >366:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-390 maintext CODE >368:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-395 maintext CODE >369:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-39A maintext CODE >370:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-39F maintext CODE >371:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3A4 maintext CODE >372:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3A9 maintext CODE >376:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3AE maintext CODE >377:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-3B3 maintext CODE >378:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5BD inittext CODE >567:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5BD inittext CODE >568:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5BE inittext CODE >569:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5BF inittext CODE >570:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C0 inittext CODE >571:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C1 inittext CODE >578:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C1 inittext CODE >579:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C6 inittext CODE >580:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C7 inittext CODE >581:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C8 inittext CODE >582:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5C9 inittext CODE >583:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5CA inittext CODE >584:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5CB inittext CODE >585:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5CC inittext CODE >586:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5CD inittext CODE >587:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5CE inittext CODE >588:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
-5CF inittext CODE >589:C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.s
+198 text6 CODE >196:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+198 text6 CODE >198:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+1AE text6 CODE >199:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+1D1 text6 CODE >200:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+1E5 text6 CODE >201:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+1ED text6 CODE >202:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+1F5 text6 CODE >203:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+1FD text6 CODE >204:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+205 text6 CODE >206:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+27 text5 CODE >208:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+27 text5 CODE >210:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+2D text5 CODE >211:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+31 text5 CODE >213:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+32 text5 CODE >214:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+33 text5 CODE >215:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3D text5 CODE >216:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+45 text5 CODE >217:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4B text5 CODE >218:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+56 text5 CODE >219:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5C text5 CODE >220:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+60 text5 CODE >221:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+64 text5 CODE >222:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+72 text5 CODE >224:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+78 text5 CODE >225:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+7A text5 CODE >225:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+7E text5 CODE >226:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+83 text5 CODE >226:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+87 text5 CODE >226:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+8F text5 CODE >227:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+9A text5 CODE >228:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+A4 text5 CODE >230:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+AA text5 CODE >231:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+AC text5 CODE >231:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+B0 text5 CODE >232:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+B6 text5 CODE >233:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+BF text5 CODE >234:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+C9 text5 CODE >213:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+D1 text5 CODE >237:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+D6 text5 CODE >238:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+D7 text5 CODE >239:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+D8 text5 CODE >240:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+E2 text5 CODE >241:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+EA text5 CODE >242:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+F0 text5 CODE >243:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+FB text5 CODE >244:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+101 text5 CODE >245:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+105 text5 CODE >246:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+10A text5 CODE >247:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+110 text5 CODE >248:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+11E text5 CODE >250:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+124 text5 CODE >251:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+126 text5 CODE >251:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+12A text5 CODE >252:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+12F text5 CODE >252:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+133 text5 CODE >252:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+13B text5 CODE >253:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+146 text5 CODE >254:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+150 text5 CODE >256:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+156 text5 CODE >257:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+158 text5 CODE >257:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+15C text5 CODE >258:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+162 text5 CODE >259:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+16B text5 CODE >260:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+175 text5 CODE >238:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+17E text5 CODE >263:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+183 text5 CODE >264:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+184 text5 CODE >265:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+185 text5 CODE >266:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+188 text5 CODE >267:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+189 text5 CODE >264:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+192 text5 CODE >269:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+197 text5 CODE >271:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+521 text4 CODE >272:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+521 text4 CODE >274:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+527 text4 CODE >276:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+52B text4 CODE >277:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+52C text4 CODE >278:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+53A text4 CODE >279:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+53F text4 CODE >282:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3EF text3 CODE >284:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3EF text3 CODE >285:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3F2 text3 CODE >286:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3F9 text3 CODE >287:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+420 text3 CODE >288:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+424 text3 CODE >289:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5FD text2 CODE >155:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5FD text2 CODE >157:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+601 text2 CODE >158:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+605 text2 CODE >160:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+606 text2 CODE >167:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4A8 text1 CODE >290:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4A8 text1 CODE >292:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4B5 text1 CODE >292:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4B9 text1 CODE >292:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4BD text1 CODE >293:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4C0 text1 CODE >294:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4C5 text1 CODE >295:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4C6 text1 CODE >296:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4C6 text1 CODE >297:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+4C9 text1 CODE >300:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+37F maintext CODE >349:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+37F maintext CODE >352:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+383 maintext CODE >353:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+385 maintext CODE >354:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+386 maintext CODE >355:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+389 maintext CODE >356:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+38C maintext CODE >357:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+38D maintext CODE >358:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+390 maintext CODE >360:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+395 maintext CODE >361:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+39A maintext CODE >362:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+39F maintext CODE >363:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3A4 maintext CODE >364:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3A9 maintext CODE >368:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3AE maintext CODE >369:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+3B3 maintext CODE >370:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+5BB inittext CODE >571:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BB inittext CODE >572:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BC inittext CODE >573:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BD inittext CODE >574:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BE inittext CODE >575:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BF inittext CODE >582:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BF inittext CODE >583:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5C4 inittext CODE >584:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5C5 inittext CODE >585:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5C6 inittext CODE >586:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5C7 inittext CODE >587:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5C8 inittext CODE >588:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5C9 inittext CODE >589:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5CA inittext CODE >590:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5CB inittext CODE >591:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5CC inittext CODE >592:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5CD inittext CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -524,10 +524,11 @@ FB text5 CODE >252:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontrol
 ___latbits 2 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awdiv@counter 27 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 -
-__Hspace_0 62A 0 ABS 0 - -
+__Hspace_0 628 0 ABS 0 - -
 __Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
 _Lcd_Init 4DE 0 CODE 0 text20 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _Lcd_Port 994 0 CODE 0 text22 dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -539,11 +540,11 @@ __end_of_Lcd_Init 598 0 CODE 0 text20 dist/default/production\TrabalhoFinal_R_M.
 __end_of_Lcd_Port 9D8 0 CODE 0 text22 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _INTF 59 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
+___sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
 _main 6FE 0 CODE 0 maintext dist/default/production\TrabalhoFinal_R_M.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _Lcd_Write_Char 770 0 CODE 0 text10 dist/default/production\TrabalhoFinal_R_M.X.production.o
-start 18 0 CODE 0 init C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
+start 18 0 CODE 0 init C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
 _umidade_minima 3F 0 BANK0 1 dataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Port@a 73 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
@@ -559,18 +560,18 @@ __end_of_verifyMenu A80 0 CODE 0 text4 dist/default/production\TrabalhoFinal_R_M
 _handleTimerInterruption 84A 0 CODE 0 text24 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awmod@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_handleTimerInterruption 8B4 0 CODE 0 text24 dist/default/production\TrabalhoFinal_R_M.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 ___awdiv@sign 28 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_setupWatchdogTimer C46 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_setupWatchdogTimer C42 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_Lcd_Write_Char 7DE 0 CODE 0 text10 dist/default/production\TrabalhoFinal_R_M.X.production.o
 writeValor@unidade 30 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___wmul@multiplicand 75 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -579,22 +580,22 @@ _ADRESL 9E 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awdiv@dividend 24 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of___wmul 950 0 CODE 0 text17 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_setupExternalInterruption C46 0 CODE 0 text18 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_setupExternalInterruption C42 0 CODE 0 text18 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awdiv@divisor 22 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of___awdiv 4DE 0 CODE 0 text16 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of___awmod 64E 0 CODE 0 text7 dist/default/production\TrabalhoFinal_R_M.X.production.o
-_setupWatchdogTimer C36 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-___stacklo 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
-_interrupcao BA0 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_setupWatchdogTimer C32 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+___stacklo 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+_interrupcao B9C 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
 getADConverterValue@leitura 2F 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Set_Cursor@temp 25 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
-_handleExternalInterruption BC2 0 CODE 0 text25 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_handleExternalInterruption BBE 0 CODE 0 text25 dist/default/production\TrabalhoFinal_R_M.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\TrabalhoFinal_R_M.X.production.o
 _Lcd_Write_String 8B4 0 CODE 0 text9 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _TMR1IF 60 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
+___int_sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -604,10 +605,11 @@ __Hstack 0 0 STACK 2 stack -
 __stringbase A0A 0 STRING 0 strings dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
 setupNewVolumeFlow@new_ms 2D 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_ofi1_irrigar C26 0 CODE 0 text26 dist/default/production\TrabalhoFinal_R_M.X.production.o
-_changeTimerMaxConter AF2 0 CODE 0 text15 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_ofi1_irrigar C22 0 CODE 0 text26 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_changeTimerMaxConter B20 0 CODE 0 text15 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hcommon 0 0 ABS 0 common -
-__end_of_irrigar C12 0 CODE 0 text2 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__Hconfig 4010 0 CONFIG 4 config -
+__end_of_irrigar C0E 0 CODE 0 text2 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -616,7 +618,7 @@ __Lcinit 1E 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
 __Linittext 0 0 ABS 0 inittext -
 _PORTBbits 6 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-_setupTimer B50 0 CODE 0 text13 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_setupTimer B4C 0 CODE 0 text13 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _setup_menu 43 0 BANK0 1 bssBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
@@ -638,70 +640,72 @@ __Ltext 0 0 ABS 0 text -
 ___wmul 906 0 CODE 0 text17 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-i1_irrigar C12 0 CODE 0 text26 dist/default/production\TrabalhoFinal_R_M.X.production.o
+i1_irrigar C0E 0 CODE 0 text26 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _RD2 42 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _RD3 43 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _RD4 44 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _RD5 45 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _RD6 46 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _RD7 47 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-__S0 62A 0 ABS 0 - -
+__S0 628 0 ABS 0 - -
 __S1 7B 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 writeValor@valor 2B 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_Lcd_Write_String 906 0 CODE 0 text9 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_of_Lcd_Clear BFE 0 CODE 0 text11 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_Lcd_Clear BFA 0 CODE 0 text11 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __stringtab A00 0 STRING 0 strings dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Write_String@a 22 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Write_String@i 20 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ?_getADConverterValue 2B 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Rodrigo\AppData\Local\Temp\xcAsfkc.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
 __pdataBANK0 3B 0 BANK0 1 dataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_Lcd_Cmd AF2 0 CODE 0 text21 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _timer_counter_max 41 0 BANK0 1 dataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awmod@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_of_setupTimer B7A 0 CODE 0 text13 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_setupTimer B76 0 CODE 0 text13 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext10 770 0 CODE 0 text10 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext11 BE4 0 CODE 0 text11 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext12 C36 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext13 B50 0 CODE 0 text13 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext11 BE0 0 CODE 0 text11 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext12 C32 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext13 B4C 0 CODE 0 text13 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext14 A80 0 CODE 0 text14 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext15 AF2 0 CODE 0 text15 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext15 B20 0 CODE 0 text15 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext16 40C 0 CODE 0 text16 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext17 906 0 CODE 0 text17 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext18 C46 0 CODE 0 text18 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext19 B22 0 CODE 0 text19 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext18 C42 0 CODE 0 text18 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext19 AF2 0 CODE 0 text19 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext20 4DE 0 CODE 0 text20 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext21 ABE 0 CODE 0 text21 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext22 994 0 CODE 0 text22 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext23 BA0 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext23 B9C 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext24 84A 0 CODE 0 text24 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext25 BC2 0 CODE 0 text25 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext26 C12 0 CODE 0 text26 dist/default/production\TrabalhoFinal_R_M.X.production.o
-_Lcd_Clear BE4 0 CODE 0 text11 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext25 BBE 0 CODE 0 text25 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext26 C0E 0 CODE 0 text26 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_Lcd_Clear BE0 0 CODE 0 text11 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awdiv 40C 0 CODE 0 text16 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awmod 598 0 CODE 0 text7 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _Lcd_Set_Cursor 64E 0 CODE 0 text8 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __pmaintext 6FE 0 CODE 0 maintext dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
 __Hinittext 0 0 ABS 0 inittext -
 ___wmul@multiplier 73 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
 handleMenu@umidade 36 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 writeValor@centena 2E 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_of_interrupcao BC2 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_interrupcao BBE 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of__stringtab A0C 0 STRING 0 strings dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
 __pbssCOMMON 79 0 COMMON 1 bssCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
-init_fetch0 B7A 0 CODE 0 inittext dist/default/production\TrabalhoFinal_R_M.X.production.o
+init_fetch0 B76 0 CODE 0 inittext dist/default/production\TrabalhoFinal_R_M.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
@@ -720,10 +724,10 @@ ___awdiv@quotient 29 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
-_setupADC B22 0 CODE 0 text19 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_setupADC AF2 0 CODE 0 text19 dist/default/production\TrabalhoFinal_R_M.X.production.o
 changeTimerMaxConter@mili_s 2B 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext1 950 0 CODE 0 text1 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__ptext2 BFE 0 CODE 0 text2 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__ptext2 BFA 0 CODE 0 text2 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext3 7DE 0 CODE 0 text3 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext4 A42 0 CODE 0 text4 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext5 4E 0 CODE 0 text5 dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -732,10 +736,10 @@ __ptext7 598 0 CODE 0 text7 dist/default/production\TrabalhoFinal_R_M.X.producti
 __ptext8 64E 0 CODE 0 text8 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __ptext9 8B4 0 CODE 0 text9 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _handleMenu 4E 0 CODE 0 text5 dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_of_setupADC B50 0 CODE 0 text19 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_setupADC B20 0 CODE 0 text19 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_irrigar BFE 0 CODE 0 text2 dist/default/production\TrabalhoFinal_R_M.X.production.o
+_irrigar BFA 0 CODE 0 text2 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _timer_counter 45 0 BANK0 1 bssBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 _water_volume 3D 0 BANK0 1 dataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -743,15 +747,15 @@ __end_of__initialization 46 0 CODE 0 cinit dist/default/production\TrabalhoFinal
 ___awmod@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 Lcd_Cmd@a 76 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
-__pidataBANK0 C26 0 CODE 0 idataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__pidataBANK0 C22 0 CODE 0 idataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-__end_of_setupExternalInterruption C54 0 CODE 0 text18 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_setupExternalInterruption C50 0 CODE 0 text18 dist/default/production\TrabalhoFinal_R_M.X.production.o
 writeValor@dezena 2F 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
 _writeValor 330 0 CODE 0 text6 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _getADConverterValue 7DE 0 CODE 0 text3 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-init_ram0 B82 0 CODE 0 inittext dist/default/production\TrabalhoFinal_R_M.X.production.o
+init_ram0 B7E 0 CODE 0 inittext dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_main 770 0 CODE 0 maintext dist/default/production\TrabalhoFinal_R_M.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -765,7 +769,7 @@ __end_of_handleMenu 330 0 CODE 0 text5 dist/default/production\TrabalhoFinal_R_M
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_of_handleExternalInterruption BE4 0 CODE 0 text25 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_handleExternalInterruption BE0 0 CODE 0 text25 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\TrabalhoFinal_R_M.X.production.o
 _verifySensor 950 0 CODE 0 text1 dist/default/production\TrabalhoFinal_R_M.X.production.o
 handleMenu@volume 34 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -779,7 +783,7 @@ ___wmul@product 77 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal
 _verifyMenu A42 0 CODE 0 text4 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Write_Char@a 77 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Write_Char@y 76 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
-__end_of_changeTimerMaxConter B22 0 CODE 0 text15 dist/default/production\TrabalhoFinal_R_M.X.production.o
+__end_of_changeTimerMaxConter B4C 0 CODE 0 text15 dist/default/production\TrabalhoFinal_R_M.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -805,7 +809,7 @@ __end_of_changeTimerMaxConter B22 0 CODE 0 text15 dist/default/production\Trabal
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text4 0 521 A42 109 2
+text4 0 521 A42 107 2
 cstackCOMMON 1 70 70 B 1
 cstackBANK0 1 20 20 27 1
 intentry 0 4 8 4E8 2

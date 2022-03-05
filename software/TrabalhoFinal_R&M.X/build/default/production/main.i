@@ -1854,7 +1854,16 @@ extern double fmod(double, double);
 extern double trunc(double);
 extern double round(double);
 # 20 "main.c" 2
-# 60 "main.c"
+
+
+
+
+
+#pragma config WDTE = ON
+#pragma config FOSC = HS
+#pragma config PWRTE = ON
+#pragma config BOREN = ON
+# 53 "main.c"
 # 1 "./lcd.h" 1
 
 
@@ -1970,7 +1979,7 @@ void Lcd_Shift_Left()
  Lcd_Cmd(0x01);
  Lcd_Cmd(0x08);
 }
-# 60 "main.c" 2
+# 53 "main.c" 2
 
 
 
@@ -1995,8 +2004,7 @@ int MLxMS = 25;
 
 void changeTimerMaxConter(int mili_s){
 
-    timer_counter_max = (mili_s/500);
-    PORTC = timer_counter_max;
+    timer_counter_max = (mili_s/25);
     return;
 
 }
@@ -2032,8 +2040,8 @@ void setupTimer()
 
 
 
-    TMR1H = 0x0B;
-    TMR1L = 0xDC;
+    TMR1H = 0xF3;
+    TMR1L = 0xCB;
 
     T1CONbits.TMR1ON = 0;
 
@@ -2067,8 +2075,8 @@ void handleTimerInterruption()
             PORTBbits.RB1 = 0;
         }
         PIR1bits.TMR1IF = 0;
-        TMR1H = 0x0B;
-        TMR1L = 0xDC;
+        TMR1H = 0xF3;
+        TMR1L = 0xCB;
     }
     return;
 }

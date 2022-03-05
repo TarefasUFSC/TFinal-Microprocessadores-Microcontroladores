@@ -31,42 +31,42 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"82 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+"75 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 [v _changeTimerMaxConter changeTimerMaxConter `(v  1 e 1 0 ]
-"92
+"84
 [v _setupNewVolumeFlow setupNewVolumeFlow `(v  1 e 1 0 ]
-"101
+"93
 [v _setupTimer setupTimer `(v  1 e 1 0 ]
-"135
+"127
 [v _handleTimerInterruption handleTimerInterruption `(v  1 e 1 0 ]
-"163
+"155
 [v _irrigar irrigar `(v  1 e 1 0 ]
 [v i1_irrigar irrigar `(v  1 e 1 0 ]
-"177
+"169
 [v _handleExternalInterruption handleExternalInterruption `(v  1 e 1 0 ]
-"188
+"180
 [v _interrupcao interrupcao `II(v  1 e 1 0 ]
-"195
+"187
 [v _setupExternalInterruption setupExternalInterruption `(v  1 e 1 0 ]
-"204
+"196
 [v _writeValor writeValor `(v  1 e 1 0 ]
-"216
+"208
 [v _handleMenu handleMenu `(v  1 e 1 0 ]
-"280
+"272
 [v _verifyMenu verifyMenu `(v  1 e 1 0 ]
-"292
+"284
 [v _getADConverterValue getADConverterValue `(i  1 e 2 0 ]
-"298
+"290
 [v _verifySensor verifySensor `(v  1 e 1 0 ]
-"310
+"302
 [v _setupWatchdogTimer setupWatchdogTimer `(v  1 e 1 0 ]
-"321
+"313
 [v _setupADC setupADC `(v  1 e 1 0 ]
-"357
+"349
 [v _main main `(v  1 e 1 0 ]
 "216 D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S126 . 1 `uc 1 RB0 1 0 :1:0 
+[s S125 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -76,11 +76,11 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "233
-[u S135 . 1 `S126 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES135  1 e 1 @6 ]
+[u S134 . 1 `S125 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES134  1 e 1 @6 ]
 "278
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S35 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S34 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -90,14 +90,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "477
-[s S44 . 1 `uc 1 . 1 0 :2:0 
+[s S43 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S49 . 1 `S35 1 . 1 0 `S44 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES49  1 e 1 @11 ]
-[s S147 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S48 . 1 `S34 1 . 1 0 `S43 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES48  1 e 1 @11 ]
+[s S146 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -107,40 +107,40 @@
 `uc 1 PSPIF 1 0 :1:7 
 ]
 "549
-[u S156 . 1 `S147 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES156  1 e 1 @12 ]
+[u S155 . 1 `S146 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES155  1 e 1 @12 ]
 "641
 [v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
 "648
 [v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
-[s S88 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S87 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
 `uc 1 T1CKPS 1 0 :2:4 
 ]
 "680
-[s S94 . 1 `uc 1 . 1 0 :2:0 
+[s S93 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S100 . 1 `uc 1 . 1 0 :2:0 
+[s S99 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1INSYNC 1 0 :1:2 
 ]
-[u S103 . 1 `S88 1 . 1 0 `S94 1 . 1 0 `S100 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES103  1 e 1 @16 ]
+[u S102 . 1 `S87 1 . 1 0 `S93 1 . 1 0 `S99 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES102  1 e 1 @16 ]
 "1152
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S195 . 1 `uc 1 ADON 1 0 :1:0 
+[s S194 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 GO_nDONE 1 0 :1:2 
 `uc 1 CHS 1 0 :3:3 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1190
-[s S201 . 1 `uc 1 . 1 0 :2:0 
+[s S200 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GO 1 0 :1:2 
 `uc 1 CHS0 1 0 :1:3 
 `uc 1 CHS1 1 0 :1:4 
@@ -148,15 +148,15 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S209 . 1 `uc 1 . 1 0 :2:0 
+[s S208 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nDONE 1 0 :1:2 
 ]
-[s S212 . 1 `uc 1 . 1 0 :2:0 
+[s S211 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GO_DONE 1 0 :1:2 
 ]
-[u S215 . 1 `S195 1 . 1 0 `S201 1 . 1 0 `S209 1 . 1 0 `S212 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES215  1 e 1 @31 ]
-[s S169 . 1 `uc 1 PS 1 0 :3:0 
+[u S214 . 1 `S194 1 . 1 0 `S200 1 . 1 0 `S208 1 . 1 0 `S211 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES214  1 e 1 @31 ]
+[s S168 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
@@ -164,12 +164,12 @@
 `uc 1 nRBPU 1 0 :1:7 
 ]
 "1275
-[s S176 . 1 `uc 1 PS0 1 0 :1:0 
+[s S175 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 ]
-[u S180 . 1 `S169 1 . 1 0 `S176 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES180  1 e 1 @129 ]
+[u S179 . 1 `S168 1 . 1 0 `S175 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES179  1 e 1 @129 ]
 "1325
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1375
@@ -178,7 +178,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1499
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S67 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S66 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -188,23 +188,23 @@
 `uc 1 PSPIE 1 0 :1:7 
 ]
 "1635
-[u S76 . 1 `S67 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES76  1 e 1 @140 ]
+[u S75 . 1 `S66 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES75  1 e 1 @140 ]
 "2222
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
-[s S242 . 1 `uc 1 PCFG 1 0 :4:0 
+[s S241 . 1 `uc 1 PCFG 1 0 :4:0 
 `uc 1 . 1 0 :2:4 
 `uc 1 ADCS2 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2248
-[s S247 . 1 `uc 1 PCFG0 1 0 :1:0 
+[s S246 . 1 `uc 1 PCFG0 1 0 :1:0 
 `uc 1 PCFG1 1 0 :1:1 
 `uc 1 PCFG2 1 0 :1:2 
 `uc 1 PCFG3 1 0 :1:3 
 ]
-[u S252 . 1 `S242 1 . 1 0 `S247 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES252  1 e 1 @159 ]
+[u S251 . 1 `S241 1 . 1 0 `S246 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES251  1 e 1 @159 ]
 "2605
 [v _INTF INTF `VEb  1 e 0 @89 ]
 "2755
@@ -221,66 +221,66 @@
 [v _RD7 RD7 `VEb  1 e 0 @71 ]
 "2890
 [v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
-"63 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+"56 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 [v _timer_counter timer_counter `i  1 e 2 0 ]
-"64
+"57
 [v _timer_counter_max timer_counter_max `i  1 e 2 0 ]
-"65
+"58
 [v _irrigacao_ativa irrigacao_ativa `i  1 e 2 0 ]
-"66
+"59
 [v _umidade_minima umidade_minima `i  1 e 2 0 ]
-"67
+"60
 [v _water_volume water_volume `i  1 e 2 0 ]
-"68
+"61
 [v _setup_menu setup_menu `i  1 e 2 0 ]
-"357
+"349
 [v _main main `(v  1 e 1 0 ]
 {
-"382
+"374
 } 0
-"298
+"290
 [v _verifySensor verifySensor `(v  1 e 1 0 ]
 {
-"308
+"300
 } 0
-"163
+"155
 [v _irrigar irrigar `(v  1 e 1 0 ]
 {
-"175
+"167
 } 0
-"292
+"284
 [v _getADConverterValue getADConverterValue `(i  1 e 2 0 ]
 {
-"295
+"287
 [v getADConverterValue@leitura leitura `i  1 a 2 15 ]
-"297
+"289
 } 0
-"280
+"272
 [v _verifyMenu verifyMenu `(v  1 e 1 0 ]
 {
-"290
+"282
 } 0
-"216
+"208
 [v _handleMenu handleMenu `(v  1 e 1 0 ]
 {
-"219
+"211
 [v handleMenu@umidade umidade `i  1 a 2 22 ]
-"218
+"210
 [v handleMenu@volume volume `i  1 a 2 20 ]
-"279
+"271
 } 0
-"204
+"196
 [v _writeValor writeValor `(v  1 e 1 0 ]
 {
-"208
+"200
 [v writeValor@unidade unidade `uc  1 a 1 16 ]
-"207
+"199
 [v writeValor@dezena dezena `uc  1 a 1 15 ]
-"206
+"198
 [v writeValor@centena centena `uc  1 a 1 14 ]
-"204
+"196
 [v writeValor@valor valor `i  1 p 2 11 ]
-"214
+"206
 } 0
 "5 D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -338,28 +338,28 @@
 {
 "39
 } 0
-"310 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+"302 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 [v _setupWatchdogTimer setupWatchdogTimer `(v  1 e 1 0 ]
 {
-"318
+"310
 } 0
-"101
+"93
 [v _setupTimer setupTimer `(v  1 e 1 0 ]
 {
-"130
+"122
 } 0
-"92
+"84
 [v _setupNewVolumeFlow setupNewVolumeFlow `(v  1 e 1 0 ]
 {
-"95
+"87
 [v setupNewVolumeFlow@new_ms new_ms `i  1 a 2 13 ]
-"99
+"91
 } 0
-"82
+"75
 [v _changeTimerMaxConter changeTimerMaxConter `(v  1 e 1 0 ]
 {
 [v changeTimerMaxConter@mili_s mili_s `i  1 p 2 11 ]
-"88
+"80
 } 0
 "5 D:\Program Files\Microchip\xc8\v2.36\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -384,15 +384,15 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 5 ]
 "53
 } 0
-"195 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+"187 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 [v _setupExternalInterruption setupExternalInterruption `(v  1 e 1 0 ]
 {
-"202
+"194
 } 0
-"321
+"313
 [v _setupADC setupADC `(v  1 e 1 0 ]
 {
-"354
+"346
 } 0
 "62 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X/lcd.h
 [v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
@@ -417,23 +417,23 @@
 [v Lcd_Port@a a `uc  1 a 1 3 ]
 "25
 } 0
-"188 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
+"180 E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 [v _interrupcao interrupcao `II(v  1 e 1 0 ]
 {
-"193
+"185
 } 0
-"135
+"127
 [v _handleTimerInterruption handleTimerInterruption `(v  1 e 1 0 ]
 {
-"160
+"152
 } 0
-"177
+"169
 [v _handleExternalInterruption handleExternalInterruption `(v  1 e 1 0 ]
 {
-"186
+"178
 } 0
-"163
+"155
 [v i1_irrigar irrigar `(v  1 e 1 0 ]
 {
-"175
+"167
 } 0

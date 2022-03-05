@@ -21,10 +21,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF842 ~T0 @X0 0 e ]
 [p i __delay ]
-"278 D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
-[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
-"460
+"460 D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 460:     struct {
 [s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S18 . RBIF INTF TMR0IF RBIE INTE TMR0IE PEIE GIE ]
@@ -174,6 +171,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1437
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1437: extern volatile unsigned char TRISC __attribute__((address(0x087)));
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"278
+[; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "1499
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1499: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
@@ -360,6 +360,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;D:/Program Files (x86)/Microchip/MPLABX/v5.35/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
+"25 main.c
+[p x WDTE  =  ON  ]
+"26
+[p x FOSC  =  HS  ]
+"27
+[p x PWRTE  =  ON  ]
+"28
+[p x BOREN  =  ON  ]
 "4 ./lcd.h
 [; ;./lcd.h: 4: void Lcd_Port(char a)
 [v _Lcd_Port `(v ~T0 @X0 1 ef1`uc ]
@@ -736,859 +744,856 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./lcd.h: 114: }
 [e :UE 119 ]
 }
-"63 main.c
-[; ;main.c: 63: int timer_counter = 0;
+"56 main.c
+[; ;main.c: 56: int timer_counter = 0;
 [v _timer_counter `i ~T0 @X0 1 e ]
 [i _timer_counter
 -> 0 `i
 ]
-"64
-[; ;main.c: 64: int timer_counter_max = 10;
+"57
+[; ;main.c: 57: int timer_counter_max = 10;
 [v _timer_counter_max `i ~T0 @X0 1 e ]
 [i _timer_counter_max
 -> 10 `i
 ]
-"65
-[; ;main.c: 65: int irrigacao_ativa = 0;
+"58
+[; ;main.c: 58: int irrigacao_ativa = 0;
 [v _irrigacao_ativa `i ~T0 @X0 1 e ]
 [i _irrigacao_ativa
 -> 0 `i
 ]
-"66
-[; ;main.c: 66: int umidade_minima = 10;
+"59
+[; ;main.c: 59: int umidade_minima = 10;
 [v _umidade_minima `i ~T0 @X0 1 e ]
 [i _umidade_minima
 -> 10 `i
 ]
-"67
-[; ;main.c: 67: int water_volume = 200;
+"60
+[; ;main.c: 60: int water_volume = 200;
 [v _water_volume `i ~T0 @X0 1 e ]
 [i _water_volume
 -> 200 `i
 ]
-"68
-[; ;main.c: 68: int setup_menu = 0;
+"61
+[; ;main.c: 61: int setup_menu = 0;
 [v _setup_menu `i ~T0 @X0 1 e ]
 [i _setup_menu
 -> 0 `i
 ]
-"74
-[; ;main.c: 74: int MLxMS = 25;
+"67
+[; ;main.c: 67: int MLxMS = 25;
 [v _MLxMS `i ~T0 @X0 1 e ]
 [i _MLxMS
 -> 25 `i
 ]
-"82
-[; ;main.c: 82: void changeTimerMaxConter(int mili_s){
+"75
+[; ;main.c: 75: void changeTimerMaxConter(int mili_s){
 [v _changeTimerMaxConter `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _changeTimerMaxConter ]
 [v _mili_s `i ~T0 @X0 1 r1 ]
 [f ]
-"84
-[; ;main.c: 84:     timer_counter_max = (mili_s/500);
-[e = _timer_counter_max / _mili_s -> 500 `i ]
-"85
-[; ;main.c: 85:     PORTC = timer_counter_max;
-[e = _PORTC -> _timer_counter_max `uc ]
-"86
-[; ;main.c: 86:     return;
+"77
+[; ;main.c: 77:     timer_counter_max = (mili_s/25);
+[e = _timer_counter_max / _mili_s -> 25 `i ]
+"78
+[; ;main.c: 78:     return;
 [e $UE 120  ]
-"88
-[; ;main.c: 88: }
+"80
+[; ;main.c: 80: }
 [e :UE 120 ]
 }
-"92
-[; ;main.c: 92: void setupNewVolumeFlow()
+"84
+[; ;main.c: 84: void setupNewVolumeFlow()
 [v _setupNewVolumeFlow `(v ~T0 @X0 1 ef ]
-"93
-[; ;main.c: 93: {
+"85
+[; ;main.c: 85: {
 {
 [e :U _setupNewVolumeFlow ]
 [f ]
-"95
-[; ;main.c: 95:     int new_ms = water_volume*MLxMS;
+"87
+[; ;main.c: 87:     int new_ms = water_volume*MLxMS;
 [v _new_ms `i ~T0 @X0 1 a ]
 [e = _new_ms * _water_volume _MLxMS ]
-"97
-[; ;main.c: 97:     changeTimerMaxConter(new_ms);
+"89
+[; ;main.c: 89:     changeTimerMaxConter(new_ms);
 [e ( _changeTimerMaxConter (1 _new_ms ]
-"98
-[; ;main.c: 98:     return;
+"90
+[; ;main.c: 90:     return;
 [e $UE 121  ]
-"99
-[; ;main.c: 99: }
+"91
+[; ;main.c: 91: }
 [e :UE 121 ]
 }
-"101
-[; ;main.c: 101: void setupTimer()
+"93
+[; ;main.c: 93: void setupTimer()
 [v _setupTimer `(v ~T0 @X0 1 ef ]
-"102
-[; ;main.c: 102: {
+"94
+[; ;main.c: 94: {
 {
 [e :U _setupTimer ]
 [f ]
-"104
-[; ;main.c: 104:     INTCONbits.GIE = 1;
+"96
+[; ;main.c: 96:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"105
-[; ;main.c: 105:     INTCONbits.PEIE = 1;
+"97
+[; ;main.c: 97:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"106
-[; ;main.c: 106:     PIE1bits.TMR1IE = 1;
+"98
+[; ;main.c: 98:     PIE1bits.TMR1IE = 1;
 [e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"109
-[; ;main.c: 109:     T1CONbits.TMR1CS = 0;
+"101
+[; ;main.c: 101:     T1CONbits.TMR1CS = 0;
 [e = . . _T1CONbits 0 1 -> -> 0 `i `uc ]
-"112
-[; ;main.c: 112:     T1CONbits.T1CKPS0 = 1;
+"104
+[; ;main.c: 104:     T1CONbits.T1CKPS0 = 1;
 [e = . . _T1CONbits 1 3 -> -> 1 `i `uc ]
-"113
-[; ;main.c: 113:     T1CONbits.T1CKPS1 = 1;
+"105
+[; ;main.c: 105:     T1CONbits.T1CKPS1 = 1;
 [e = . . _T1CONbits 1 4 -> -> 1 `i `uc ]
-"121
-[; ;main.c: 121:     TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
-"122
-[; ;main.c: 122:     TMR1L = 0xDC;
-[e = _TMR1L -> -> 220 `i `uc ]
-"124
-[; ;main.c: 124:     T1CONbits.TMR1ON = 0;
+"113
+[; ;main.c: 113:     TMR1H = 0xF3;
+[e = _TMR1H -> -> 243 `i `uc ]
+"114
+[; ;main.c: 114:     TMR1L = 0xCB;
+[e = _TMR1L -> -> 203 `i `uc ]
+"116
+[; ;main.c: 116:     T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"128
-[; ;main.c: 128:     setupNewVolumeFlow();
+"120
+[; ;main.c: 120:     setupNewVolumeFlow();
 [e ( _setupNewVolumeFlow ..  ]
-"129
-[; ;main.c: 129:     return;
+"121
+[; ;main.c: 121:     return;
 [e $UE 122  ]
-"130
-[; ;main.c: 130: }
+"122
+[; ;main.c: 122: }
 [e :UE 122 ]
 }
-"135
-[; ;main.c: 135: void handleTimerInterruption()
+"127
+[; ;main.c: 127: void handleTimerInterruption()
 [v _handleTimerInterruption `(v ~T0 @X0 1 ef ]
-"136
-[; ;main.c: 136: {
+"128
+[; ;main.c: 128: {
 {
 [e :U _handleTimerInterruption ]
 [f ]
-"137
-[; ;main.c: 137:     if(TMR1IF){
+"129
+[; ;main.c: 129:     if(TMR1IF){
 [e $ ! _TMR1IF 124  ]
 {
-"138
-[; ;main.c: 138:         if(irrigacao_ativa){
+"130
+[; ;main.c: 130:         if(irrigacao_ativa){
 [e $ ! != _irrigacao_ativa -> 0 `i 125  ]
 {
-"139
-[; ;main.c: 139:             timer_counter++;
+"131
+[; ;main.c: 131:             timer_counter++;
 [e ++ _timer_counter -> 1 `i ]
-"140
-[; ;main.c: 140:             PORTBbits.RB1 = 1;
+"132
+[; ;main.c: 132:             PORTBbits.RB1 = 1;
 [e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-"141
-[; ;main.c: 141:             PORTBbits.RB6 = 1;
+"133
+[; ;main.c: 133:             PORTBbits.RB6 = 1;
 [e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
-"142
-[; ;main.c: 142:             if(timer_counter_max <= timer_counter){
+"134
+[; ;main.c: 134:             if(timer_counter_max <= timer_counter){
 [e $ ! <= _timer_counter_max _timer_counter 126  ]
 {
-"143
-[; ;main.c: 143:                 PORTBbits.RB1 = 0;
+"135
+[; ;main.c: 135:                 PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"144
-[; ;main.c: 144:                 irrigacao_ativa = 0;
+"136
+[; ;main.c: 136:                 irrigacao_ativa = 0;
 [e = _irrigacao_ativa -> 0 `i ]
-"145
-[; ;main.c: 145:                 PORTBbits.RB6 = 0;
+"137
+[; ;main.c: 137:                 PORTBbits.RB6 = 0;
 [e = . . _PORTBbits 0 6 -> -> 0 `i `uc ]
-"148
-[; ;main.c: 148:                 T1CONbits.TMR1ON = 0;
+"140
+[; ;main.c: 140:                 T1CONbits.TMR1ON = 0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"149
-[; ;main.c: 149:             }
+"141
+[; ;main.c: 141:             }
 }
 [e :U 126 ]
-"150
-[; ;main.c: 150:         }
+"142
+[; ;main.c: 142:         }
 }
 [e $U 127  ]
-"151
-[; ;main.c: 151:         else{
+"143
+[; ;main.c: 143:         else{
 [e :U 125 ]
 {
-"152
-[; ;main.c: 152:             timer_counter = 0;
+"144
+[; ;main.c: 144:             timer_counter = 0;
 [e = _timer_counter -> 0 `i ]
-"153
-[; ;main.c: 153:             PORTBbits.RB1 = 0;
+"145
+[; ;main.c: 145:             PORTBbits.RB1 = 0;
 [e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"154
-[; ;main.c: 154:         }
+"146
+[; ;main.c: 146:         }
 }
 [e :U 127 ]
-"155
-[; ;main.c: 155:         PIR1bits.TMR1IF = 0;
+"147
+[; ;main.c: 147:         PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"156
-[; ;main.c: 156:         TMR1H = 0x0B;
-[e = _TMR1H -> -> 11 `i `uc ]
-"157
-[; ;main.c: 157:         TMR1L = 0xDC;
-[e = _TMR1L -> -> 220 `i `uc ]
-"158
-[; ;main.c: 158:     }
+"148
+[; ;main.c: 148:         TMR1H = 0xF3;
+[e = _TMR1H -> -> 243 `i `uc ]
+"149
+[; ;main.c: 149:         TMR1L = 0xCB;
+[e = _TMR1L -> -> 203 `i `uc ]
+"150
+[; ;main.c: 150:     }
 }
 [e :U 124 ]
-"159
-[; ;main.c: 159:     return;
+"151
+[; ;main.c: 151:     return;
 [e $UE 123  ]
-"160
-[; ;main.c: 160: }
+"152
+[; ;main.c: 152: }
 [e :UE 123 ]
 }
-"163
-[; ;main.c: 163: void irrigar(){
+"155
+[; ;main.c: 155: void irrigar(){
 [v _irrigar `(v ~T0 @X0 1 ef ]
 {
 [e :U _irrigar ]
 [f ]
-"165
-[; ;main.c: 165:     irrigacao_ativa = 1;
+"157
+[; ;main.c: 157:     irrigacao_ativa = 1;
 [e = _irrigacao_ativa -> 1 `i ]
-"166
-[; ;main.c: 166:     timer_counter = 0;
+"158
+[; ;main.c: 158:     timer_counter = 0;
 [e = _timer_counter -> 0 `i ]
-"168
-[; ;main.c: 168:     T1CONbits.TMR1ON = 1;
+"160
+[; ;main.c: 160:     T1CONbits.TMR1ON = 1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"175
-[; ;main.c: 175: }
+"167
+[; ;main.c: 167: }
 [e :UE 128 ]
 }
-"177
-[; ;main.c: 177: void handleExternalInterruption()
+"169
+[; ;main.c: 169: void handleExternalInterruption()
 [v _handleExternalInterruption `(v ~T0 @X0 1 ef ]
-"178
-[; ;main.c: 178: {
+"170
+[; ;main.c: 170: {
 {
 [e :U _handleExternalInterruption ]
 [f ]
-"179
-[; ;main.c: 179:     if(INTF){
+"171
+[; ;main.c: 171:     if(INTF){
 [e $ ! _INTF 130  ]
 {
-"180
-[; ;main.c: 180:         if(!irrigacao_ativa){
+"172
+[; ;main.c: 172:         if(!irrigacao_ativa){
 [e $ ! ! != _irrigacao_ativa -> 0 `i 131  ]
 {
-"181
-[; ;main.c: 181:             irrigar();
+"173
+[; ;main.c: 173:             irrigar();
 [e ( _irrigar ..  ]
-"182
-[; ;main.c: 182:         }
+"174
+[; ;main.c: 174:         }
 }
 [e :U 131 ]
-"183
-[; ;main.c: 183:         INTCONbits.INTF = 0;
+"175
+[; ;main.c: 175:         INTCONbits.INTF = 0;
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"184
-[; ;main.c: 184:     }
+"176
+[; ;main.c: 176:     }
 }
 [e :U 130 ]
-"185
-[; ;main.c: 185:     return;
+"177
+[; ;main.c: 177:     return;
 [e $UE 129  ]
-"186
-[; ;main.c: 186: }
+"178
+[; ;main.c: 178: }
 [e :UE 129 ]
 }
 [v $root$_interrupcao `(v ~T0 @X0 0 e ]
-"188
-[; ;main.c: 188: void __attribute__((picinterrupt(("")))) interrupcao(void)
+"180
+[; ;main.c: 180: void __attribute__((picinterrupt(("")))) interrupcao(void)
 [v _interrupcao `(v ~T1 @X0 1 ef ]
-"189
-[; ;main.c: 189: {
+"181
+[; ;main.c: 181: {
 {
 [e :U _interrupcao ]
 [f ]
-"190
-[; ;main.c: 190:     handleTimerInterruption();
+"182
+[; ;main.c: 182:     handleTimerInterruption();
 [e ( _handleTimerInterruption ..  ]
-"191
-[; ;main.c: 191:     handleExternalInterruption();
+"183
+[; ;main.c: 183:     handleExternalInterruption();
 [e ( _handleExternalInterruption ..  ]
-"192
-[; ;main.c: 192:     return;
+"184
+[; ;main.c: 184:     return;
 [e $UE 132  ]
-"193
-[; ;main.c: 193: }
+"185
+[; ;main.c: 185: }
 [e :UE 132 ]
 }
-"195
-[; ;main.c: 195: void setupExternalInterruption()
+"187
+[; ;main.c: 187: void setupExternalInterruption()
 [v _setupExternalInterruption `(v ~T0 @X0 1 ef ]
-"196
-[; ;main.c: 196: {
+"188
+[; ;main.c: 188: {
 {
 [e :U _setupExternalInterruption ]
 [f ]
-"197
-[; ;main.c: 197:     OPTION_REGbits.INTEDG = 0;
+"189
+[; ;main.c: 189:     OPTION_REGbits.INTEDG = 0;
 [e = . . _OPTION_REGbits 0 4 -> -> 0 `i `uc ]
-"198
-[; ;main.c: 198:  INTCONbits.GIE = 1;
+"190
+[; ;main.c: 190:  INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"199
-[; ;main.c: 199:  INTCONbits.INTE = 1;
+"191
+[; ;main.c: 191:  INTCONbits.INTE = 1;
 [e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-"200
-[; ;main.c: 200:     INTCONbits.INTF = 0;
+"192
+[; ;main.c: 192:     INTCONbits.INTF = 0;
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-"201
-[; ;main.c: 201:     return;
+"193
+[; ;main.c: 193:     return;
 [e $UE 133  ]
-"202
-[; ;main.c: 202: }
+"194
+[; ;main.c: 194: }
 [e :UE 133 ]
 }
-"204
-[; ;main.c: 204: void writeValor(int valor)
+"196
+[; ;main.c: 196: void writeValor(int valor)
 [v _writeValor `(v ~T0 @X0 1 ef1`i ]
-"205
-[; ;main.c: 205: {
+"197
+[; ;main.c: 197: {
 {
 [e :U _writeValor ]
-"204
-[; ;main.c: 204: void writeValor(int valor)
+"196
+[; ;main.c: 196: void writeValor(int valor)
 [v _valor `i ~T0 @X0 1 r1 ]
-"205
-[; ;main.c: 205: {
+"197
+[; ;main.c: 197: {
 [f ]
-"206
-[; ;main.c: 206:     char centena = valor/100 + 48;
+"198
+[; ;main.c: 198:     char centena = valor/100 + 48;
 [v _centena `uc ~T0 @X0 1 a ]
 [e = _centena -> + / _valor -> 100 `i -> 48 `i `uc ]
-"207
-[; ;main.c: 207:     char dezena = (valor%100)/10 + 48;
+"199
+[; ;main.c: 199:     char dezena = (valor%100)/10 + 48;
 [v _dezena `uc ~T0 @X0 1 a ]
 [e = _dezena -> + / % _valor -> 100 `i -> 10 `i -> 48 `i `uc ]
-"208
-[; ;main.c: 208:     char unidade = valor%10 + 48;
+"200
+[; ;main.c: 200:     char unidade = valor%10 + 48;
 [v _unidade `uc ~T0 @X0 1 a ]
 [e = _unidade -> + % _valor -> 10 `i -> 48 `i `uc ]
-"209
-[; ;main.c: 209:     Lcd_Set_Cursor(2,1);
+"201
+[; ;main.c: 201:     Lcd_Set_Cursor(2,1);
 [e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
-"210
-[; ;main.c: 210:     Lcd_Write_Char(centena);
+"202
+[; ;main.c: 202:     Lcd_Write_Char(centena);
 [e ( _Lcd_Write_Char (1 _centena ]
-"211
-[; ;main.c: 211:     Lcd_Write_Char(dezena);
+"203
+[; ;main.c: 203:     Lcd_Write_Char(dezena);
 [e ( _Lcd_Write_Char (1 _dezena ]
-"212
-[; ;main.c: 212:     Lcd_Write_Char(unidade);
+"204
+[; ;main.c: 204:     Lcd_Write_Char(unidade);
 [e ( _Lcd_Write_Char (1 _unidade ]
-"213
-[; ;main.c: 213:     return;
+"205
+[; ;main.c: 205:     return;
 [e $UE 134  ]
-"214
-[; ;main.c: 214: }
+"206
+[; ;main.c: 206: }
 [e :UE 134 ]
 }
-"216
-[; ;main.c: 216: void handleMenu()
+"208
+[; ;main.c: 208: void handleMenu()
 [v _handleMenu `(v ~T0 @X0 1 ef ]
-"217
-[; ;main.c: 217: {
+"209
+[; ;main.c: 209: {
 {
 [e :U _handleMenu ]
 [f ]
-"218
-[; ;main.c: 218:     int volume = water_volume;
+"210
+[; ;main.c: 210:     int volume = water_volume;
 [v _volume `i ~T0 @X0 1 a ]
 [e = _volume _water_volume ]
-"219
-[; ;main.c: 219:     int umidade = umidade_minima;
+"211
+[; ;main.c: 211:     int umidade = umidade_minima;
 [v _umidade `i ~T0 @X0 1 a ]
 [e = _umidade _umidade_minima ]
-"221
-[; ;main.c: 221:     while(setup_menu == 1){
+"213
+[; ;main.c: 213:     while(setup_menu == 1){
 [e $U 136  ]
 [e :U 137 ]
 {
-"222
-[; ;main.c: 222:         __asm("clrwdt");
+"214
+[; ;main.c: 214:         __asm("clrwdt");
 [; <" clrwdt ;# ">
-"223
-[; ;main.c: 223:         _delay((unsigned long)((100)*(4000000/4000.0)));
+"215
+[; ;main.c: 215:         _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"224
-[; ;main.c: 224:         Lcd_Set_Cursor(1,1);
+"216
+[; ;main.c: 216:         Lcd_Set_Cursor(1,1);
 [e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"225
-[; ;main.c: 225:         Lcd_Write_String("NEW THRESHOLD:");
+"217
+[; ;main.c: 217:         Lcd_Write_String("NEW THRESHOLD:");
 [e ( _Lcd_Write_String (1 :s 1C ]
-"226
-[; ;main.c: 226:         writeValor(umidade);
+"218
+[; ;main.c: 218:         writeValor(umidade);
 [e ( _writeValor (1 _umidade ]
-"227
-[; ;main.c: 227:         if(!PORTBbits.RB2){
+"219
+[; ;main.c: 219:         if(!PORTBbits.RB2){
 [e $ ! ! != -> . . _PORTBbits 0 2 `i -> 0 `i 139  ]
 {
-"228
-[; ;main.c: 228:             umidade_minima = umidade;
+"220
+[; ;main.c: 220:             umidade_minima = umidade;
 [e = _umidade_minima _umidade ]
-"229
-[; ;main.c: 229:             setup_menu = 2;
+"221
+[; ;main.c: 221:             setup_menu = 2;
 [e = _setup_menu -> 2 `i ]
-"230
-[; ;main.c: 230:             _delay((unsigned long)((500)*(4000000/4000.0)));
+"222
+[; ;main.c: 222:             _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"231
-[; ;main.c: 231:         }
+"223
+[; ;main.c: 223:         }
 }
 [e :U 139 ]
-"232
-[; ;main.c: 232:         if(!PORTBbits.RB3){
+"224
+[; ;main.c: 224:         if(!PORTBbits.RB3){
 [e $ ! ! != -> . . _PORTBbits 0 3 `i -> 0 `i 140  ]
 {
-"233
-[; ;main.c: 233:             umidade++;
+"225
+[; ;main.c: 225:             umidade++;
 [e ++ _umidade -> 1 `i ]
-"234
-[; ;main.c: 234:             if(umidade > 999) umidade = 0;
+"226
+[; ;main.c: 226:             if(umidade > 999) umidade = 0;
 [e $ ! > _umidade -> 999 `i 141  ]
 [e = _umidade -> 0 `i ]
 [e :U 141 ]
-"235
-[; ;main.c: 235:             writeValor(umidade);
+"227
+[; ;main.c: 227:             writeValor(umidade);
 [e ( _writeValor (1 _umidade ]
-"236
-[; ;main.c: 236:             _delay((unsigned long)((100)*(4000000/4000.0)));
+"228
+[; ;main.c: 228:             _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"237
-[; ;main.c: 237:         }
+"229
+[; ;main.c: 229:         }
 }
 [e :U 140 ]
-"238
-[; ;main.c: 238:         if(!PORTBbits.RB4){
+"230
+[; ;main.c: 230:         if(!PORTBbits.RB4){
 [e $ ! ! != -> . . _PORTBbits 0 4 `i -> 0 `i 142  ]
 {
-"239
-[; ;main.c: 239:             umidade--;
+"231
+[; ;main.c: 231:             umidade--;
 [e -- _umidade -> 1 `i ]
-"240
-[; ;main.c: 240:             if(umidade < 0) umidade = 0;
+"232
+[; ;main.c: 232:             if(umidade < 0) umidade = 0;
 [e $ ! < _umidade -> 0 `i 143  ]
 [e = _umidade -> 0 `i ]
 [e :U 143 ]
-"241
-[; ;main.c: 241:             writeValor(umidade);
+"233
+[; ;main.c: 233:             writeValor(umidade);
 [e ( _writeValor (1 _umidade ]
-"242
-[; ;main.c: 242:             _delay((unsigned long)((100)*(4000000/4000.0)));
+"234
+[; ;main.c: 234:             _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"243
-[; ;main.c: 243:         }
+"235
+[; ;main.c: 235:         }
 }
 [e :U 142 ]
-"244
-[; ;main.c: 244:     }
+"236
+[; ;main.c: 236:     }
 }
 [e :U 136 ]
-"221
-[; ;main.c: 221:     while(setup_menu == 1){
+"213
+[; ;main.c: 213:     while(setup_menu == 1){
 [e $ == _setup_menu -> 1 `i 137  ]
 [e :U 138 ]
-"245
-[; ;main.c: 245:     Lcd_Clear();
+"237
+[; ;main.c: 237:     Lcd_Clear();
 [e ( _Lcd_Clear ..  ]
-"246
-[; ;main.c: 246:     while(setup_menu == 2){
+"238
+[; ;main.c: 238:     while(setup_menu == 2){
 [e $U 144  ]
 [e :U 145 ]
 {
-"247
-[; ;main.c: 247:         __asm("clrwdt");
+"239
+[; ;main.c: 239:         __asm("clrwdt");
 [; <" clrwdt ;# ">
-"248
-[; ;main.c: 248:         _delay((unsigned long)((100)*(4000000/4000.0)));
+"240
+[; ;main.c: 240:         _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"249
-[; ;main.c: 249:         Lcd_Set_Cursor(1,1);
+"241
+[; ;main.c: 241:         Lcd_Set_Cursor(1,1);
 [e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"250
-[; ;main.c: 250:         Lcd_Write_String("NEW VOLUME:");
+"242
+[; ;main.c: 242:         Lcd_Write_String("NEW VOLUME:");
 [e ( _Lcd_Write_String (1 :s 2C ]
-"251
-[; ;main.c: 251:         writeValor(volume);
+"243
+[; ;main.c: 243:         writeValor(volume);
 [e ( _writeValor (1 _volume ]
-"252
-[; ;main.c: 252:         if(!PORTBbits.RB2){
+"244
+[; ;main.c: 244:         if(!PORTBbits.RB2){
 [e $ ! ! != -> . . _PORTBbits 0 2 `i -> 0 `i 147  ]
 {
-"253
-[; ;main.c: 253:             water_volume = volume;
+"245
+[; ;main.c: 245:             water_volume = volume;
 [e = _water_volume _volume ]
-"254
-[; ;main.c: 254:             setupNewVolumeFlow();
+"246
+[; ;main.c: 246:             setupNewVolumeFlow();
 [e ( _setupNewVolumeFlow ..  ]
-"255
-[; ;main.c: 255:             setup_menu = 3;
+"247
+[; ;main.c: 247:             setup_menu = 3;
 [e = _setup_menu -> 3 `i ]
-"256
-[; ;main.c: 256:             _delay((unsigned long)((500)*(4000000/4000.0)));
+"248
+[; ;main.c: 248:             _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"257
-[; ;main.c: 257:         }
+"249
+[; ;main.c: 249:         }
 }
 [e :U 147 ]
-"258
-[; ;main.c: 258:         if(!PORTBbits.RB3){
+"250
+[; ;main.c: 250:         if(!PORTBbits.RB3){
 [e $ ! ! != -> . . _PORTBbits 0 3 `i -> 0 `i 148  ]
 {
-"259
-[; ;main.c: 259:             volume++;
+"251
+[; ;main.c: 251:             volume++;
 [e ++ _volume -> 1 `i ]
-"260
-[; ;main.c: 260:             if(volume > 999) volume = 0;
+"252
+[; ;main.c: 252:             if(volume > 999) volume = 0;
 [e $ ! > _volume -> 999 `i 149  ]
 [e = _volume -> 0 `i ]
 [e :U 149 ]
-"261
-[; ;main.c: 261:             writeValor(volume);
+"253
+[; ;main.c: 253:             writeValor(volume);
 [e ( _writeValor (1 _volume ]
-"262
-[; ;main.c: 262:             _delay((unsigned long)((100)*(4000000/4000.0)));
+"254
+[; ;main.c: 254:             _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"263
-[; ;main.c: 263:         }
+"255
+[; ;main.c: 255:         }
 }
 [e :U 148 ]
-"264
-[; ;main.c: 264:         if(!PORTBbits.RB4){
+"256
+[; ;main.c: 256:         if(!PORTBbits.RB4){
 [e $ ! ! != -> . . _PORTBbits 0 4 `i -> 0 `i 150  ]
 {
-"265
-[; ;main.c: 265:             volume--;
+"257
+[; ;main.c: 257:             volume--;
 [e -- _volume -> 1 `i ]
-"266
-[; ;main.c: 266:             if(volume < 0) volume = 0;
+"258
+[; ;main.c: 258:             if(volume < 0) volume = 0;
 [e $ ! < _volume -> 0 `i 151  ]
 [e = _volume -> 0 `i ]
 [e :U 151 ]
-"267
-[; ;main.c: 267:             writeValor(volume);
+"259
+[; ;main.c: 259:             writeValor(volume);
 [e ( _writeValor (1 _volume ]
-"268
-[; ;main.c: 268:             _delay((unsigned long)((100)*(4000000/4000.0)));
+"260
+[; ;main.c: 260:             _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"269
-[; ;main.c: 269:         }
+"261
+[; ;main.c: 261:         }
 }
 [e :U 150 ]
-"270
-[; ;main.c: 270:     }
+"262
+[; ;main.c: 262:     }
 }
 [e :U 144 ]
-"246
-[; ;main.c: 246:     while(setup_menu == 2){
+"238
+[; ;main.c: 238:     while(setup_menu == 2){
 [e $ == _setup_menu -> 2 `i 145  ]
 [e :U 146 ]
-"271
-[; ;main.c: 271:     Lcd_Clear();
+"263
+[; ;main.c: 263:     Lcd_Clear();
 [e ( _Lcd_Clear ..  ]
-"272
-[; ;main.c: 272:     while(setup_menu == 3){
+"264
+[; ;main.c: 264:     while(setup_menu == 3){
 [e $U 152  ]
 [e :U 153 ]
 {
-"273
-[; ;main.c: 273:         __asm("clrwdt");
+"265
+[; ;main.c: 265:         __asm("clrwdt");
 [; <" clrwdt ;# ">
-"274
-[; ;main.c: 274:         PORTBbits.RB5 = 0;
+"266
+[; ;main.c: 266:         PORTBbits.RB5 = 0;
 [e = . . _PORTBbits 0 5 -> -> 0 `i `uc ]
-"275
-[; ;main.c: 275:         break;
+"267
+[; ;main.c: 267:         break;
 [e $U 154  ]
-"276
-[; ;main.c: 276:     }
+"268
+[; ;main.c: 268:     }
 }
 [e :U 152 ]
-"272
-[; ;main.c: 272:     while(setup_menu == 3){
+"264
+[; ;main.c: 264:     while(setup_menu == 3){
 [e $ == _setup_menu -> 3 `i 153  ]
 [e :U 154 ]
-"277
-[; ;main.c: 277:     Lcd_Clear();
+"269
+[; ;main.c: 269:     Lcd_Clear();
 [e ( _Lcd_Clear ..  ]
-"278
-[; ;main.c: 278:     return;
+"270
+[; ;main.c: 270:     return;
 [e $UE 135  ]
-"279
-[; ;main.c: 279: }
+"271
+[; ;main.c: 271: }
 [e :UE 135 ]
 }
-"280
-[; ;main.c: 280: void verifyMenu()
+"272
+[; ;main.c: 272: void verifyMenu()
 [v _verifyMenu `(v ~T0 @X0 1 ef ]
-"281
-[; ;main.c: 281: {
+"273
+[; ;main.c: 273: {
 {
 [e :U _verifyMenu ]
 [f ]
-"282
-[; ;main.c: 282:     if (!PORTBbits.RB2)
+"274
+[; ;main.c: 274:     if (!PORTBbits.RB2)
 [e $ ! ! != -> . . _PORTBbits 0 2 `i -> 0 `i 156  ]
-"283
-[; ;main.c: 283:     {
+"275
+[; ;main.c: 275:     {
 {
-"284
-[; ;main.c: 284:         setup_menu = 1;
+"276
+[; ;main.c: 276:         setup_menu = 1;
 [e = _setup_menu -> 1 `i ]
-"285
-[; ;main.c: 285:         PORTBbits.RB5 = 1;
+"277
+[; ;main.c: 277:         PORTBbits.RB5 = 1;
 [e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
-"286
-[; ;main.c: 286:         _delay((unsigned long)((500)*(4000000/4000.0)));
+"278
+[; ;main.c: 278:         _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"287
-[; ;main.c: 287:         handleMenu();
+"279
+[; ;main.c: 279:         handleMenu();
 [e ( _handleMenu ..  ]
-"288
-[; ;main.c: 288:     }
+"280
+[; ;main.c: 280:     }
 }
 [e :U 156 ]
-"289
-[; ;main.c: 289:     return;
+"281
+[; ;main.c: 281:     return;
 [e $UE 155  ]
-"290
-[; ;main.c: 290: }
+"282
+[; ;main.c: 282: }
 [e :UE 155 ]
 }
-"292
-[; ;main.c: 292: int getADConverterValue(){
+"284
+[; ;main.c: 284: int getADConverterValue(){
 [v _getADConverterValue `(i ~T0 @X0 1 ef ]
 {
 [e :U _getADConverterValue ]
 [f ]
-"293
-[; ;main.c: 293:     ADCON0bits.GO = 1;
+"285
+[; ;main.c: 285:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"294
-[; ;main.c: 294:     _delay((unsigned long)((100)*(4000000/4000000.0)));
+"286
+[; ;main.c: 286:     _delay((unsigned long)((100)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"295
-[; ;main.c: 295:     int leitura = 100*ADRESH/256;
+"287
+[; ;main.c: 287:     int leitura = 100*ADRESH/256;
 [v _leitura `i ~T0 @X0 1 a ]
 [e = _leitura / * -> 100 `i -> _ADRESH `i -> 256 `i ]
-"296
-[; ;main.c: 296:     return leitura;
+"288
+[; ;main.c: 288:     return leitura;
 [e ) _leitura ]
 [e $UE 157  ]
-"297
-[; ;main.c: 297: }
+"289
+[; ;main.c: 289: }
 [e :UE 157 ]
 }
-"298
-[; ;main.c: 298: void verifySensor()
+"290
+[; ;main.c: 290: void verifySensor()
 [v _verifySensor `(v ~T0 @X0 1 ef ]
-"299
-[; ;main.c: 299: {
+"291
+[; ;main.c: 291: {
 {
 [e :U _verifySensor ]
 [f ]
-"300
-[; ;main.c: 300:     if(getADConverterValue()<umidade_minima){
+"292
+[; ;main.c: 292:     if(getADConverterValue()<umidade_minima){
 [e $ ! < ( _getADConverterValue ..  _umidade_minima 159  ]
 {
-"301
-[; ;main.c: 301:         PORTBbits.RB7 = 1;
+"293
+[; ;main.c: 293:         PORTBbits.RB7 = 1;
 [e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
-"302
-[; ;main.c: 302:         irrigar();
+"294
+[; ;main.c: 294:         irrigar();
 [e ( _irrigar ..  ]
-"303
-[; ;main.c: 303:     }
+"295
+[; ;main.c: 295:     }
 }
 [e $U 160  ]
-"304
-[; ;main.c: 304:     else{
+"296
+[; ;main.c: 296:     else{
 [e :U 159 ]
 {
-"305
-[; ;main.c: 305:         PORTBbits.RB7 = 0;
+"297
+[; ;main.c: 297:         PORTBbits.RB7 = 0;
 [e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
-"306
-[; ;main.c: 306:     }
+"298
+[; ;main.c: 298:     }
 }
 [e :U 160 ]
-"307
-[; ;main.c: 307:     return;
+"299
+[; ;main.c: 299:     return;
 [e $UE 158  ]
-"308
-[; ;main.c: 308: }
+"300
+[; ;main.c: 300: }
 [e :UE 158 ]
 }
-"310
-[; ;main.c: 310: void setupWatchdogTimer()
+"302
+[; ;main.c: 302: void setupWatchdogTimer()
 [v _setupWatchdogTimer `(v ~T0 @X0 1 ef ]
-"311
-[; ;main.c: 311: {
+"303
+[; ;main.c: 303: {
 {
 [e :U _setupWatchdogTimer ]
 [f ]
-"312
-[; ;main.c: 312:     OPTION_REGbits.PSA = 1;
+"304
+[; ;main.c: 304:     OPTION_REGbits.PSA = 1;
 [e = . . _OPTION_REGbits 0 1 -> -> 1 `i `uc ]
-"313
-[; ;main.c: 313:     OPTION_REGbits.PS0 = 0;
+"305
+[; ;main.c: 305:     OPTION_REGbits.PS0 = 0;
 [e = . . _OPTION_REGbits 1 0 -> -> 0 `i `uc ]
-"314
-[; ;main.c: 314:     OPTION_REGbits.PS1 = 1;
+"306
+[; ;main.c: 306:     OPTION_REGbits.PS1 = 1;
 [e = . . _OPTION_REGbits 1 1 -> -> 1 `i `uc ]
-"315
-[; ;main.c: 315:     OPTION_REGbits.PS2 = 1;
+"307
+[; ;main.c: 307:     OPTION_REGbits.PS2 = 1;
 [e = . . _OPTION_REGbits 1 2 -> -> 1 `i `uc ]
-"316
-[; ;main.c: 316:     __asm("clrwdt");
+"308
+[; ;main.c: 308:     __asm("clrwdt");
 [; <" clrwdt ;# ">
-"317
-[; ;main.c: 317:     return;
+"309
+[; ;main.c: 309:     return;
 [e $UE 161  ]
-"318
-[; ;main.c: 318: }
+"310
+[; ;main.c: 310: }
 [e :UE 161 ]
 }
-"321
-[; ;main.c: 321: void setupADC(){
+"313
+[; ;main.c: 313: void setupADC(){
 [v _setupADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _setupADC ]
 [f ]
-"326
-[; ;main.c: 326:     ADCON1bits.PCFG0 = 1;
+"318
+[; ;main.c: 318:     ADCON1bits.PCFG0 = 1;
 [e = . . _ADCON1bits 1 0 -> -> 1 `i `uc ]
-"327
-[; ;main.c: 327:     ADCON1bits.PCFG1 = 1;
+"319
+[; ;main.c: 319:     ADCON1bits.PCFG1 = 1;
 [e = . . _ADCON1bits 1 1 -> -> 1 `i `uc ]
-"328
-[; ;main.c: 328:     ADCON1bits.PCFG2 = 1;
+"320
+[; ;main.c: 320:     ADCON1bits.PCFG2 = 1;
 [e = . . _ADCON1bits 1 2 -> -> 1 `i `uc ]
-"329
-[; ;main.c: 329:     ADCON1bits.PCFG3 = 1;
+"321
+[; ;main.c: 321:     ADCON1bits.PCFG3 = 1;
 [e = . . _ADCON1bits 1 3 -> -> 1 `i `uc ]
-"332
-[; ;main.c: 332:     ADCON1bits.ADCS2 = 1;
+"324
+[; ;main.c: 324:     ADCON1bits.ADCS2 = 1;
 [e = . . _ADCON1bits 0 2 -> -> 1 `i `uc ]
-"333
-[; ;main.c: 333:     ADCON0bits.ADCS1 = 1;
+"325
+[; ;main.c: 325:     ADCON0bits.ADCS1 = 1;
 [e = . . _ADCON0bits 1 6 -> -> 1 `i `uc ]
-"334
-[; ;main.c: 334:     ADCON0bits.ADCS0 = 0;
+"326
+[; ;main.c: 326:     ADCON0bits.ADCS0 = 0;
 [e = . . _ADCON0bits 1 5 -> -> 0 `i `uc ]
-"337
-[; ;main.c: 337:     ADCON1bits.ADFM = 0;
+"329
+[; ;main.c: 329:     ADCON1bits.ADFM = 0;
 [e = . . _ADCON1bits 0 3 -> -> 0 `i `uc ]
-"340
-[; ;main.c: 340:     ADRESL = 0;
+"332
+[; ;main.c: 332:     ADRESL = 0;
 [e = _ADRESL -> -> 0 `i `uc ]
-"341
-[; ;main.c: 341:     ADRESH = 0;
+"333
+[; ;main.c: 333:     ADRESH = 0;
 [e = _ADRESH -> -> 0 `i `uc ]
-"345
-[; ;main.c: 345:     ADCON0bits.ADON = 1;
+"337
+[; ;main.c: 337:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"348
-[; ;main.c: 348:     ADCON0bits.CHS0 = 0;
+"340
+[; ;main.c: 340:     ADCON0bits.CHS0 = 0;
 [e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
-"349
-[; ;main.c: 349:     ADCON0bits.CHS1 = 0;
+"341
+[; ;main.c: 341:     ADCON0bits.CHS1 = 0;
 [e = . . _ADCON0bits 1 3 -> -> 0 `i `uc ]
-"350
-[; ;main.c: 350:     ADCON0bits.CHS2 = 0;
+"342
+[; ;main.c: 342:     ADCON0bits.CHS2 = 0;
 [e = . . _ADCON0bits 1 4 -> -> 0 `i `uc ]
-"353
-[; ;main.c: 353:     return;
+"345
+[; ;main.c: 345:     return;
 [e $UE 162  ]
-"354
-[; ;main.c: 354: }
+"346
+[; ;main.c: 346: }
 [e :UE 162 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"357
-[; ;main.c: 357: void main(void)
+"349
+[; ;main.c: 349: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"358
-[; ;main.c: 358: {
+"350
+[; ;main.c: 350: {
 {
 [e :U _main ]
 [f ]
-"360
-[; ;main.c: 360:     TRISA = 0b00000001;
+"352
+[; ;main.c: 352:     TRISA = 0b00000001;
 [e = _TRISA -> -> 1 `i `uc ]
-"361
-[; ;main.c: 361:     TRISB = 0b00011101;
+"353
+[; ;main.c: 353:     TRISB = 0b00011101;
 [e = _TRISB -> -> 29 `i `uc ]
-"362
-[; ;main.c: 362:     TRISC = 0;
+"354
+[; ;main.c: 354:     TRISC = 0;
 [e = _TRISC -> -> 0 `i `uc ]
-"363
-[; ;main.c: 363:     PORTC = 0;
+"355
+[; ;main.c: 355:     PORTC = 0;
 [e = _PORTC -> -> 0 `i `uc ]
-"364
-[; ;main.c: 364:     TRISD = 0b00000000;
+"356
+[; ;main.c: 356:     TRISD = 0b00000000;
 [e = _TRISD -> -> 0 `i `uc ]
-"365
-[; ;main.c: 365:     OPTION_REGbits.nRBPU = 0;
+"357
+[; ;main.c: 357:     OPTION_REGbits.nRBPU = 0;
 [e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"366
-[; ;main.c: 366:     PORTB = 0;
+"358
+[; ;main.c: 358:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"368
-[; ;main.c: 368:     setupExternalInterruption();
+"360
+[; ;main.c: 360:     setupExternalInterruption();
 [e ( _setupExternalInterruption ..  ]
-"369
-[; ;main.c: 369:     setupWatchdogTimer();
+"361
+[; ;main.c: 361:     setupWatchdogTimer();
 [e ( _setupWatchdogTimer ..  ]
-"370
-[; ;main.c: 370:     setupTimer();
+"362
+[; ;main.c: 362:     setupTimer();
 [e ( _setupTimer ..  ]
-"371
-[; ;main.c: 371:     setupADC();
+"363
+[; ;main.c: 363:     setupADC();
 [e ( _setupADC ..  ]
-"372
-[; ;main.c: 372:     Lcd_Init();
+"364
+[; ;main.c: 364:     Lcd_Init();
 [e ( _Lcd_Init ..  ]
-"374
-[; ;main.c: 374:     while (1)
+"366
+[; ;main.c: 366:     while (1)
 [e :U 165 ]
-"375
-[; ;main.c: 375:     {
+"367
+[; ;main.c: 367:     {
 {
-"376
-[; ;main.c: 376:         verifySensor();
+"368
+[; ;main.c: 368:         verifySensor();
 [e ( _verifySensor ..  ]
-"377
-[; ;main.c: 377:         verifyMenu();
+"369
+[; ;main.c: 369:         verifyMenu();
 [e ( _verifyMenu ..  ]
-"378
-[; ;main.c: 378:         __asm("clrwdt");
+"370
+[; ;main.c: 370:         __asm("clrwdt");
 [; <" clrwdt ;# ">
-"380
-[; ;main.c: 380:     }
+"372
+[; ;main.c: 372:     }
 }
 [e :U 164 ]
 [e $U 165  ]
 [e :U 166 ]
-"381
-[; ;main.c: 381:     return;
+"373
+[; ;main.c: 373:     return;
 [e $UE 163  ]
-"382
-[; ;main.c: 382: }
+"374
+[; ;main.c: 374: }
 [e :UE 163 ]
 }
 [a 2C 78 69 87 32 86 79 76 85 77 69 58 0 ]

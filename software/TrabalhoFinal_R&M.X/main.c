@@ -21,11 +21,11 @@
 
 #define _XTAL_FREQ 4000000
 
-//configurando o watchdog time
-//#pragma config WDTE = ON //habilita o uso do WDT
-//#pragma config FOSC = HS //define uso do clock externo em 4 ou 20Mhz
-//#pragma config PWRTE = ON //habilita reset ao ligar (pode ser usado no lugar do capacitor)
-//#pragma config BOREN = ON //Habilita o reset por Brown-out (vales na tens�o)
+// configurando o watchdog time
+#pragma config WDTE = ON //habilita o uso do WDT
+#pragma config FOSC = HS //define uso do clock externo em 4 ou 20Mhz
+#pragma config PWRTE = ON //habilita reset ao ligar (pode ser usado no lugar do capacitor)
+#pragma config BOREN = ON //Habilita o reset por Brown-out (vales na tens�o)
 
 #define SENSOR_UMIDADE      PORTAbits.RA0
 
@@ -38,21 +38,14 @@
 #define LED_IRRIGACAO       PORTBbits.RB6
 #define LED_UMIDADE         PORTBbits.RB7
 
-//#define EN                  PORTDbits.RD0
-//#define RS                  PORTDbits.RD1
-//#define RW                  PORTDbits.RD2
-//#define D4                  PORTDbits.RD4
-//#define D5                  PORTDbits.RD5
-//#define D6                  PORTDbits.RD6
-//#define D7                  PORTDbits.RD7
 
 //*** define pinos referentes a interface com LCD
-#define RS RD2
-#define EN RD3
-#define D4 RD4
-#define D5 RD5
-#define D6 RD6
-#define D7 RD7
+#define RS                  RD2
+#define EN                  RD3
+#define D4                  RD4
+#define D5                  RD5
+#define D6                  RD6
+#define D7                  RD7
 
             
 
@@ -81,8 +74,7 @@ int MLxMS = 25;
 // passa como parametro a qnt de ms que a valvula tem que ficar aberta
 void changeTimerMaxConter(int mili_s){
     
-    timer_counter_max = (mili_s/500);
-    PORTC = timer_counter_max;
+    timer_counter_max = (mili_s/MLxMS);
     return;
     
 }
@@ -114,12 +106,12 @@ void setupTimer()
     
     /* Calculos para o contador
      * clock = 4Mhz -> clock/4 = 1Mhz
-     * 1Mhz/8 = 125Khz -> periodo = 0.000008s ou 8ms
-     * Para uma interrup��o a cada 500ms s�o necess�rias 62500 ciclos de m�quina
-     * 65536 - 62500 = 3036     
+     * 1Mhz/8 = 125Khz -> periodo = 0.000008s ou 8us
+     * Para uma interrup��o a cada 25ms s�o necess�rias 3125 ciclos de m�quina
+     * 65536 - 3125 = 3036     
      */
-    TMR1H               = 0x0B;
-    TMR1L               = 0xDC;
+    TMR1H               = 0xF3;
+    TMR1L               = 0xCB;
     
     T1CONbits.TMR1ON    = 0;
     
@@ -153,8 +145,8 @@ void handleTimerInterruption()
             VALVULA = 0;
         }
         PIR1bits.TMR1IF = 0;
-        TMR1H = 0x0B;
-        TMR1L = 0xDC;
+        TMR1H               = 0xF3;
+        TMR1L               = 0xCB;
     }
     return;
 }
