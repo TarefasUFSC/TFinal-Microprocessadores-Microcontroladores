@@ -112,7 +112,7 @@ void setupTimer()
      */
     TMR1H               = 0xF3;
     TMR1L               = 0xCB;
-    
+  
     T1CONbits.TMR1ON    = 0;
     
     

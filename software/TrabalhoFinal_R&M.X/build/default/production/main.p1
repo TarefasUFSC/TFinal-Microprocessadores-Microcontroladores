@@ -794,8 +794,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _mili_s `i ~T0 @X0 1 r1 ]
 [f ]
 "77
-[; ;main.c: 77:     timer_counter_max = (mili_s/25);
-[e = _timer_counter_max / _mili_s -> 25 `i ]
+[; ;main.c: 77:     timer_counter_max = (mili_s/MLxMS);
+[e = _timer_counter_max / _mili_s _MLxMS ]
 "78
 [; ;main.c: 78:     return;
 [e $UE 120  ]

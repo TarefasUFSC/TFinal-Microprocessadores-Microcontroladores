@@ -2004,7 +2004,7 @@ int MLxMS = 25;
 
 void changeTimerMaxConter(int mili_s){
 
-    timer_counter_max = (mili_s/25);
+    timer_counter_max = (mili_s/MLxMS);
     return;
 
 }

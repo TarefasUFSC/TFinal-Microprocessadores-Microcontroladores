@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Sat Mar 05 14:22:53 2022
+                                                                                               Sat Mar 05 15:56:12 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F877A
@@ -2663,7 +2663,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   2645                           ; Regs used in _changeTimerMaxConter: [wreg+status,2+status,0+pclath+cstack]
   2646                           
   2647                           
-  2648                           ;main.c: 77:     timer_counter_max = (mili_s/25);
+  2648                           ;main.c: 77:     timer_counter_max = (mili_s/MLxMS);
   2649  0590  3019               	movlw	25
   2650  0591  1283               	bcf	3,5	;RP0=0, select bank0
   2651  0592  1303               	bcf	3,6	;RP1=0, select bank0
@@ -4111,7 +4111,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Sat Mar 05 14:22:53 2022
+Symbol Table                                                                                   Sat Mar 05 15:56:12 2022
 
                                  pc 0002                     writeValor@valor 002B  
                                 l60 04DD                                  l61 04E3  

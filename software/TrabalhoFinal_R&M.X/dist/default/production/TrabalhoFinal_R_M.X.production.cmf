@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+$C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 reset_vec CODE 0 0 0 3 2 1
 end_init CODE 0 C C 3 2 1
 config CONFIG 4 2007 2007 1 2 1
@@ -104,27 +104,27 @@ STRING 628-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\TrabalhoFinal_R_M.X.production.o
-F cinit CODE >520:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-F cinit CODE >523:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-F cinit CODE >597:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-10 cinit CODE >598:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-11 cinit CODE >599:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-12 cinit CODE >600:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-13 cinit CODE >601:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-14 cinit CODE >602:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-15 cinit CODE >603:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-16 cinit CODE >604:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-17 cinit CODE >605:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-18 cinit CODE >606:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-1D cinit CODE >610:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-1E cinit CODE >611:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-1F cinit CODE >612:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-20 cinit CODE >613:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-21 cinit CODE >616:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-22 cinit CODE >617:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-23 cinit CODE >623:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-23 cinit CODE >625:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-24 cinit CODE >626:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+F cinit CODE >520:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+F cinit CODE >523:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+F cinit CODE >597:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+10 cinit CODE >598:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+11 cinit CODE >599:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+12 cinit CODE >600:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+13 cinit CODE >601:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+14 cinit CODE >602:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+15 cinit CODE >603:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+16 cinit CODE >604:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+17 cinit CODE >605:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+18 cinit CODE >606:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+1D cinit CODE >610:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+1E cinit CODE >611:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+1F cinit CODE >612:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+20 cinit CODE >613:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+21 cinit CODE >616:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+22 cinit CODE >617:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+23 cinit CODE >623:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+23 cinit CODE >625:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+24 cinit CODE >626:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
 4 intentry CODE >180:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 607 text26 CODE >155:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 607 text26 CODE >157:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
@@ -492,23 +492,23 @@ FB text5 CODE >244:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontrol
 3A9 maintext CODE >368:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 3AE maintext CODE >369:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
 3B3 maintext CODE >370:E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\software\TrabalhoFinal_R&M.X\main.c
-5BB inittext CODE >571:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5BB inittext CODE >572:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5BC inittext CODE >573:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5BD inittext CODE >574:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5BE inittext CODE >575:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5BF inittext CODE >582:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5BF inittext CODE >583:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5C4 inittext CODE >584:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5C5 inittext CODE >585:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5C6 inittext CODE >586:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5C7 inittext CODE >587:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5C8 inittext CODE >588:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5C9 inittext CODE >589:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5CA inittext CODE >590:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5CB inittext CODE >591:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5CC inittext CODE >592:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
-5CD inittext CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.s
+5BB inittext CODE >571:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5BB inittext CODE >572:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5BC inittext CODE >573:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5BD inittext CODE >574:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5BE inittext CODE >575:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5BF inittext CODE >582:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5BF inittext CODE >583:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5C4 inittext CODE >584:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5C5 inittext CODE >585:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5C6 inittext CODE >586:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5C7 inittext CODE >587:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5C8 inittext CODE >588:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5C9 inittext CODE >589:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5CA inittext CODE >590:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5CB inittext CODE >591:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5CC inittext CODE >592:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
+5CD inittext CODE >593:C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -540,11 +540,11 @@ __end_of_Lcd_Init 598 0 CODE 0 text20 dist/default/production\TrabalhoFinal_R_M.
 __end_of_Lcd_Port 9D8 0 CODE 0 text22 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _INTF 59 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+___sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 _main 6FE 0 CODE 0 maintext dist/default/production\TrabalhoFinal_R_M.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 _Lcd_Write_Char 770 0 CODE 0 text10 dist/default/production\TrabalhoFinal_R_M.X.production.o
-start 18 0 CODE 0 init C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+start 18 0 CODE 0 init C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 _umidade_minima 3F 0 BANK0 1 dataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Port@a 73 0 COMMON 1 cstackCOMMON dist/default/production\TrabalhoFinal_R_M.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
@@ -560,12 +560,12 @@ __end_of_verifyMenu A80 0 CODE 0 text4 dist/default/production\TrabalhoFinal_R_M
 _handleTimerInterruption 84A 0 CODE 0 text24 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ___awmod@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_handleTimerInterruption 8B4 0 CODE 0 text24 dist/default/production\TrabalhoFinal_R_M.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -585,8 +585,8 @@ ___awdiv@divisor 22 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_
 __end_of___awdiv 4DE 0 CODE 0 text16 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of___awmod 64E 0 CODE 0 text7 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _setupWatchdogTimer C32 0 CODE 0 text12 dist/default/production\TrabalhoFinal_R_M.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
-___stacklo 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+___stackhi 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
+___stacklo 0 0 ABS 0 - C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 _interrupcao B9C 0 CODE 0 text23 dist/default/production\TrabalhoFinal_R_M.X.production.o
 getADConverterValue@leitura 2F 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Set_Cursor@temp 25 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
@@ -595,7 +595,7 @@ start_initialization 1E 0 CODE 0 cinit dist/default/production\TrabalhoFinal_R_M
 _Lcd_Write_String 8B4 0 CODE 0 text9 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 _TMR1IF 60 0 ABS 0 - dist/default/production\TrabalhoFinal_R_M.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+___int_sp 0 0 STACK 2 stack C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -659,7 +659,7 @@ __stringtab A00 0 STRING 0 strings dist/default/production\TrabalhoFinal_R_M.X.p
 Lcd_Write_String@a 22 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 Lcd_Write_String@i 20 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 ?_getADConverterValue 2B 0 BANK0 1 cstackBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
 __pdataBANK0 3B 0 BANK0 1 dataBANK0 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __end_of_Lcd_Cmd AF2 0 CODE 0 text21 dist/default/production\TrabalhoFinal_R_M.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

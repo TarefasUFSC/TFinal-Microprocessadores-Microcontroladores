@@ -5,10 +5,10 @@ Linker command line:
 -W-3 --edf=D:\Program Files\Microchip\xc8\v2.36\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\TrabalhoFinal_R_M.X.production.sym \
   --cmf=dist/default/production\TrabalhoFinal_R_M.X.production.cmf -z \
-  -Q16F877A -oC:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.4 \
+  -Q16F877A -oC:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/TrabalhoFinal_R_M.X.production.map \
-  --md=C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.dat -E1 \
+  --md=C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -20,7 +20,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o \
+  -pfunctab=ENTRY -k C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o \
   dist/default/production\TrabalhoFinal_R_M.X.production.o 
 
 Object code version is 3.11
@@ -30,7 +30,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Rodrigo\AppData\Local\Temp\xcAs9j8.o
+C:\Users\Rodrigo\AppData\Local\Temp\xcAsg0g.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        1        0       4
