@@ -1,4 +1,4 @@
-# Writing all output to: E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\hardware\placa_pic_deploy\hardware_placa_pic_deploy.log
+# Writing all output to: E:\Projetos\UFSC\Aulas\TFinal-Microprocessadores-Microcontroladores\hardware\placa_pic_deploy_single_layer\hardware_placa_pic_deploy_single_layer.log
 set pad_wire_necking on
 bus diagonal
 fanout 5
